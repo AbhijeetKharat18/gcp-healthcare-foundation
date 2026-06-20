@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------
+# 1-org / terraform.tfvars.example
+# ---------------------------------------------------------------------------
+bootstrap_state_bucket = "hcf-b-seed-tfstate"
+
+environments      = ["development", "nonproduction", "production"]
+allowed_locations = ["in:us-locations"]
+
+security_contact_email   = "security-alerts@your-domain.com"
+audit_log_retention_days = 2555

@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# Terraform
+# ---------------------------------------------------------------------------
+# Local state and backups (state lives in the GCS backend, never in git)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# Variable files with real values (commit only *.example)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Plan output and overrides
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ---------------------------------------------------------------------------
+# Credentials / secrets — never commit
+# ---------------------------------------------------------------------------
+*.json.key
+*-sa-key.json
+service-account*.json
+*.pem
+.env
+
+# ---------------------------------------------------------------------------
+# Editor / OS
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+*.swp

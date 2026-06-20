@@ -1,0 +1,2 @@
+# 4-projects / terraform.tfvars.example
+bootstrap_state_bucket = "hcf-b-seed-tfstate"

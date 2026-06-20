@@ -1,0 +1,5 @@
+# 3-networks / terraform.tfvars.example
+bootstrap_state_bucket = "hcf-b-seed-tfstate"
+
+# Replace with your real corporate egress ranges:
+trusted_ip_ranges = ["198.51.100.0/24"]

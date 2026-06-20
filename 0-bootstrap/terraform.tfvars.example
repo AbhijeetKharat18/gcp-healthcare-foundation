@@ -1,0 +1,13 @@
+# ---------------------------------------------------------------------------
+# 0-bootstrap / terraform.tfvars.example
+# Copy to terraform.tfvars and fill with real values before applying.
+# ---------------------------------------------------------------------------
+
+org_id          = "123456789012"
+billing_account = "ABCDEF-123456-GHIJKL"
+
+project_prefix  = "hcf"
+default_region  = "us-central1"
+
+org_admins_group     = "gcp-organization-admins@your-domain.com"
+billing_admins_group = "gcp-billing-admins@your-domain.com"

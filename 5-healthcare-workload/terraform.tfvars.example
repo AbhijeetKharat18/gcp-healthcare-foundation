@@ -1,0 +1,4 @@
+# 5-healthcare-workload / terraform.tfvars.example
+bootstrap_state_bucket = "hcf-b-seed-tfstate"
+analysts_group         = "data-analysts@your-domain.com"
+create_example_views   = false
