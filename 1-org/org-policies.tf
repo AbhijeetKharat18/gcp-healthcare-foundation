@@ -10,9 +10,9 @@ locals {
   boolean_enforced_policies = [
     "iam.disableServiceAccountKeyCreation", # no long-lived SA keys
     "iam.disableServiceAccountKeyUpload",
-    "compute.skipDefaultNetworkCreation",   # no auto default VPC
+    "compute.skipDefaultNetworkCreation", # no auto default VPC
     "compute.requireOsLogin",
-    "sql.restrictPublicIp",                 # Cloud SQL: no public IP
+    "sql.restrictPublicIp", # Cloud SQL: no public IP
     "storage.uniformBucketLevelAccess",
     "compute.disableSerialPortAccess",
   ]

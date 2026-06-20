@@ -19,7 +19,7 @@ variable "allowed_locations" {
   description = "Allowed GCP resource locations (org policy gcp.resourceLocations)."
   type        = list(string)
   # Keep PHI in-country. US-only by default; tighten/loosen per your data residency needs.
-  default     = ["in:us-locations"]
+  default = ["in:us-locations"]
 }
 
 variable "cmek_required_services" {

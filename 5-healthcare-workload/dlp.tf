@@ -65,14 +65,14 @@ resource "google_data_loss_prevention_deidentify_template" "phi" {
         info_types { name = "STREET_ADDRESS" }
         info_types { name = "US_HEALTHCARE_NPI" }
         primitive_transformation {
-          replace_with_info_type_config {}
+          replace_with_info_type_config = true
         }
       }
       # Generalize dates of birth to the year (date shifting / bucketing).
       transformations {
         info_types { name = "DATE_OF_BIRTH" }
         primitive_transformation {
-          replace_with_info_type_config {}
+          replace_with_info_type_config = true
         }
       }
     }
