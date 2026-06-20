@@ -12,9 +12,10 @@ from the two reference architecture diagrams.
 > `org_id`, `billing_account`, groups, and IP ranges. It was **not** validated
 > against live GCP APIs here.
 
-## Architecture
+## Architecture Roadmap
 
-The target architecture (see `docs/architecture/`):
+The target architecture is captured in the
+[`docs/architecture/ROADMAP.md`](docs/architecture/ROADMAP.md) roadmap:
 
 - **End-to-end, seven compliance pillars** — `docs/architecture/01-end-to-end-seven-pillars.png`
 - **HIPAA-compliant data architecture** — `docs/architecture/02-hipaa-compliant-architecture.png`
