@@ -52,3 +52,15 @@ variable "labels" {
     workload    = "healthcare-foundation"
   }
 }
+
+variable "github_owner" {
+  description = "GitHub org/user that owns the repo (for CI/CD WIF)."
+  type        = string
+  default     = "your-github-org"
+}
+
+variable "github_repo" {
+  description = "GitHub repo name (for CI/CD WIF)."
+  type        = string
+  default     = "gcp-healthcare-foundation"
+}

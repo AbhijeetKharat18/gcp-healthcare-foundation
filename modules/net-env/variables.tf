@@ -13,3 +13,9 @@ variable "cidr" {
     services = string
   })
 }
+
+variable "onprem_cidrs" {
+  description = "On-prem/peer CIDRs reachable via VPN (allowed through firewall)."
+  type        = list(string)
+  default     = []
+}

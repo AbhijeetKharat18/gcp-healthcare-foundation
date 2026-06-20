@@ -81,3 +81,30 @@ resource "google_compute_firewall" "deny_egress_all" {
   destination_ranges = ["0.0.0.0/0"]
   deny { protocol = "all" }
 }
+
+# --- On-prem (VPN) connectivity: allow only when CIDRs are provided ----------
+resource "google_compute_firewall" "allow_ingress_onprem" {
+  for_each = length(var.onprem_cidrs) > 0 ? toset(["enabled"]) : toset([])
+
+  project       = google_project.host.project_id
+  name          = "fw-${var.env_short}-ingress-onprem"
+  network       = google_compute_network.vpc.name
+  direction     = "INGRESS"
+  priority      = 1000
+  source_ranges = var.onprem_cidrs
+  allow { protocol = "tcp" }
+  allow { protocol = "udp" }
+  allow { protocol = "icmp" }
+}
+
+resource "google_compute_firewall" "allow_egress_onprem" {
+  for_each = length(var.onprem_cidrs) > 0 ? toset(["enabled"]) : toset([])
+
+  project            = google_project.host.project_id
+  name               = "fw-${var.env_short}-egress-onprem"
+  network            = google_compute_network.vpc.name
+  direction          = "EGRESS"
+  priority           = 1000
+  destination_ranges = var.onprem_cidrs
+  allow { protocol = "all" }
+}

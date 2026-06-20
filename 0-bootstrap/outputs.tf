@@ -41,3 +41,9 @@ output "project_prefix" {
 output "default_region" {
   value = var.default_region
 }
+
+# --- CI/CD (Workload Identity Federation) -----------------------------------
+output "wif_provider_name" {
+  description = "Full WIF provider resource name for google-github-actions/auth."
+  value       = google_iam_workload_identity_pool_provider.github.name
+}

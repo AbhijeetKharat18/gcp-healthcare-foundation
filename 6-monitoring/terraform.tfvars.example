@@ -1,0 +1,3 @@
+# 6-monitoring / terraform.tfvars.example
+bootstrap_state_bucket = "hcf-b-seed-tfstate"
+alert_email            = "alerts@your-domain.com"

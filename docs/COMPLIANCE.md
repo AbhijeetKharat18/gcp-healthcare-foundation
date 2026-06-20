@@ -24,6 +24,10 @@ technical control that *supports* them, not enforced by code.
 | Column-level security | Data Catalog policy-tag taxonomy + fine-grained reader | 5 |
 | Row-level security | Authorized `secure_views` + `SESSION_USER()` filtering | 5 |
 | Least-exposure delivery | Delivery SAs read `secure_views` only | 5 |
+| Security event alerting | Log-based metrics + alert policies (IAM/VPC-SC/SA-key/KMS) | 6 |
+| Operational monitoring | Per-env metrics scope + dashboards | 6 |
+| Hybrid transmission security | HA VPN (BGP) to on-prem, optional | 3 |
+| Keyless CI/CD | Workload Identity Federation; no SA keys in pipelines | 0 + GH Actions |
 
 ## HIPAA Security Rule (diagram Image 2)
 

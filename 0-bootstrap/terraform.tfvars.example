@@ -11,3 +11,7 @@ default_region  = "us-central1"
 
 org_admins_group     = "gcp-organization-admins@your-domain.com"
 billing_admins_group = "gcp-billing-admins@your-domain.com"
+
+# CI/CD (GitHub Actions WIF)
+github_owner = "your-github-org"
+github_repo  = "gcp-healthcare-foundation"

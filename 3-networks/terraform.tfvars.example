@@ -3,3 +3,13 @@ bootstrap_state_bucket = "hcf-b-seed-tfstate"
 
 # Replace with your real corporate egress ranges:
 trusted_ip_ranges = ["198.51.100.0/24"]
+
+# Optional: enable HA VPN to on-prem for specific environments.
+# vpn_config = {
+#   prod = {
+#     peer_gateway_ips = ["203.0.113.10", "203.0.113.11"]
+#     peer_asn         = 65000
+#     shared_secret    = "REPLACE_WITH_SECRET"   # use a secret manager in practice
+#     onprem_cidrs     = ["10.100.0.0/16"]
+#   }
+# }

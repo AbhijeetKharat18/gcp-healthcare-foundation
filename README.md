@@ -29,9 +29,12 @@ The target architecture (see `docs/architecture/`):
 | `3-networks` | Per-env Shared VPC, firewall/egress lockdown, NAT, DNS, VPC-SC perimeters |
 | `4-projects` | Workload projects (ingestion/healthcare-core/lakehouse/delivery), perimeter membership |
 | `5-healthcare-workload` | Healthcare API stores, BQ medallion lakehouse, DLP, CLS/RLS, workload IAM |
+| `6-monitoring` | Org-wide security alerting (IAM/VPC-SC/KMS), per-env metrics scope + dashboards |
 
-Shared logic lives in `modules/` (`env-baseline`, `net-env`, `workload-project`).
-Compliance control mapping is in `docs/COMPLIANCE.md`.
+Shared logic lives in `modules/` (`env-baseline`, `net-env`, `workload-project`,
+`hybrid-vpn`, `monitoring-env`). CI/CD is in `.github/workflows/terraform.yml`
+(keyless via Workload Identity Federation). Hybrid connectivity (HA VPN to
+on-prem) is optional in `3-networks` via `var.vpn_config`.
 
 ## How state flows
 `0-bootstrap` creates the GCS state bucket, then every later stage stores its
@@ -49,7 +52,7 @@ terraform init && terraform apply
 # then uncomment backend.tf with the printed bucket and: terraform init -migrate-state
 
 # 2..5: set bootstrap_state_bucket + backend bucket in each, then in order:
-for s in 1-org 2-environments 3-networks 4-projects 5-healthcare-workload; do
+for s in 1-org 2-environments 3-networks 4-projects 5-healthcare-workload 6-monitoring; do
   ( cd $s && terraform init && terraform apply )
 done
 ```

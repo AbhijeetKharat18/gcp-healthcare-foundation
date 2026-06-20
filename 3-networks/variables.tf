@@ -61,3 +61,14 @@ variable "trusted_ip_ranges" {
   type        = list(string)
   default     = ["203.0.113.0/24"] # placeholder — replace with real ranges
 }
+
+variable "vpn_config" {
+  description = "Optional HA VPN per environment (keyed by short code). Empty = disabled."
+  type = map(object({
+    peer_gateway_ips = list(string)
+    peer_asn         = number
+    shared_secret    = string
+    onprem_cidrs     = list(string)
+  }))
+  default = {}
+}

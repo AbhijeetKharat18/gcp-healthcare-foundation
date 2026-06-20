@@ -1,0 +1,98 @@
+name: terraform
+
+# CI/CD for the foundation. PRs run fmt/validate/plan; merges to main apply.
+# Auth is keyless via Workload Identity Federation (set up in 0-bootstrap).
+#
+# Required GitHub repo configuration:
+#   Variables (Settings > Secrets and variables > Actions > Variables):
+#     GCP_WIF_PROVIDER   = 0-bootstrap output `wif_provider_name`
+#     GCP_SERVICE_ACCOUNT= 0-bootstrap output `terraform_sa_email`
+#     TF_STATE_BUCKET    = 0-bootstrap output `tfstate_bucket`
+#   Environment named "production" with required reviewers (for apply approval).
+#
+# NOTE: 0-bootstrap is applied once, manually, by an org admin. CI manages
+# stages 1-5 only.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  id-token: write   # required for WIF
+  pull-requests: write
+
+env:
+  TF_IN_AUTOMATION: "true"
+  TF_VAR_bootstrap_state_bucket: ${{ vars.TF_STATE_BUCKET }}
+
+jobs:
+  # ---- fmt + validate (no cloud auth needed) -------------------------------
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        stage: [1-org, 2-environments, 3-networks, 4-projects, 5-healthcare-workload, 6-monitoring]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.5"
+      - name: fmt
+        run: terraform fmt -check -recursive ${{ matrix.stage }}
+      - name: init (no backend)
+        run: terraform -chdir=${{ matrix.stage }} init -backend=false
+      - name: validate
+        run: terraform -chdir=${{ matrix.stage }} validate
+
+  # ---- plan on PR ----------------------------------------------------------
+  plan:
+    if: github.event_name == 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.5"
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      # Plan each stage in dependency order.
+      - name: plan all stages
+        run: |
+          for s in 1-org 2-environments 3-networks 4-projects 5-healthcare-workload 6-monitoring; do
+            echo "::group::plan $s"
+            terraform -chdir=$s init
+            terraform -chdir=$s plan -input=false -no-color
+            echo "::endgroup::"
+          done
+
+  # ---- apply on merge to main (gated by environment approval) --------------
+  apply:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: production   # add required reviewers in repo settings
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.5"
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      - name: apply all stages in order
+        run: |
+          for s in 1-org 2-environments 3-networks 4-projects 5-healthcare-workload 6-monitoring; do
+            echo "::group::apply $s"
+            terraform -chdir=$s init
+            terraform -chdir=$s apply -input=false -auto-approve
+            echo "::endgroup::"
+          done
