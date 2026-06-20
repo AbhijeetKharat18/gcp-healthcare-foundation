@@ -1,6 +1,7 @@
 name: terraform
 
-# CI/CD for the foundation. PRs run fmt/validate/plan; merges to main apply.
+# CI/CD for the foundation. PRs run fmt/validate/plan; pushes to main apply
+# only after the required GCP repo variables are configured.
 # Auth is keyless via Workload Identity Federation (set up in 0-bootstrap).
 #
 # Required GitHub repo configuration:
@@ -11,7 +12,7 @@ name: terraform
 #   Environment named "production" with required reviewers (for apply approval).
 #
 # NOTE: 0-bootstrap is applied once, manually, by an org admin. CI manages
-# stages 1-5 only.
+# stages 1-6 only after the GCP variables below are set.
 
 on:
   pull_request:
@@ -49,7 +50,11 @@ jobs:
 
   # ---- plan on PR ----------------------------------------------------------
   plan:
-    if: github.event_name == 'pull_request'
+    if: >-
+      github.event_name == 'pull_request' &&
+      vars.GCP_WIF_PROVIDER != '' &&
+      vars.GCP_SERVICE_ACCOUNT != '' &&
+      vars.TF_STATE_BUCKET != ''
     needs: validate
     runs-on: ubuntu-latest
     steps:
@@ -74,7 +79,12 @@ jobs:
 
   # ---- apply on merge to main (gated by environment approval) --------------
   apply:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      vars.GCP_WIF_PROVIDER != '' &&
+      vars.GCP_SERVICE_ACCOUNT != '' &&
+      vars.TF_STATE_BUCKET != ''
     needs: validate
     runs-on: ubuntu-latest
     environment: production   # add required reviewers in repo settings
