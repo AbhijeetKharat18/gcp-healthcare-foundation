@@ -24,6 +24,9 @@ For a team-facing explanation of what this landing zone does, how the repo is
 organized, key learnings, and the path to production, see
 [`docs/TEAM_BRIEFING.md`](docs/TEAM_BRIEFING.md).
 
+For the production-readiness hardening notes and remaining production gates, see
+[`docs/PRODUCTION_READINESS_AUDIT.md`](docs/PRODUCTION_READINESS_AUDIT.md).
+
 ## Stages (apply in order)
 
 | Stage | Builds |

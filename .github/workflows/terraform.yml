@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        stage: [1-org, 2-environments, 3-networks, 4-projects, 5-healthcare-workload, 6-monitoring]
+        stage: [0-bootstrap, 1-org, 2-environments, 3-networks, 4-projects, 5-healthcare-workload, 6-monitoring]
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3

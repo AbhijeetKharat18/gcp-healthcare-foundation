@@ -20,7 +20,7 @@ resource "google_kms_crypto_key" "tfstate" {
   rotation_period = "7776000s" # 90 days
 
   lifecycle {
-    prevent_destroy = false # set true in production
+    prevent_destroy = true
   }
 }
 

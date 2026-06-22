@@ -23,9 +23,9 @@ locals {
     "roles/orgpolicy.policyAdmin",
     "roles/billing.user",
     "roles/logging.configWriter",
-    "roles/compute.xpnAdmin",                  # shared VPC host enablement
-    "roles/accesscontextmanager.policyAdmin",  # VPC-SC perimeters
-    "roles/securitycenter.admin",              # SCC config
+    "roles/compute.xpnAdmin",                 # shared VPC host enablement
+    "roles/accesscontextmanager.policyAdmin", # VPC-SC perimeters
+    "roles/securitycenter.admin",             # SCC config
     "roles/iam.organizationRoleAdmin",
     "roles/serviceusage.serviceUsageAdmin",
   ]
