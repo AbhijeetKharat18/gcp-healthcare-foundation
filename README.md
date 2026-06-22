@@ -20,6 +20,10 @@ The target architecture is captured in the
 - **End-to-end, seven compliance pillars** — `docs/architecture/01-end-to-end-seven-pillars.png`
 - **HIPAA-compliant data architecture** — `docs/architecture/02-hipaa-compliant-architecture.png`
 
+For a team-facing explanation of what this landing zone does, how the repo is
+organized, key learnings, and the path to production, see
+[`docs/TEAM_BRIEFING.md`](docs/TEAM_BRIEFING.md).
+
 ## Stages (apply in order)
 
 | Stage | Builds |
