@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Terraform (real backend/vars; examples are committed)
+backend.tf
+.terraform/
+.terraform.lock.hcl

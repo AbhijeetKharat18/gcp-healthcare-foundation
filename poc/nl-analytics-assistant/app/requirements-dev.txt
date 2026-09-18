@@ -1,0 +1,8 @@
+# Local demo + test dependencies (no cloud SDKs needed: mock LLM + DuckDB).
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+sqlglot>=25.0
+duckdb>=1.1
+pytest>=8.0
+httpx>=0.27

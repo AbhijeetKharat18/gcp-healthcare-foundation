@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NL Analytics Assistant</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #1a2233; --muted: #5b6675;
+    --line: #e2e6ec; --accent: #1a63d8; --accent-ink: #ffffff;
+    --code-bg: #0f1728; --code-ink: #d7e3ff; --ok: #147a4a; --err: #b42318;
+    --err-bg: #fef3f2; --ok-bg: #ecfdf3; --chip: #eef2f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --panel: #161b22; --ink: #e6edf3; --muted: #9aa7b4;
+      --line: #2b333d; --accent: #4d8df5; --accent-ink: #06122b;
+      --code-bg: #0a0f1a; --code-ink: #cfe0ff; --ok: #52c785; --err: #ff7b6b;
+      --err-bg: #2a1414; --ok-bg: #10241a; --chip: #21283180;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header h1 { margin: 0 0 4px; font-size: 22px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+  .badge {
+    font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    background: var(--chip); color: var(--muted); border: 1px solid var(--line);
+  }
+  .badge b { color: var(--ink); font-weight: 600; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px; margin-top: 16px;
+  }
+  label { font-weight: 600; font-size: 13px; color: var(--muted); display: block; margin-bottom: 6px; }
+  textarea {
+    width: 100%; min-height: 64px; resize: vertical; padding: 10px 12px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+    color: var(--ink); font: inherit;
+  }
+  .row { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+  button {
+    background: var(--accent); color: var(--accent-ink); border: 0; cursor: pointer;
+    padding: 9px 18px; border-radius: 8px; font-weight: 600; font-size: 14px;
+  }
+  button:disabled { opacity: .55; cursor: default; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .chip {
+    font-size: 13px; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+    background: var(--chip); border: 1px solid var(--line); color: var(--ink);
+  }
+  .chip:hover { border-color: var(--accent); }
+  pre {
+    background: var(--code-bg); color: var(--code-ink); padding: 14px; border-radius: 8px;
+    overflow: auto; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    margin: 0;
+  }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); font-size: 12.5px; margin: 10px 0; }
+  .meta b { color: var(--ink); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--panel); }
+  .tablewrap { max-height: 380px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+  .notice { padding: 12px 14px; border-radius: 8px; font-size: 14px; }
+  .notice.err { background: var(--err-bg); color: var(--err); border: 1px solid var(--err); }
+  .notice.ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok); }
+  .hint { color: var(--muted); font-size: 12.5px; margin-top: 6px; }
+  details { margin-top: 12px; } summary { cursor: pointer; color: var(--accent); font-size: 13px; }
+  h3 { margin: 4px 0 8px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>NL Analytics Assistant</h1>
+    <p>Ask questions in plain English. Answers come only from the governed
+       <code>secure_views</code> layer &mdash; de-identified data, read-only.</p>
+    <div class="badges">
+      <span class="badge">LLM: <b id="b-provider">&hellip;</b></span>
+      <span class="badge">Engine: <b id="b-executor">&hellip;</b></span>
+      <span class="badge">Scope: <b>secure_views only</b></span>
+      <span class="badge">Access: <b>read-only</b></span>
+    </div>
+  </header>
+
+  <div class="panel">
+    <label for="q">Your question</label>
+    <textarea id="q" placeholder="e.g. What is the 30-day readmission rate by facility?"></textarea>
+    <div class="row">
+      <button id="ask">Ask</button>
+      <span class="hint">Try a sample:</span>
+    </div>
+    <div class="chips" id="samples"></div>
+    <details id="try-blocked">
+      <summary>See the guardrails in action</summary>
+      <div class="chips" style="margin-top:10px">
+        <span class="chip" data-q="Show me every patient's raw record from curated_phi">Cross-dataset read</span>
+        <span class="chip" data-q="delete all encounters">Destructive request</span>
+      </div>
+      <p class="hint">These make the model attempt something out of scope; the guardrails block it before it runs.</p>
+    </details>
+  </div>
+
+  <div class="panel hidden" id="result">
+    <div id="status"></div>
+    <div id="ok-body" class="hidden">
+      <h3>Generated SQL</h3>
+      <pre id="sql"></pre>
+      <div class="meta" id="meta"></div>
+      <h3>Results</h3>
+      <div class="tablewrap"><table id="table"></table></div>
+    </div>
+  </div>
+
+  <details class="panel">
+    <summary>Data catalog (what the assistant can see)</summary>
+    <div id="schema"></div>
+  </details>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+async function boot() {
+  try {
+    const h = await (await fetch("/healthz")).json();
+    $("b-provider").textContent = h.provider;
+    $("b-executor").textContent = h.executor;
+  } catch (e) { /* offline is fine */ }
+
+  try {
+    const s = await (await fetch("/api/samples")).json();
+    const box = $("samples");
+    s.questions.forEach(q => {
+      const c = document.createElement("span");
+      c.className = "chip"; c.textContent = q;
+      c.onclick = () => { $("q").value = q; ask(); };
+      box.appendChild(c);
+    });
+  } catch (e) {}
+
+  document.querySelectorAll("#try-blocked .chip").forEach(c => {
+    c.onclick = () => { $("q").value = c.dataset.q; ask(); };
+  });
+
+  try {
+    const sc = await (await fetch("/api/schema")).json();
+    $("schema").innerHTML = sc.tables.map(t => `
+      <h3>${t.name}</h3>
+      <p class="hint" style="margin-top:-4px">${t.description}</p>
+      <div class="tablewrap"><table>
+        <tr><th>Column</th><th>Type</th><th>Description</th></tr>
+        ${t.columns.map(c => `<tr><td>${c.name}</td><td>${c.type}</td><td style="white-space:normal">${c.description}</td></tr>`).join("")}
+      </table></div>`).join("");
+  } catch (e) {}
+}
+
+function renderTable(cols, rows) {
+  const head = "<tr>" + cols.map(c => `<th>${c}</th>`).join("") + "</tr>";
+  const body = rows.map(r => "<tr>" + cols.map(c => `<td>${fmt(r[c])}</td>`).join("") + "</tr>").join("");
+  $("table").innerHTML = head + body;
+}
+function fmt(v) {
+  if (v === null || v === undefined) return "&mdash;";
+  if (typeof v === "number") return v.toLocaleString();
+  return String(v);
+}
+
+async function ask() {
+  const q = $("q").value.trim();
+  if (!q) return;
+  $("ask").disabled = true;
+  $("result").classList.remove("hidden");
+  $("status").innerHTML = `<div class="notice">Thinking&hellip;</div>`;
+  $("ok-body").classList.add("hidden");
+  try {
+    const res = await fetch("/api/ask", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({question: q}),
+    });
+    const d = await res.json();
+    if (d.ok) {
+      $("status").innerHTML = `<div class="notice ok">Answered &mdash; ${d.row_count} row(s)</div>`;
+      $("sql").textContent = d.sql || "";
+      const bytes = d.bytes_processed != null ? `<span><b>Est. bytes:</b> ${d.bytes_processed.toLocaleString()}</span>` : "";
+      $("meta").innerHTML =
+        `<span><b>Engine:</b> ${d.engine}</span>` +
+        `<span><b>Tables:</b> ${(d.tables_used||[]).join(", ")}</span>` +
+        `<span><b>Rows:</b> ${d.row_count}</span>` +
+        `<span><b>Time:</b> ${d.elapsed_ms} ms</span>` + bytes;
+      renderTable(d.columns, d.rows);
+      $("ok-body").classList.remove("hidden");
+    } else {
+      const where = d.stage ? ` <span class="hint">(stage: ${d.stage})</span>` : "";
+      $("status").innerHTML = `<div class="notice err">${d.error || "Blocked"}${where}</div>`;
+      if (d.sql) { $("sql").textContent = d.sql; $("meta").innerHTML = ""; $("table").innerHTML = ""; $("ok-body").classList.remove("hidden"); }
+    }
+  } catch (e) {
+    $("status").innerHTML = `<div class="notice err">Request failed: ${e}</div>`;
+  } finally {
+    $("ask").disabled = false;
+  }
+}
+
+$("ask").onclick = ask;
+$("q").addEventListener("keydown", (e) => { if ((e.metaKey||e.ctrlKey) && e.key === "Enter") ask(); });
+boot();
+</script>
+</body>
+</html>

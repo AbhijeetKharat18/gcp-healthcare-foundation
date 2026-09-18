@@ -1,0 +1,8 @@
+# Cloud Run runtime dependencies.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+sqlglot>=25.0
+duckdb>=1.1
+google-cloud-bigquery>=3.25
+google-cloud-aiplatform>=1.71

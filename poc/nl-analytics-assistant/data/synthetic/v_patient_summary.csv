@@ -1,0 +1,2001 @@
+patient_key,age_band,sex,zip3,region,primary_condition,home_facility_id
+PT-000000,65-79,M,127,East,None,FAC-04
+PT-000001,65-79,F,557,North,Diabetes,FAC-01
+PT-000002,35-49,F,902,West,Hypertension,FAC-02
+PT-000003,18-34,M,565,North,Hypertension,FAC-01
+PT-000004,65-79,M,934,West,COPD,FAC-02
+PT-000005,50-64,M,915,West,Hypertension,FAC-02
+PT-000006,18-34,F,903,West,Hypertension,FAC-02
+PT-000007,50-64,F,135,East,Hypertension,FAC-04
+PT-000008,18-34,F,910,West,Diabetes,FAC-02
+PT-000009,50-64,F,620,Central,Diabetes,FAC-03
+PT-000010,65-79,F,920,West,Chronic Kidney Disease,FAC-02
+PT-000011,0-17,F,625,Central,None,FAC-03
+PT-000012,0-17,F,626,Central,None,FAC-03
+PT-000013,50-64,F,589,North,Congestive Heart Failure,FAC-01
+PT-000014,0-17,F,928,West,Congestive Heart Failure,FAC-02
+PT-000015,18-34,F,924,West,None,FAC-02
+PT-000016,18-34,M,917,West,COPD,FAC-02
+PT-000017,35-49,M,561,North,COPD,FAC-01
+PT-000018,65-79,F,914,West,Hypertension,FAC-02
+PT-000019,80+,Other,567,North,Chronic Kidney Disease,FAC-01
+PT-000020,0-17,F,554,North,COPD,FAC-01
+PT-000021,35-49,F,116,East,None,FAC-04
+PT-000022,0-17,M,114,East,Hypertension,FAC-04
+PT-000023,65-79,M,135,East,Asthma,FAC-04
+PT-000024,50-64,F,553,North,Diabetes,FAC-01
+PT-000025,35-49,F,933,West,Hypertension,FAC-02
+PT-000026,35-49,F,917,West,Hypertension,FAC-02
+PT-000027,0-17,F,916,West,Diabetes,FAC-02
+PT-000028,18-34,M,576,North,Chronic Kidney Disease,FAC-01
+PT-000029,18-34,M,551,North,Hypertension,FAC-01
+PT-000030,0-17,F,917,West,Hypertension,FAC-02
+PT-000031,50-64,M,565,North,Congestive Heart Failure,FAC-01
+PT-000032,50-64,F,133,East,Hypertension,FAC-04
+PT-000033,18-34,F,107,East,COPD,FAC-04
+PT-000034,65-79,F,565,North,COPD,FAC-01
+PT-000035,50-64,F,104,East,Congestive Heart Failure,FAC-04
+PT-000036,80+,F,622,Central,Congestive Heart Failure,FAC-03
+PT-000037,50-64,M,579,North,Congestive Heart Failure,FAC-01
+PT-000038,50-64,F,567,North,Hypertension,FAC-01
+PT-000039,50-64,F,929,West,Asthma,FAC-02
+PT-000040,65-79,F,127,East,Chronic Kidney Disease,FAC-04
+PT-000041,18-34,F,105,East,None,FAC-04
+PT-000042,65-79,F,565,North,Hypertension,FAC-01
+PT-000043,0-17,M,562,North,COPD,FAC-01
+PT-000044,50-64,M,907,West,Chronic Kidney Disease,FAC-02
+PT-000045,50-64,F,104,East,Hypertension,FAC-04
+PT-000046,80+,M,567,North,Diabetes,FAC-01
+PT-000047,35-49,M,566,North,COPD,FAC-01
+PT-000048,18-34,M,601,Central,Asthma,FAC-03
+PT-000049,35-49,M,125,East,Asthma,FAC-04
+PT-000050,65-79,F,114,East,None,FAC-04
+PT-000051,80+,M,563,North,Chronic Kidney Disease,FAC-01
+PT-000052,18-34,Other,590,North,Asthma,FAC-01
+PT-000053,18-34,M,578,North,Hypertension,FAC-01
+PT-000054,35-49,M,554,North,Hypertension,FAC-01
+PT-000055,0-17,M,604,Central,Hypertension,FAC-03
+PT-000056,65-79,F,610,Central,COPD,FAC-03
+PT-000057,35-49,M,554,North,Hypertension,FAC-01
+PT-000058,50-64,F,120,East,None,FAC-04
+PT-000059,65-79,M,569,North,Congestive Heart Failure,FAC-01
+PT-000060,0-17,F,907,West,Diabetes,FAC-02
+PT-000061,50-64,M,920,West,Hypertension,FAC-02
+PT-000062,35-49,M,640,Central,Diabetes,FAC-03
+PT-000063,50-64,F,590,North,Asthma,FAC-01
+PT-000064,65-79,F,135,East,Chronic Kidney Disease,FAC-04
+PT-000065,18-34,F,585,North,COPD,FAC-01
+PT-000066,18-34,F,626,Central,Hypertension,FAC-03
+PT-000067,18-34,F,919,West,Congestive Heart Failure,FAC-02
+PT-000068,35-49,F,939,West,Asthma,FAC-02
+PT-000069,50-64,F,910,West,COPD,FAC-02
+PT-000070,35-49,M,576,North,None,FAC-01
+PT-000071,65-79,M,576,North,Congestive Heart Failure,FAC-01
+PT-000072,0-17,M,578,North,COPD,FAC-01
+PT-000073,35-49,Unknown,911,West,Hypertension,FAC-02
+PT-000074,35-49,F,107,East,Chronic Kidney Disease,FAC-04
+PT-000075,18-34,F,558,North,Hypertension,FAC-01
+PT-000076,65-79,F,573,North,Hypertension,FAC-01
+PT-000077,80+,F,936,West,Diabetes,FAC-02
+PT-000078,50-64,F,575,North,Hypertension,FAC-01
+PT-000079,18-34,F,586,North,Asthma,FAC-01
+PT-000080,65-79,M,557,North,COPD,FAC-01
+PT-000081,18-34,F,125,East,Diabetes,FAC-04
+PT-000082,35-49,F,551,North,Congestive Heart Failure,FAC-01
+PT-000083,50-64,M,582,North,Diabetes,FAC-01
+PT-000084,18-34,F,929,West,Chronic Kidney Disease,FAC-02
+PT-000085,50-64,F,577,North,Asthma,FAC-01
+PT-000086,80+,Other,129,East,COPD,FAC-04
+PT-000087,65-79,M,587,North,Asthma,FAC-01
+PT-000088,18-34,M,619,Central,Congestive Heart Failure,FAC-03
+PT-000089,50-64,M,920,West,Hypertension,FAC-02
+PT-000090,50-64,F,116,East,Diabetes,FAC-04
+PT-000091,35-49,M,140,East,Diabetes,FAC-04
+PT-000092,50-64,F,907,West,Congestive Heart Failure,FAC-02
+PT-000093,35-49,F,551,North,Hypertension,FAC-01
+PT-000094,35-49,F,314,South,Diabetes,FAC-05
+PT-000095,50-64,F,551,North,Congestive Heart Failure,FAC-01
+PT-000096,18-34,M,553,North,Asthma,FAC-01
+PT-000097,18-34,Unknown,551,North,Asthma,FAC-01
+PT-000098,18-34,M,586,North,Hypertension,FAC-01
+PT-000099,50-64,M,553,North,None,FAC-01
+PT-000100,65-79,F,585,North,Hypertension,FAC-01
+PT-000101,50-64,F,571,North,Congestive Heart Failure,FAC-01
+PT-000102,65-79,F,923,West,Diabetes,FAC-02
+PT-000103,50-64,M,620,Central,Asthma,FAC-03
+PT-000104,50-64,M,573,North,Congestive Heart Failure,FAC-01
+PT-000105,50-64,M,139,East,Hypertension,FAC-04
+PT-000106,80+,F,917,West,COPD,FAC-02
+PT-000107,80+,F,101,East,Chronic Kidney Disease,FAC-04
+PT-000108,35-49,M,621,Central,Chronic Kidney Disease,FAC-03
+PT-000109,35-49,M,583,North,Diabetes,FAC-01
+PT-000110,65-79,F,583,North,Hypertension,FAC-01
+PT-000111,35-49,F,306,South,None,FAC-05
+PT-000112,65-79,M,556,North,Asthma,FAC-01
+PT-000113,35-49,F,107,East,Diabetes,FAC-04
+PT-000114,65-79,M,590,North,None,FAC-01
+PT-000115,35-49,F,554,North,Chronic Kidney Disease,FAC-01
+PT-000116,0-17,F,574,North,Asthma,FAC-01
+PT-000117,50-64,M,583,North,None,FAC-01
+PT-000118,65-79,F,931,West,None,FAC-02
+PT-000119,35-49,Other,919,West,Diabetes,FAC-02
+PT-000120,35-49,M,912,West,None,FAC-02
+PT-000121,35-49,F,563,North,Chronic Kidney Disease,FAC-01
+PT-000122,35-49,F,911,West,Asthma,FAC-02
+PT-000123,80+,M,566,North,Diabetes,FAC-01
+PT-000124,80+,M,619,Central,Congestive Heart Failure,FAC-03
+PT-000125,65-79,M,937,West,Chronic Kidney Disease,FAC-02
+PT-000126,65-79,M,637,Central,Chronic Kidney Disease,FAC-03
+PT-000127,80+,M,127,East,Asthma,FAC-04
+PT-000128,50-64,M,614,Central,Chronic Kidney Disease,FAC-03
+PT-000129,0-17,M,571,North,Hypertension,FAC-01
+PT-000130,65-79,F,582,North,Asthma,FAC-01
+PT-000131,65-79,M,331,South,Chronic Kidney Disease,FAC-05
+PT-000132,50-64,F,577,North,Diabetes,FAC-01
+PT-000133,35-49,M,586,North,Congestive Heart Failure,FAC-01
+PT-000134,65-79,F,575,North,Diabetes,FAC-01
+PT-000135,50-64,M,562,North,Diabetes,FAC-01
+PT-000136,35-49,F,558,North,COPD,FAC-01
+PT-000137,65-79,M,589,North,None,FAC-01
+PT-000138,18-34,M,902,West,Chronic Kidney Disease,FAC-02
+PT-000139,65-79,F,916,West,None,FAC-02
+PT-000140,0-17,M,121,East,Hypertension,FAC-04
+PT-000141,18-34,F,908,West,Diabetes,FAC-02
+PT-000142,35-49,M,565,North,COPD,FAC-01
+PT-000143,65-79,M,118,East,Hypertension,FAC-04
+PT-000144,50-64,F,337,South,Diabetes,FAC-05
+PT-000145,18-34,F,560,North,None,FAC-01
+PT-000146,35-49,F,615,Central,Hypertension,FAC-03
+PT-000147,18-34,F,589,North,Congestive Heart Failure,FAC-01
+PT-000148,65-79,F,610,Central,None,FAC-03
+PT-000149,65-79,F,556,North,COPD,FAC-01
+PT-000150,50-64,M,585,North,Chronic Kidney Disease,FAC-01
+PT-000151,0-17,F,117,East,Diabetes,FAC-04
+PT-000152,65-79,M,328,South,Congestive Heart Failure,FAC-05
+PT-000153,50-64,F,588,North,Hypertension,FAC-01
+PT-000154,50-64,M,564,North,COPD,FAC-01
+PT-000155,50-64,M,114,East,Asthma,FAC-04
+PT-000156,80+,M,923,West,Hypertension,FAC-02
+PT-000157,65-79,Unknown,902,West,Hypertension,FAC-02
+PT-000158,65-79,F,318,South,None,FAC-05
+PT-000159,35-49,F,617,Central,Hypertension,FAC-03
+PT-000160,65-79,M,924,West,Chronic Kidney Disease,FAC-02
+PT-000161,50-64,M,927,West,Asthma,FAC-02
+PT-000162,50-64,F,915,West,None,FAC-02
+PT-000163,50-64,F,334,South,COPD,FAC-05
+PT-000164,35-49,F,110,East,Diabetes,FAC-04
+PT-000165,65-79,M,558,North,COPD,FAC-01
+PT-000166,18-34,Other,624,Central,Congestive Heart Failure,FAC-03
+PT-000167,65-79,F,906,West,Diabetes,FAC-02
+PT-000168,18-34,F,584,North,None,FAC-01
+PT-000169,35-49,Other,567,North,Diabetes,FAC-01
+PT-000170,35-49,F,585,North,Diabetes,FAC-01
+PT-000171,50-64,M,912,West,Hypertension,FAC-02
+PT-000172,35-49,F,569,North,Diabetes,FAC-01
+PT-000173,18-34,F,561,North,Congestive Heart Failure,FAC-01
+PT-000174,0-17,F,625,Central,Congestive Heart Failure,FAC-03
+PT-000175,80+,Other,121,East,Congestive Heart Failure,FAC-04
+PT-000176,50-64,F,564,North,Hypertension,FAC-01
+PT-000177,18-34,F,589,North,Hypertension,FAC-01
+PT-000178,18-34,M,604,Central,Asthma,FAC-03
+PT-000179,18-34,F,587,North,Diabetes,FAC-01
+PT-000180,18-34,M,614,Central,Hypertension,FAC-03
+PT-000181,18-34,M,901,West,Hypertension,FAC-02
+PT-000182,65-79,F,134,East,None,FAC-04
+PT-000183,50-64,Unknown,554,North,COPD,FAC-01
+PT-000184,0-17,F,565,North,Diabetes,FAC-01
+PT-000185,80+,M,574,North,Congestive Heart Failure,FAC-01
+PT-000186,35-49,F,550,North,Congestive Heart Failure,FAC-01
+PT-000187,80+,M,565,North,Congestive Heart Failure,FAC-01
+PT-000188,18-34,M,576,North,Diabetes,FAC-01
+PT-000189,0-17,M,118,East,Diabetes,FAC-04
+PT-000190,65-79,M,603,Central,Hypertension,FAC-03
+PT-000191,50-64,M,558,North,COPD,FAC-01
+PT-000192,65-79,F,338,South,None,FAC-05
+PT-000193,65-79,M,340,South,Diabetes,FAC-05
+PT-000194,50-64,M,565,North,None,FAC-01
+PT-000195,18-34,M,607,Central,Asthma,FAC-03
+PT-000196,35-49,F,901,West,COPD,FAC-02
+PT-000197,0-17,M,571,North,Congestive Heart Failure,FAC-01
+PT-000198,65-79,M,940,West,COPD,FAC-02
+PT-000199,50-64,M,121,East,Chronic Kidney Disease,FAC-04
+PT-000200,65-79,F,333,South,Hypertension,FAC-05
+PT-000201,18-34,M,940,West,COPD,FAC-02
+PT-000202,65-79,F,610,Central,COPD,FAC-03
+PT-000203,0-17,M,562,North,COPD,FAC-01
+PT-000204,18-34,M,124,East,Asthma,FAC-04
+PT-000205,35-49,F,583,North,Diabetes,FAC-01
+PT-000206,0-17,M,117,East,None,FAC-04
+PT-000207,50-64,F,909,West,None,FAC-02
+PT-000208,35-49,F,911,West,Hypertension,FAC-02
+PT-000209,65-79,F,551,North,Hypertension,FAC-01
+PT-000210,35-49,F,934,West,Hypertension,FAC-02
+PT-000211,65-79,M,330,South,None,FAC-05
+PT-000212,0-17,M,103,East,Hypertension,FAC-04
+PT-000213,35-49,F,931,West,Hypertension,FAC-02
+PT-000214,0-17,F,922,West,COPD,FAC-02
+PT-000215,35-49,F,572,North,Hypertension,FAC-01
+PT-000216,50-64,F,554,North,Congestive Heart Failure,FAC-01
+PT-000217,18-34,M,589,North,None,FAC-01
+PT-000218,0-17,M,110,East,Diabetes,FAC-04
+PT-000219,18-34,F,918,West,Chronic Kidney Disease,FAC-02
+PT-000220,18-34,F,556,North,Congestive Heart Failure,FAC-01
+PT-000221,35-49,M,112,East,Diabetes,FAC-04
+PT-000222,50-64,M,901,West,Asthma,FAC-02
+PT-000223,50-64,F,107,East,Congestive Heart Failure,FAC-04
+PT-000224,0-17,F,565,North,COPD,FAC-01
+PT-000225,35-49,M,586,North,None,FAC-01
+PT-000226,18-34,M,919,West,Diabetes,FAC-02
+PT-000227,35-49,F,555,North,Diabetes,FAC-01
+PT-000228,0-17,M,553,North,Hypertension,FAC-01
+PT-000229,50-64,M,918,West,Asthma,FAC-02
+PT-000230,50-64,M,940,West,Diabetes,FAC-02
+PT-000231,0-17,F,129,East,Chronic Kidney Disease,FAC-04
+PT-000232,65-79,M,121,East,Asthma,FAC-04
+PT-000233,80+,Other,577,North,COPD,FAC-01
+PT-000234,50-64,M,620,Central,Chronic Kidney Disease,FAC-03
+PT-000235,50-64,M,117,East,Diabetes,FAC-04
+PT-000236,50-64,F,922,West,COPD,FAC-02
+PT-000237,35-49,M,561,North,None,FAC-01
+PT-000238,35-49,M,128,East,None,FAC-04
+PT-000239,18-34,M,553,North,COPD,FAC-01
+PT-000240,35-49,M,585,North,Congestive Heart Failure,FAC-01
+PT-000241,35-49,F,326,South,None,FAC-05
+PT-000242,18-34,M,915,West,Diabetes,FAC-02
+PT-000243,18-34,Other,901,West,Diabetes,FAC-02
+PT-000244,65-79,F,118,East,None,FAC-04
+PT-000245,50-64,M,115,East,Congestive Heart Failure,FAC-04
+PT-000246,50-64,M,581,North,Diabetes,FAC-01
+PT-000247,35-49,F,589,North,Hypertension,FAC-01
+PT-000248,65-79,M,565,North,None,FAC-01
+PT-000249,50-64,F,333,South,COPD,FAC-05
+PT-000250,65-79,M,556,North,Hypertension,FAC-01
+PT-000251,65-79,F,567,North,Hypertension,FAC-01
+PT-000252,80+,M,904,West,Hypertension,FAC-02
+PT-000253,35-49,M,133,East,Congestive Heart Failure,FAC-04
+PT-000254,50-64,F,936,West,COPD,FAC-02
+PT-000255,65-79,M,550,North,Asthma,FAC-01
+PT-000256,65-79,F,609,Central,Hypertension,FAC-03
+PT-000257,35-49,M,922,West,None,FAC-02
+PT-000258,50-64,F,925,West,Asthma,FAC-02
+PT-000259,65-79,F,907,West,Congestive Heart Failure,FAC-02
+PT-000260,18-34,F,907,West,Chronic Kidney Disease,FAC-02
+PT-000261,0-17,F,938,West,Congestive Heart Failure,FAC-02
+PT-000262,35-49,M,605,Central,COPD,FAC-03
+PT-000263,0-17,F,610,Central,Hypertension,FAC-03
+PT-000264,50-64,F,107,East,Diabetes,FAC-04
+PT-000265,65-79,F,928,West,Hypertension,FAC-02
+PT-000266,65-79,M,564,North,COPD,FAC-01
+PT-000267,0-17,M,569,North,Chronic Kidney Disease,FAC-01
+PT-000268,65-79,M,136,East,Hypertension,FAC-04
+PT-000269,50-64,M,129,East,Congestive Heart Failure,FAC-04
+PT-000270,80+,F,930,West,Diabetes,FAC-02
+PT-000271,50-64,F,552,North,Chronic Kidney Disease,FAC-01
+PT-000272,18-34,F,134,East,None,FAC-04
+PT-000273,80+,M,102,East,None,FAC-04
+PT-000274,65-79,M,119,East,Hypertension,FAC-04
+PT-000275,65-79,F,300,South,Hypertension,FAC-05
+PT-000276,18-34,M,919,West,Diabetes,FAC-02
+PT-000277,50-64,F,114,East,None,FAC-04
+PT-000278,0-17,F,105,East,COPD,FAC-04
+PT-000279,18-34,F,917,West,None,FAC-02
+PT-000280,35-49,F,614,Central,Chronic Kidney Disease,FAC-03
+PT-000281,0-17,M,120,East,Diabetes,FAC-04
+PT-000282,35-49,F,932,West,Congestive Heart Failure,FAC-02
+PT-000283,35-49,F,587,North,Chronic Kidney Disease,FAC-01
+PT-000284,18-34,F,559,North,None,FAC-01
+PT-000285,18-34,F,124,East,Diabetes,FAC-04
+PT-000286,50-64,F,340,South,Hypertension,FAC-05
+PT-000287,35-49,F,913,West,None,FAC-02
+PT-000288,80+,M,568,North,None,FAC-01
+PT-000289,50-64,F,927,West,Chronic Kidney Disease,FAC-02
+PT-000290,35-49,M,103,East,Asthma,FAC-04
+PT-000291,50-64,F,633,Central,Diabetes,FAC-03
+PT-000292,0-17,F,566,North,Diabetes,FAC-01
+PT-000293,35-49,F,612,Central,Diabetes,FAC-03
+PT-000294,18-34,F,580,North,Hypertension,FAC-01
+PT-000295,0-17,F,557,North,Congestive Heart Failure,FAC-01
+PT-000296,18-34,F,917,West,Diabetes,FAC-02
+PT-000297,80+,M,118,East,COPD,FAC-04
+PT-000298,18-34,M,573,North,Chronic Kidney Disease,FAC-01
+PT-000299,80+,F,124,East,Diabetes,FAC-04
+PT-000300,18-34,F,551,North,Diabetes,FAC-01
+PT-000301,0-17,M,565,North,Diabetes,FAC-01
+PT-000302,50-64,M,127,East,Diabetes,FAC-04
+PT-000303,35-49,M,554,North,COPD,FAC-01
+PT-000304,80+,F,575,North,Hypertension,FAC-01
+PT-000305,35-49,M,938,West,COPD,FAC-02
+PT-000306,50-64,M,604,Central,Congestive Heart Failure,FAC-03
+PT-000307,35-49,M,918,West,Hypertension,FAC-02
+PT-000308,0-17,M,585,North,Chronic Kidney Disease,FAC-01
+PT-000309,65-79,M,572,North,None,FAC-01
+PT-000310,18-34,M,117,East,None,FAC-04
+PT-000311,0-17,F,923,West,Hypertension,FAC-02
+PT-000312,80+,Unknown,616,Central,Hypertension,FAC-03
+PT-000313,18-34,F,132,East,Hypertension,FAC-04
+PT-000314,80+,F,109,East,Asthma,FAC-04
+PT-000315,50-64,Unknown,929,West,Congestive Heart Failure,FAC-02
+PT-000316,65-79,M,939,West,COPD,FAC-02
+PT-000317,50-64,M,932,West,None,FAC-02
+PT-000318,50-64,F,580,North,Asthma,FAC-01
+PT-000319,50-64,F,939,West,Congestive Heart Failure,FAC-02
+PT-000320,0-17,F,101,East,Asthma,FAC-04
+PT-000321,18-34,M,636,Central,Hypertension,FAC-03
+PT-000322,18-34,F,937,West,Chronic Kidney Disease,FAC-02
+PT-000323,18-34,M,118,East,COPD,FAC-04
+PT-000324,50-64,M,925,West,COPD,FAC-02
+PT-000325,50-64,F,120,East,None,FAC-04
+PT-000326,18-34,F,925,West,Hypertension,FAC-02
+PT-000327,18-34,M,327,South,None,FAC-05
+PT-000328,35-49,F,590,North,Hypertension,FAC-01
+PT-000329,18-34,F,917,West,Hypertension,FAC-02
+PT-000330,50-64,F,586,North,COPD,FAC-01
+PT-000331,50-64,F,110,East,Hypertension,FAC-04
+PT-000332,35-49,F,900,West,Chronic Kidney Disease,FAC-02
+PT-000333,18-34,F,566,North,Hypertension,FAC-01
+PT-000334,18-34,M,119,East,Congestive Heart Failure,FAC-04
+PT-000335,35-49,M,122,East,None,FAC-04
+PT-000336,80+,M,932,West,Hypertension,FAC-02
+PT-000337,0-17,M,122,East,COPD,FAC-04
+PT-000338,65-79,M,935,West,Diabetes,FAC-02
+PT-000339,18-34,M,565,North,Chronic Kidney Disease,FAC-01
+PT-000340,0-17,F,615,Central,Diabetes,FAC-03
+PT-000341,0-17,M,582,North,Diabetes,FAC-01
+PT-000342,65-79,M,554,North,COPD,FAC-01
+PT-000343,50-64,F,612,Central,Diabetes,FAC-03
+PT-000344,18-34,F,936,West,COPD,FAC-02
+PT-000345,65-79,F,555,North,Diabetes,FAC-01
+PT-000346,18-34,F,904,West,None,FAC-02
+PT-000347,0-17,M,611,Central,Diabetes,FAC-03
+PT-000348,65-79,M,583,North,Diabetes,FAC-01
+PT-000349,50-64,M,908,West,Chronic Kidney Disease,FAC-02
+PT-000350,35-49,F,902,West,Hypertension,FAC-02
+PT-000351,0-17,M,552,North,None,FAC-01
+PT-000352,35-49,F,587,North,Diabetes,FAC-01
+PT-000353,18-34,M,931,West,Hypertension,FAC-02
+PT-000354,50-64,M,572,North,Hypertension,FAC-01
+PT-000355,18-34,M,573,North,Chronic Kidney Disease,FAC-01
+PT-000356,50-64,M,903,West,Hypertension,FAC-02
+PT-000357,35-49,F,633,Central,Congestive Heart Failure,FAC-03
+PT-000358,35-49,F,577,North,Diabetes,FAC-01
+PT-000359,50-64,F,932,West,Chronic Kidney Disease,FAC-02
+PT-000360,50-64,F,573,North,COPD,FAC-01
+PT-000361,35-49,M,609,Central,Chronic Kidney Disease,FAC-03
+PT-000362,50-64,F,568,North,Asthma,FAC-01
+PT-000363,18-34,F,114,East,Asthma,FAC-04
+PT-000364,0-17,M,131,East,None,FAC-04
+PT-000365,50-64,F,611,Central,Asthma,FAC-03
+PT-000366,50-64,Other,620,Central,Hypertension,FAC-03
+PT-000367,80+,F,570,North,Asthma,FAC-01
+PT-000368,65-79,F,900,West,Diabetes,FAC-02
+PT-000369,35-49,F,581,North,None,FAC-01
+PT-000370,18-34,M,909,West,Chronic Kidney Disease,FAC-02
+PT-000371,50-64,F,588,North,COPD,FAC-01
+PT-000372,35-49,Unknown,929,West,Congestive Heart Failure,FAC-02
+PT-000373,50-64,M,606,Central,Congestive Heart Failure,FAC-03
+PT-000374,50-64,F,576,North,Hypertension,FAC-01
+PT-000375,35-49,M,901,West,Hypertension,FAC-02
+PT-000376,18-34,F,618,Central,Hypertension,FAC-03
+PT-000377,50-64,F,562,North,Asthma,FAC-01
+PT-000378,50-64,M,558,North,Diabetes,FAC-01
+PT-000379,0-17,F,606,Central,Diabetes,FAC-03
+PT-000380,65-79,M,575,North,Asthma,FAC-01
+PT-000381,50-64,F,587,North,Asthma,FAC-01
+PT-000382,35-49,F,107,East,None,FAC-04
+PT-000383,65-79,F,921,West,Diabetes,FAC-02
+PT-000384,35-49,F,573,North,None,FAC-01
+PT-000385,65-79,F,554,North,COPD,FAC-01
+PT-000386,0-17,Other,550,North,Diabetes,FAC-01
+PT-000387,50-64,M,130,East,Diabetes,FAC-04
+PT-000388,80+,M,575,North,Diabetes,FAC-01
+PT-000389,18-34,M,911,West,COPD,FAC-02
+PT-000390,35-49,F,116,East,Hypertension,FAC-04
+PT-000391,50-64,F,604,Central,Diabetes,FAC-03
+PT-000392,0-17,M,900,West,Asthma,FAC-02
+PT-000393,0-17,M,903,West,None,FAC-02
+PT-000394,18-34,M,581,North,Chronic Kidney Disease,FAC-01
+PT-000395,35-49,M,138,East,Hypertension,FAC-04
+PT-000396,18-34,F,300,South,Asthma,FAC-05
+PT-000397,50-64,F,607,Central,None,FAC-03
+PT-000398,35-49,M,631,Central,Chronic Kidney Disease,FAC-03
+PT-000399,18-34,M,578,North,COPD,FAC-01
+PT-000400,18-34,Unknown,623,Central,Hypertension,FAC-03
+PT-000401,50-64,M,567,North,Diabetes,FAC-01
+PT-000402,65-79,F,923,West,Diabetes,FAC-02
+PT-000403,0-17,M,122,East,Diabetes,FAC-04
+PT-000404,50-64,F,123,East,Asthma,FAC-04
+PT-000405,0-17,F,928,West,Congestive Heart Failure,FAC-02
+PT-000406,50-64,M,621,Central,Diabetes,FAC-03
+PT-000407,50-64,F,561,North,Chronic Kidney Disease,FAC-01
+PT-000408,18-34,M,561,North,Hypertension,FAC-01
+PT-000409,65-79,F,550,North,None,FAC-01
+PT-000410,0-17,F,926,West,Asthma,FAC-02
+PT-000411,18-34,M,915,West,Congestive Heart Failure,FAC-02
+PT-000412,18-34,M,589,North,COPD,FAC-01
+PT-000413,50-64,F,310,South,Diabetes,FAC-05
+PT-000414,18-34,F,912,West,Diabetes,FAC-02
+PT-000415,18-34,M,579,North,Asthma,FAC-01
+PT-000416,65-79,F,101,East,Chronic Kidney Disease,FAC-04
+PT-000417,35-49,M,904,West,None,FAC-02
+PT-000418,65-79,F,563,North,None,FAC-01
+PT-000419,50-64,M,575,North,Diabetes,FAC-01
+PT-000420,80+,M,556,North,Congestive Heart Failure,FAC-01
+PT-000421,0-17,F,926,West,Congestive Heart Failure,FAC-02
+PT-000422,65-79,Unknown,335,South,Hypertension,FAC-05
+PT-000423,50-64,Unknown,585,North,Diabetes,FAC-01
+PT-000424,50-64,F,103,East,Diabetes,FAC-04
+PT-000425,50-64,F,586,North,Hypertension,FAC-01
+PT-000426,65-79,M,588,North,Asthma,FAC-01
+PT-000427,50-64,F,625,Central,Hypertension,FAC-03
+PT-000428,50-64,F,634,Central,Diabetes,FAC-03
+PT-000429,0-17,M,927,West,COPD,FAC-02
+PT-000430,80+,M,570,North,None,FAC-01
+PT-000431,0-17,F,118,East,Hypertension,FAC-04
+PT-000432,50-64,F,626,Central,Diabetes,FAC-03
+PT-000433,35-49,M,563,North,None,FAC-01
+PT-000434,18-34,F,938,West,Diabetes,FAC-02
+PT-000435,18-34,M,551,North,COPD,FAC-01
+PT-000436,35-49,Other,585,North,None,FAC-01
+PT-000437,18-34,F,575,North,COPD,FAC-01
+PT-000438,50-64,M,561,North,Congestive Heart Failure,FAC-01
+PT-000439,65-79,F,336,South,Congestive Heart Failure,FAC-05
+PT-000440,18-34,F,576,North,Diabetes,FAC-01
+PT-000441,65-79,F,932,West,Hypertension,FAC-02
+PT-000442,50-64,F,328,South,Asthma,FAC-05
+PT-000443,35-49,M,563,North,COPD,FAC-01
+PT-000444,65-79,M,937,West,None,FAC-02
+PT-000445,18-34,F,632,Central,Diabetes,FAC-03
+PT-000446,50-64,F,565,North,Congestive Heart Failure,FAC-01
+PT-000447,35-49,M,922,West,None,FAC-02
+PT-000448,80+,M,562,North,Diabetes,FAC-01
+PT-000449,50-64,M,927,West,None,FAC-02
+PT-000450,0-17,M,603,Central,Diabetes,FAC-03
+PT-000451,50-64,Other,910,West,None,FAC-02
+PT-000452,80+,F,106,East,Diabetes,FAC-04
+PT-000453,50-64,M,554,North,Diabetes,FAC-01
+PT-000454,80+,F,575,North,COPD,FAC-01
+PT-000455,35-49,M,940,West,Hypertension,FAC-02
+PT-000456,65-79,F,555,North,Asthma,FAC-01
+PT-000457,50-64,F,139,East,None,FAC-04
+PT-000458,50-64,M,561,North,Diabetes,FAC-01
+PT-000459,50-64,M,578,North,None,FAC-01
+PT-000460,0-17,F,920,West,Hypertension,FAC-02
+PT-000461,50-64,M,926,West,Asthma,FAC-02
+PT-000462,65-79,M,333,South,None,FAC-05
+PT-000463,35-49,F,938,West,Congestive Heart Failure,FAC-02
+PT-000464,65-79,M,590,North,Hypertension,FAC-01
+PT-000465,80+,M,903,West,Asthma,FAC-02
+PT-000466,50-64,M,555,North,None,FAC-01
+PT-000467,65-79,M,939,West,Hypertension,FAC-02
+PT-000468,65-79,F,574,North,Diabetes,FAC-01
+PT-000469,18-34,M,922,West,Chronic Kidney Disease,FAC-02
+PT-000470,35-49,M,120,East,Asthma,FAC-04
+PT-000471,65-79,M,912,West,COPD,FAC-02
+PT-000472,18-34,Other,921,West,Chronic Kidney Disease,FAC-02
+PT-000473,35-49,F,928,West,Hypertension,FAC-02
+PT-000474,35-49,M,936,West,Hypertension,FAC-02
+PT-000475,50-64,F,572,North,Congestive Heart Failure,FAC-01
+PT-000476,18-34,M,110,East,Congestive Heart Failure,FAC-04
+PT-000477,35-49,M,584,North,Congestive Heart Failure,FAC-01
+PT-000478,65-79,F,571,North,Congestive Heart Failure,FAC-01
+PT-000479,18-34,F,914,West,None,FAC-02
+PT-000480,50-64,F,579,North,Congestive Heart Failure,FAC-01
+PT-000481,80+,F,588,North,Hypertension,FAC-01
+PT-000482,35-49,F,569,North,Diabetes,FAC-01
+PT-000483,18-34,F,101,East,Asthma,FAC-04
+PT-000484,18-34,F,933,West,Diabetes,FAC-02
+PT-000485,65-79,M,926,West,COPD,FAC-02
+PT-000486,18-34,Other,569,North,Asthma,FAC-01
+PT-000487,18-34,F,575,North,Hypertension,FAC-01
+PT-000488,35-49,F,570,North,Hypertension,FAC-01
+PT-000489,35-49,F,933,West,Chronic Kidney Disease,FAC-02
+PT-000490,50-64,F,582,North,None,FAC-01
+PT-000491,35-49,F,938,West,Congestive Heart Failure,FAC-02
+PT-000492,65-79,F,901,West,None,FAC-02
+PT-000493,35-49,M,582,North,Asthma,FAC-01
+PT-000494,18-34,F,608,Central,Asthma,FAC-03
+PT-000495,65-79,F,583,North,Chronic Kidney Disease,FAC-01
+PT-000496,18-34,F,560,North,Diabetes,FAC-01
+PT-000497,18-34,F,632,Central,Diabetes,FAC-03
+PT-000498,18-34,M,112,East,None,FAC-04
+PT-000499,18-34,F,566,North,Asthma,FAC-01
+PT-000500,35-49,F,901,West,Hypertension,FAC-02
+PT-000501,18-34,F,553,North,None,FAC-01
+PT-000502,50-64,M,564,North,None,FAC-01
+PT-000503,0-17,M,921,West,Hypertension,FAC-02
+PT-000504,0-17,M,906,West,Hypertension,FAC-02
+PT-000505,65-79,M,103,East,Congestive Heart Failure,FAC-04
+PT-000506,80+,M,112,East,COPD,FAC-04
+PT-000507,18-34,M,554,North,Hypertension,FAC-01
+PT-000508,65-79,M,904,West,COPD,FAC-02
+PT-000509,18-34,F,904,West,Diabetes,FAC-02
+PT-000510,50-64,M,132,East,Chronic Kidney Disease,FAC-04
+PT-000511,35-49,M,114,East,Chronic Kidney Disease,FAC-04
+PT-000512,18-34,M,590,North,Chronic Kidney Disease,FAC-01
+PT-000513,35-49,F,928,West,Diabetes,FAC-02
+PT-000514,35-49,F,580,North,Congestive Heart Failure,FAC-01
+PT-000515,80+,F,927,West,None,FAC-02
+PT-000516,18-34,M,560,North,None,FAC-01
+PT-000517,65-79,F,608,Central,None,FAC-03
+PT-000518,35-49,F,927,West,COPD,FAC-02
+PT-000519,50-64,F,576,North,COPD,FAC-01
+PT-000520,35-49,F,581,North,None,FAC-01
+PT-000521,35-49,M,569,North,Diabetes,FAC-01
+PT-000522,65-79,F,304,South,Congestive Heart Failure,FAC-05
+PT-000523,18-34,M,325,South,Asthma,FAC-05
+PT-000524,35-49,F,632,Central,None,FAC-03
+PT-000525,18-34,M,922,West,COPD,FAC-02
+PT-000526,0-17,M,575,North,Congestive Heart Failure,FAC-01
+PT-000527,18-34,M,912,West,Hypertension,FAC-02
+PT-000528,18-34,F,123,East,Hypertension,FAC-04
+PT-000529,65-79,M,569,North,Hypertension,FAC-01
+PT-000530,65-79,F,918,West,Diabetes,FAC-02
+PT-000531,50-64,F,586,North,Asthma,FAC-01
+PT-000532,50-64,M,906,West,Hypertension,FAC-02
+PT-000533,35-49,M,108,East,COPD,FAC-04
+PT-000534,18-34,F,577,North,None,FAC-01
+PT-000535,65-79,F,636,Central,Asthma,FAC-03
+PT-000536,35-49,M,571,North,Hypertension,FAC-01
+PT-000537,18-34,M,610,Central,None,FAC-03
+PT-000538,80+,M,600,Central,Asthma,FAC-03
+PT-000539,0-17,M,568,North,Diabetes,FAC-01
+PT-000540,18-34,M,925,West,COPD,FAC-02
+PT-000541,50-64,M,906,West,None,FAC-02
+PT-000542,65-79,F,126,East,Congestive Heart Failure,FAC-04
+PT-000543,35-49,F,608,Central,Hypertension,FAC-03
+PT-000544,0-17,M,926,West,None,FAC-02
+PT-000545,0-17,F,639,Central,Asthma,FAC-03
+PT-000546,0-17,F,131,East,Diabetes,FAC-04
+PT-000547,0-17,M,581,North,COPD,FAC-01
+PT-000548,18-34,F,618,Central,Chronic Kidney Disease,FAC-03
+PT-000549,50-64,M,924,West,COPD,FAC-02
+PT-000550,65-79,M,933,West,Diabetes,FAC-02
+PT-000551,50-64,F,917,West,Hypertension,FAC-02
+PT-000552,35-49,M,557,North,Diabetes,FAC-01
+PT-000553,50-64,F,554,North,Hypertension,FAC-01
+PT-000554,80+,F,633,Central,Diabetes,FAC-03
+PT-000555,65-79,M,560,North,Hypertension,FAC-01
+PT-000556,80+,F,933,West,Hypertension,FAC-02
+PT-000557,65-79,F,560,North,Hypertension,FAC-01
+PT-000558,50-64,F,910,West,Hypertension,FAC-02
+PT-000559,50-64,M,918,West,Hypertension,FAC-02
+PT-000560,80+,Other,924,West,Hypertension,FAC-02
+PT-000561,65-79,M,586,North,Asthma,FAC-01
+PT-000562,50-64,F,124,East,Hypertension,FAC-04
+PT-000563,50-64,F,550,North,Chronic Kidney Disease,FAC-01
+PT-000564,0-17,F,571,North,Asthma,FAC-01
+PT-000565,50-64,M,928,West,Congestive Heart Failure,FAC-02
+PT-000566,35-49,F,105,East,Diabetes,FAC-04
+PT-000567,65-79,F,906,West,Hypertension,FAC-02
+PT-000568,50-64,Other,578,North,Hypertension,FAC-01
+PT-000569,50-64,F,905,West,Congestive Heart Failure,FAC-02
+PT-000570,35-49,F,582,North,Chronic Kidney Disease,FAC-01
+PT-000571,35-49,M,620,Central,Hypertension,FAC-03
+PT-000572,50-64,F,902,West,Hypertension,FAC-02
+PT-000573,18-34,M,561,North,Congestive Heart Failure,FAC-01
+PT-000574,50-64,M,920,West,Hypertension,FAC-02
+PT-000575,18-34,F,560,North,None,FAC-01
+PT-000576,80+,M,938,West,Diabetes,FAC-02
+PT-000577,65-79,M,580,North,None,FAC-01
+PT-000578,18-34,F,559,North,COPD,FAC-01
+PT-000579,18-34,M,583,North,Diabetes,FAC-01
+PT-000580,65-79,F,609,Central,Hypertension,FAC-03
+PT-000581,65-79,F,135,East,Chronic Kidney Disease,FAC-04
+PT-000582,0-17,F,111,East,Congestive Heart Failure,FAC-04
+PT-000583,50-64,M,935,West,Hypertension,FAC-02
+PT-000584,80+,F,119,East,None,FAC-04
+PT-000585,0-17,F,928,West,Asthma,FAC-02
+PT-000586,35-49,M,554,North,Diabetes,FAC-01
+PT-000587,50-64,F,138,East,Hypertension,FAC-04
+PT-000588,50-64,M,571,North,Diabetes,FAC-01
+PT-000589,50-64,M,569,North,Chronic Kidney Disease,FAC-01
+PT-000590,0-17,F,640,Central,Diabetes,FAC-03
+PT-000591,18-34,F,927,West,None,FAC-02
+PT-000592,50-64,M,338,South,Chronic Kidney Disease,FAC-05
+PT-000593,50-64,Other,623,Central,None,FAC-03
+PT-000594,35-49,F,914,West,Diabetes,FAC-02
+PT-000595,18-34,M,551,North,None,FAC-01
+PT-000596,50-64,F,580,North,Diabetes,FAC-01
+PT-000597,65-79,M,907,West,Asthma,FAC-02
+PT-000598,35-49,F,554,North,Congestive Heart Failure,FAC-01
+PT-000599,50-64,M,101,East,Hypertension,FAC-04
+PT-000600,0-17,M,324,South,Hypertension,FAC-05
+PT-000601,65-79,F,562,North,Hypertension,FAC-01
+PT-000602,35-49,F,614,Central,Congestive Heart Failure,FAC-03
+PT-000603,35-49,F,940,West,Hypertension,FAC-02
+PT-000604,50-64,F,117,East,Hypertension,FAC-04
+PT-000605,80+,F,129,East,Congestive Heart Failure,FAC-04
+PT-000606,50-64,F,901,West,Congestive Heart Failure,FAC-02
+PT-000607,65-79,F,570,North,Chronic Kidney Disease,FAC-01
+PT-000608,50-64,M,578,North,Diabetes,FAC-01
+PT-000609,50-64,M,575,North,COPD,FAC-01
+PT-000610,65-79,F,906,West,Diabetes,FAC-02
+PT-000611,50-64,F,130,East,Asthma,FAC-04
+PT-000612,0-17,F,125,East,None,FAC-04
+PT-000613,35-49,M,557,North,Asthma,FAC-01
+PT-000614,65-79,M,568,North,COPD,FAC-01
+PT-000615,18-34,F,916,West,Hypertension,FAC-02
+PT-000616,65-79,M,552,North,Congestive Heart Failure,FAC-01
+PT-000617,50-64,M,563,North,Hypertension,FAC-01
+PT-000618,65-79,F,901,West,None,FAC-02
+PT-000619,18-34,M,605,Central,COPD,FAC-03
+PT-000620,80+,F,914,West,Diabetes,FAC-02
+PT-000621,0-17,M,584,North,Hypertension,FAC-01
+PT-000622,80+,M,554,North,None,FAC-01
+PT-000623,50-64,M,566,North,Congestive Heart Failure,FAC-01
+PT-000624,0-17,M,629,Central,Hypertension,FAC-03
+PT-000625,18-34,F,910,West,COPD,FAC-02
+PT-000626,18-34,F,102,East,COPD,FAC-04
+PT-000627,35-49,F,572,North,None,FAC-01
+PT-000628,35-49,F,615,Central,Diabetes,FAC-03
+PT-000629,18-34,F,581,North,None,FAC-01
+PT-000630,0-17,M,928,West,COPD,FAC-02
+PT-000631,35-49,F,580,North,COPD,FAC-01
+PT-000632,18-34,M,925,West,None,FAC-02
+PT-000633,18-34,F,571,North,Chronic Kidney Disease,FAC-01
+PT-000634,18-34,F,111,East,COPD,FAC-04
+PT-000635,80+,F,578,North,Chronic Kidney Disease,FAC-01
+PT-000636,35-49,M,561,North,COPD,FAC-01
+PT-000637,65-79,Unknown,605,Central,Hypertension,FAC-03
+PT-000638,65-79,F,106,East,Hypertension,FAC-04
+PT-000639,0-17,F,572,North,Hypertension,FAC-01
+PT-000640,18-34,M,921,West,Diabetes,FAC-02
+PT-000641,65-79,M,923,West,COPD,FAC-02
+PT-000642,0-17,M,640,Central,COPD,FAC-03
+PT-000643,50-64,M,590,North,Diabetes,FAC-01
+PT-000644,35-49,M,308,South,Asthma,FAC-05
+PT-000645,0-17,F,927,West,Hypertension,FAC-02
+PT-000646,35-49,M,900,West,None,FAC-02
+PT-000647,35-49,M,906,West,COPD,FAC-02
+PT-000648,50-64,Unknown,582,North,Hypertension,FAC-01
+PT-000649,18-34,M,617,Central,COPD,FAC-03
+PT-000650,18-34,M,569,North,Congestive Heart Failure,FAC-01
+PT-000651,35-49,F,940,West,Hypertension,FAC-02
+PT-000652,35-49,F,112,East,Hypertension,FAC-04
+PT-000653,18-34,F,902,West,COPD,FAC-02
+PT-000654,50-64,Other,581,North,COPD,FAC-01
+PT-000655,50-64,F,564,North,Chronic Kidney Disease,FAC-01
+PT-000656,18-34,F,590,North,Congestive Heart Failure,FAC-01
+PT-000657,65-79,F,933,West,Diabetes,FAC-02
+PT-000658,35-49,F,625,Central,Hypertension,FAC-03
+PT-000659,35-49,M,300,South,Hypertension,FAC-05
+PT-000660,18-34,F,130,East,COPD,FAC-04
+PT-000661,35-49,F,623,Central,Diabetes,FAC-03
+PT-000662,50-64,F,620,Central,Hypertension,FAC-03
+PT-000663,18-34,M,571,North,Diabetes,FAC-01
+PT-000664,65-79,M,585,North,None,FAC-01
+PT-000665,50-64,M,565,North,Diabetes,FAC-01
+PT-000666,35-49,M,919,West,Chronic Kidney Disease,FAC-02
+PT-000667,65-79,M,555,North,Hypertension,FAC-01
+PT-000668,50-64,F,926,West,None,FAC-02
+PT-000669,35-49,F,559,North,Hypertension,FAC-01
+PT-000670,18-34,M,564,North,Asthma,FAC-01
+PT-000671,0-17,F,565,North,Hypertension,FAC-01
+PT-000672,18-34,F,567,North,COPD,FAC-01
+PT-000673,65-79,M,582,North,Hypertension,FAC-01
+PT-000674,65-79,F,559,North,Diabetes,FAC-01
+PT-000675,35-49,F,926,West,COPD,FAC-02
+PT-000676,35-49,F,590,North,Hypertension,FAC-01
+PT-000677,50-64,F,920,West,Diabetes,FAC-02
+PT-000678,0-17,F,583,North,Diabetes,FAC-01
+PT-000679,18-34,F,588,North,COPD,FAC-01
+PT-000680,35-49,F,124,East,Chronic Kidney Disease,FAC-04
+PT-000681,0-17,F,552,North,Diabetes,FAC-01
+PT-000682,50-64,M,588,North,Congestive Heart Failure,FAC-01
+PT-000683,50-64,F,905,West,Hypertension,FAC-02
+PT-000684,0-17,F,565,North,None,FAC-01
+PT-000685,65-79,M,121,East,COPD,FAC-04
+PT-000686,65-79,M,118,East,None,FAC-04
+PT-000687,65-79,Other,308,South,Diabetes,FAC-05
+PT-000688,50-64,F,113,East,Hypertension,FAC-04
+PT-000689,18-34,M,929,West,Diabetes,FAC-02
+PT-000690,35-49,F,615,Central,None,FAC-03
+PT-000691,35-49,M,577,North,Chronic Kidney Disease,FAC-01
+PT-000692,80+,F,580,North,Diabetes,FAC-01
+PT-000693,35-49,M,583,North,Asthma,FAC-01
+PT-000694,80+,M,901,West,Chronic Kidney Disease,FAC-02
+PT-000695,0-17,F,318,South,COPD,FAC-05
+PT-000696,35-49,F,612,Central,Chronic Kidney Disease,FAC-03
+PT-000697,18-34,M,589,North,Asthma,FAC-01
+PT-000698,80+,M,307,South,Asthma,FAC-05
+PT-000699,50-64,F,562,North,COPD,FAC-01
+PT-000700,65-79,F,940,West,None,FAC-02
+PT-000701,65-79,F,554,North,Asthma,FAC-01
+PT-000702,35-49,Other,556,North,Asthma,FAC-01
+PT-000703,65-79,F,551,North,Asthma,FAC-01
+PT-000704,50-64,F,565,North,Congestive Heart Failure,FAC-01
+PT-000705,50-64,M,902,West,Congestive Heart Failure,FAC-02
+PT-000706,35-49,F,908,West,Diabetes,FAC-02
+PT-000707,0-17,M,903,West,Chronic Kidney Disease,FAC-02
+PT-000708,18-34,F,552,North,Diabetes,FAC-01
+PT-000709,80+,M,581,North,Congestive Heart Failure,FAC-01
+PT-000710,50-64,M,580,North,Diabetes,FAC-01
+PT-000711,65-79,F,328,South,Hypertension,FAC-05
+PT-000712,35-49,F,339,South,Chronic Kidney Disease,FAC-05
+PT-000713,65-79,F,558,North,Hypertension,FAC-01
+PT-000714,35-49,M,100,East,Hypertension,FAC-04
+PT-000715,35-49,M,921,West,Diabetes,FAC-02
+PT-000716,50-64,F,323,South,Hypertension,FAC-05
+PT-000717,50-64,M,923,West,None,FAC-02
+PT-000718,80+,F,585,North,Congestive Heart Failure,FAC-01
+PT-000719,18-34,M,565,North,Diabetes,FAC-01
+PT-000720,18-34,F,939,West,Asthma,FAC-02
+PT-000721,65-79,M,125,East,None,FAC-04
+PT-000722,18-34,M,575,North,None,FAC-01
+PT-000723,18-34,F,625,Central,Chronic Kidney Disease,FAC-03
+PT-000724,65-79,F,621,Central,Chronic Kidney Disease,FAC-03
+PT-000725,18-34,M,909,West,Diabetes,FAC-02
+PT-000726,80+,M,935,West,Hypertension,FAC-02
+PT-000727,50-64,M,566,North,Hypertension,FAC-01
+PT-000728,65-79,M,616,Central,Diabetes,FAC-03
+PT-000729,0-17,M,610,Central,Asthma,FAC-03
+PT-000730,0-17,F,911,West,COPD,FAC-02
+PT-000731,65-79,M,551,North,COPD,FAC-01
+PT-000732,18-34,F,931,West,Chronic Kidney Disease,FAC-02
+PT-000733,65-79,M,938,West,None,FAC-02
+PT-000734,65-79,F,575,North,Diabetes,FAC-01
+PT-000735,18-34,M,567,North,Chronic Kidney Disease,FAC-01
+PT-000736,18-34,F,931,West,Chronic Kidney Disease,FAC-02
+PT-000737,18-34,M,139,East,Hypertension,FAC-04
+PT-000738,35-49,M,574,North,Hypertension,FAC-01
+PT-000739,35-49,F,929,West,Hypertension,FAC-02
+PT-000740,65-79,F,116,East,Diabetes,FAC-04
+PT-000741,65-79,F,902,West,Hypertension,FAC-02
+PT-000742,65-79,M,572,North,Chronic Kidney Disease,FAC-01
+PT-000743,35-49,M,582,North,None,FAC-01
+PT-000744,50-64,M,604,Central,Hypertension,FAC-03
+PT-000745,80+,M,564,North,Asthma,FAC-01
+PT-000746,35-49,M,102,East,None,FAC-04
+PT-000747,50-64,M,578,North,Congestive Heart Failure,FAC-01
+PT-000748,0-17,F,563,North,COPD,FAC-01
+PT-000749,0-17,M,311,South,Asthma,FAC-05
+PT-000750,18-34,F,121,East,Congestive Heart Failure,FAC-04
+PT-000751,50-64,M,555,North,Hypertension,FAC-01
+PT-000752,80+,F,579,North,Hypertension,FAC-01
+PT-000753,35-49,F,126,East,Hypertension,FAC-04
+PT-000754,18-34,M,935,West,Diabetes,FAC-02
+PT-000755,50-64,M,562,North,Diabetes,FAC-01
+PT-000756,18-34,M,588,North,Diabetes,FAC-01
+PT-000757,35-49,F,139,East,Hypertension,FAC-04
+PT-000758,0-17,F,138,East,Asthma,FAC-04
+PT-000759,35-49,F,554,North,Chronic Kidney Disease,FAC-01
+PT-000760,80+,M,902,West,COPD,FAC-02
+PT-000761,50-64,F,580,North,Asthma,FAC-01
+PT-000762,18-34,F,569,North,Hypertension,FAC-01
+PT-000763,50-64,M,910,West,Diabetes,FAC-02
+PT-000764,35-49,F,328,South,Diabetes,FAC-05
+PT-000765,18-34,M,311,South,COPD,FAC-05
+PT-000766,50-64,M,634,Central,Chronic Kidney Disease,FAC-03
+PT-000767,18-34,F,900,West,COPD,FAC-02
+PT-000768,50-64,M,940,West,Chronic Kidney Disease,FAC-02
+PT-000769,18-34,M,621,Central,COPD,FAC-03
+PT-000770,35-49,M,587,North,None,FAC-01
+PT-000771,50-64,F,108,East,Hypertension,FAC-04
+PT-000772,50-64,F,924,West,Chronic Kidney Disease,FAC-02
+PT-000773,50-64,F,583,North,Diabetes,FAC-01
+PT-000774,18-34,M,566,North,None,FAC-01
+PT-000775,50-64,F,588,North,Diabetes,FAC-01
+PT-000776,18-34,M,933,West,Diabetes,FAC-02
+PT-000777,65-79,F,122,East,Hypertension,FAC-04
+PT-000778,35-49,F,582,North,Congestive Heart Failure,FAC-01
+PT-000779,18-34,M,930,West,Congestive Heart Failure,FAC-02
+PT-000780,0-17,M,315,South,Diabetes,FAC-05
+PT-000781,50-64,M,918,West,Asthma,FAC-02
+PT-000782,50-64,F,629,Central,Diabetes,FAC-03
+PT-000783,65-79,F,105,East,Chronic Kidney Disease,FAC-04
+PT-000784,18-34,M,552,North,None,FAC-01
+PT-000785,50-64,M,630,Central,Chronic Kidney Disease,FAC-03
+PT-000786,18-34,Other,911,West,Hypertension,FAC-02
+PT-000787,50-64,F,940,West,Congestive Heart Failure,FAC-02
+PT-000788,65-79,M,556,North,Diabetes,FAC-01
+PT-000789,50-64,M,570,North,Asthma,FAC-01
+PT-000790,50-64,F,935,West,Diabetes,FAC-02
+PT-000791,50-64,M,572,North,COPD,FAC-01
+PT-000792,18-34,F,570,North,Asthma,FAC-01
+PT-000793,18-34,Other,577,North,Congestive Heart Failure,FAC-01
+PT-000794,35-49,F,578,North,Diabetes,FAC-01
+PT-000795,0-17,M,126,East,COPD,FAC-04
+PT-000796,50-64,M,131,East,Hypertension,FAC-04
+PT-000797,50-64,F,120,East,Hypertension,FAC-04
+PT-000798,18-34,M,334,South,Hypertension,FAC-05
+PT-000799,50-64,F,600,Central,Hypertension,FAC-03
+PT-000800,18-34,M,566,North,None,FAC-01
+PT-000801,65-79,F,580,North,None,FAC-01
+PT-000802,50-64,M,335,South,None,FAC-05
+PT-000803,18-34,F,915,West,Diabetes,FAC-02
+PT-000804,65-79,M,561,North,Hypertension,FAC-01
+PT-000805,50-64,M,102,East,Hypertension,FAC-04
+PT-000806,35-49,M,911,West,Diabetes,FAC-02
+PT-000807,35-49,F,572,North,None,FAC-01
+PT-000808,50-64,M,564,North,Chronic Kidney Disease,FAC-01
+PT-000809,18-34,M,100,East,Asthma,FAC-04
+PT-000810,80+,M,923,West,Asthma,FAC-02
+PT-000811,35-49,F,928,West,Diabetes,FAC-02
+PT-000812,35-49,M,118,East,Chronic Kidney Disease,FAC-04
+PT-000813,35-49,F,578,North,Diabetes,FAC-01
+PT-000814,65-79,F,590,North,Asthma,FAC-01
+PT-000815,80+,F,589,North,None,FAC-01
+PT-000816,65-79,F,132,East,None,FAC-04
+PT-000817,65-79,Unknown,935,West,Hypertension,FAC-02
+PT-000818,65-79,F,628,Central,Hypertension,FAC-03
+PT-000819,35-49,M,640,Central,Hypertension,FAC-03
+PT-000820,80+,M,932,West,COPD,FAC-02
+PT-000821,35-49,F,557,North,Chronic Kidney Disease,FAC-01
+PT-000822,65-79,F,618,Central,Diabetes,FAC-03
+PT-000823,35-49,M,583,North,Diabetes,FAC-01
+PT-000824,18-34,M,588,North,Diabetes,FAC-01
+PT-000825,0-17,M,921,West,Chronic Kidney Disease,FAC-02
+PT-000826,65-79,F,600,Central,Diabetes,FAC-03
+PT-000827,35-49,F,615,Central,None,FAC-03
+PT-000828,0-17,F,925,West,None,FAC-02
+PT-000829,35-49,F,568,North,Hypertension,FAC-01
+PT-000830,35-49,M,908,West,Asthma,FAC-02
+PT-000831,35-49,F,577,North,Asthma,FAC-01
+PT-000832,50-64,F,560,North,Asthma,FAC-01
+PT-000833,35-49,F,911,West,Asthma,FAC-02
+PT-000834,18-34,M,938,West,Diabetes,FAC-02
+PT-000835,50-64,F,618,Central,None,FAC-03
+PT-000836,50-64,M,623,Central,Hypertension,FAC-03
+PT-000837,35-49,M,923,West,Asthma,FAC-02
+PT-000838,65-79,F,623,Central,Hypertension,FAC-03
+PT-000839,80+,F,139,East,Diabetes,FAC-04
+PT-000840,35-49,F,912,West,Congestive Heart Failure,FAC-02
+PT-000841,35-49,M,118,East,Hypertension,FAC-04
+PT-000842,65-79,F,570,North,None,FAC-01
+PT-000843,65-79,M,608,Central,COPD,FAC-03
+PT-000844,65-79,M,104,East,Asthma,FAC-04
+PT-000845,65-79,F,589,North,Diabetes,FAC-01
+PT-000846,65-79,M,923,West,None,FAC-02
+PT-000847,0-17,Other,638,Central,None,FAC-03
+PT-000848,0-17,F,114,East,Hypertension,FAC-04
+PT-000849,65-79,M,909,West,Asthma,FAC-02
+PT-000850,80+,M,571,North,COPD,FAC-01
+PT-000851,65-79,F,917,West,COPD,FAC-02
+PT-000852,65-79,Other,127,East,Congestive Heart Failure,FAC-04
+PT-000853,35-49,M,571,North,Hypertension,FAC-01
+PT-000854,65-79,F,938,West,Asthma,FAC-02
+PT-000855,65-79,F,579,North,COPD,FAC-01
+PT-000856,0-17,F,906,West,Congestive Heart Failure,FAC-02
+PT-000857,18-34,M,634,Central,None,FAC-03
+PT-000858,50-64,F,111,East,COPD,FAC-04
+PT-000859,0-17,M,586,North,Hypertension,FAC-01
+PT-000860,35-49,M,113,East,Hypertension,FAC-04
+PT-000861,50-64,M,554,North,COPD,FAC-01
+PT-000862,35-49,F,924,West,Diabetes,FAC-02
+PT-000863,80+,F,579,North,None,FAC-01
+PT-000864,65-79,M,328,South,None,FAC-05
+PT-000865,18-34,F,626,Central,Hypertension,FAC-03
+PT-000866,35-49,M,585,North,Diabetes,FAC-01
+PT-000867,50-64,M,122,East,Diabetes,FAC-04
+PT-000868,65-79,M,111,East,Chronic Kidney Disease,FAC-04
+PT-000869,65-79,F,922,West,Chronic Kidney Disease,FAC-02
+PT-000870,18-34,M,558,North,None,FAC-01
+PT-000871,0-17,F,563,North,COPD,FAC-01
+PT-000872,35-49,M,124,East,None,FAC-04
+PT-000873,80+,F,600,Central,Chronic Kidney Disease,FAC-03
+PT-000874,50-64,M,933,West,Diabetes,FAC-02
+PT-000875,80+,M,585,North,Hypertension,FAC-01
+PT-000876,18-34,M,906,West,Chronic Kidney Disease,FAC-02
+PT-000877,18-34,F,609,Central,Diabetes,FAC-03
+PT-000878,18-34,M,633,Central,Chronic Kidney Disease,FAC-03
+PT-000879,35-49,M,925,West,None,FAC-02
+PT-000880,50-64,F,101,East,Hypertension,FAC-04
+PT-000881,50-64,M,583,North,Diabetes,FAC-01
+PT-000882,0-17,M,109,East,Hypertension,FAC-04
+PT-000883,65-79,M,917,West,Congestive Heart Failure,FAC-02
+PT-000884,18-34,F,136,East,Asthma,FAC-04
+PT-000885,50-64,F,134,East,COPD,FAC-04
+PT-000886,50-64,F,927,West,None,FAC-02
+PT-000887,35-49,F,551,North,Asthma,FAC-01
+PT-000888,0-17,F,556,North,Diabetes,FAC-01
+PT-000889,65-79,M,111,East,None,FAC-04
+PT-000890,35-49,M,550,North,Hypertension,FAC-01
+PT-000891,50-64,M,564,North,Hypertension,FAC-01
+PT-000892,18-34,F,637,Central,None,FAC-03
+PT-000893,18-34,M,565,North,COPD,FAC-01
+PT-000894,50-64,M,129,East,Diabetes,FAC-04
+PT-000895,0-17,F,560,North,Diabetes,FAC-01
+PT-000896,50-64,M,132,East,COPD,FAC-04
+PT-000897,50-64,F,118,East,COPD,FAC-04
+PT-000898,50-64,F,901,West,None,FAC-02
+PT-000899,50-64,M,587,North,None,FAC-01
+PT-000900,0-17,M,612,Central,None,FAC-03
+PT-000901,18-34,M,923,West,COPD,FAC-02
+PT-000902,80+,F,605,Central,Diabetes,FAC-03
+PT-000903,18-34,F,113,East,None,FAC-04
+PT-000904,18-34,F,560,North,Diabetes,FAC-01
+PT-000905,18-34,F,554,North,Hypertension,FAC-01
+PT-000906,65-79,M,552,North,Diabetes,FAC-01
+PT-000907,0-17,F,582,North,Hypertension,FAC-01
+PT-000908,0-17,F,916,West,None,FAC-02
+PT-000909,35-49,M,580,North,COPD,FAC-01
+PT-000910,50-64,F,583,North,Diabetes,FAC-01
+PT-000911,50-64,F,623,Central,None,FAC-03
+PT-000912,35-49,M,131,East,None,FAC-04
+PT-000913,65-79,F,564,North,Chronic Kidney Disease,FAC-01
+PT-000914,0-17,M,107,East,Hypertension,FAC-04
+PT-000915,35-49,F,919,West,COPD,FAC-02
+PT-000916,35-49,F,130,East,Chronic Kidney Disease,FAC-04
+PT-000917,80+,M,940,West,Hypertension,FAC-02
+PT-000918,35-49,M,581,North,Hypertension,FAC-01
+PT-000919,35-49,F,910,West,Diabetes,FAC-02
+PT-000920,35-49,F,550,North,Hypertension,FAC-01
+PT-000921,65-79,M,567,North,None,FAC-01
+PT-000922,65-79,F,559,North,None,FAC-01
+PT-000923,35-49,M,931,West,COPD,FAC-02
+PT-000924,18-34,M,585,North,Hypertension,FAC-01
+PT-000925,50-64,F,563,North,Hypertension,FAC-01
+PT-000926,18-34,M,567,North,None,FAC-01
+PT-000927,0-17,F,581,North,Diabetes,FAC-01
+PT-000928,65-79,F,568,North,Diabetes,FAC-01
+PT-000929,18-34,M,114,East,None,FAC-04
+PT-000930,0-17,F,112,East,Diabetes,FAC-04
+PT-000931,35-49,M,914,West,Asthma,FAC-02
+PT-000932,35-49,M,603,Central,Hypertension,FAC-03
+PT-000933,50-64,M,920,West,Congestive Heart Failure,FAC-02
+PT-000934,50-64,F,104,East,Diabetes,FAC-04
+PT-000935,35-49,F,562,North,None,FAC-01
+PT-000936,35-49,M,905,West,Hypertension,FAC-02
+PT-000937,0-17,F,138,East,Asthma,FAC-04
+PT-000938,35-49,F,907,West,Hypertension,FAC-02
+PT-000939,35-49,M,569,North,COPD,FAC-01
+PT-000940,65-79,F,138,East,Hypertension,FAC-04
+PT-000941,35-49,F,568,North,COPD,FAC-01
+PT-000942,18-34,M,919,West,Hypertension,FAC-02
+PT-000943,50-64,F,906,West,Diabetes,FAC-02
+PT-000944,35-49,M,934,West,COPD,FAC-02
+PT-000945,0-17,M,905,West,None,FAC-02
+PT-000946,18-34,F,622,Central,Diabetes,FAC-03
+PT-000947,65-79,F,325,South,Asthma,FAC-05
+PT-000948,65-79,F,560,North,COPD,FAC-01
+PT-000949,0-17,F,551,North,None,FAC-01
+PT-000950,80+,F,915,West,Diabetes,FAC-02
+PT-000951,50-64,M,903,West,Hypertension,FAC-02
+PT-000952,65-79,M,923,West,COPD,FAC-02
+PT-000953,35-49,M,561,North,Hypertension,FAC-01
+PT-000954,35-49,F,906,West,COPD,FAC-02
+PT-000955,65-79,F,909,West,Asthma,FAC-02
+PT-000956,65-79,F,589,North,Asthma,FAC-01
+PT-000957,65-79,M,907,West,Chronic Kidney Disease,FAC-02
+PT-000958,0-17,F,906,West,Hypertension,FAC-02
+PT-000959,18-34,F,578,North,None,FAC-01
+PT-000960,50-64,F,573,North,Diabetes,FAC-01
+PT-000961,0-17,F,908,West,None,FAC-02
+PT-000962,65-79,Unknown,303,South,Congestive Heart Failure,FAC-05
+PT-000963,50-64,M,338,South,None,FAC-05
+PT-000964,18-34,F,108,East,Chronic Kidney Disease,FAC-04
+PT-000965,18-34,M,589,North,Hypertension,FAC-01
+PT-000966,50-64,F,919,West,Diabetes,FAC-02
+PT-000967,50-64,M,915,West,Chronic Kidney Disease,FAC-02
+PT-000968,35-49,F,570,North,Diabetes,FAC-01
+PT-000969,35-49,F,575,North,COPD,FAC-01
+PT-000970,35-49,F,579,North,None,FAC-01
+PT-000971,50-64,F,105,East,Diabetes,FAC-04
+PT-000972,50-64,M,606,Central,None,FAC-03
+PT-000973,35-49,M,930,West,Diabetes,FAC-02
+PT-000974,35-49,F,634,Central,None,FAC-03
+PT-000975,18-34,F,936,West,Asthma,FAC-02
+PT-000976,80+,M,128,East,Congestive Heart Failure,FAC-04
+PT-000977,65-79,M,583,North,None,FAC-01
+PT-000978,18-34,F,576,North,Congestive Heart Failure,FAC-01
+PT-000979,0-17,M,131,East,Hypertension,FAC-04
+PT-000980,35-49,M,612,Central,Diabetes,FAC-03
+PT-000981,65-79,F,561,North,Hypertension,FAC-01
+PT-000982,35-49,F,340,South,Diabetes,FAC-05
+PT-000983,65-79,F,300,South,Hypertension,FAC-05
+PT-000984,50-64,F,576,North,Hypertension,FAC-01
+PT-000985,35-49,F,929,West,Hypertension,FAC-02
+PT-000986,50-64,F,138,East,Chronic Kidney Disease,FAC-04
+PT-000987,80+,F,931,West,None,FAC-02
+PT-000988,0-17,F,583,North,Diabetes,FAC-01
+PT-000989,35-49,F,636,Central,Asthma,FAC-03
+PT-000990,65-79,F,614,Central,COPD,FAC-03
+PT-000991,50-64,M,906,West,Asthma,FAC-02
+PT-000992,65-79,F,911,West,Hypertension,FAC-02
+PT-000993,65-79,F,572,North,Diabetes,FAC-01
+PT-000994,0-17,M,573,North,Asthma,FAC-01
+PT-000995,50-64,F,556,North,Chronic Kidney Disease,FAC-01
+PT-000996,35-49,F,903,West,None,FAC-02
+PT-000997,0-17,F,562,North,Diabetes,FAC-01
+PT-000998,0-17,M,565,North,COPD,FAC-01
+PT-000999,35-49,M,559,North,Diabetes,FAC-01
+PT-001000,35-49,M,574,North,Diabetes,FAC-01
+PT-001001,65-79,M,122,East,Hypertension,FAC-04
+PT-001002,50-64,M,923,West,Asthma,FAC-02
+PT-001003,18-34,M,910,West,Hypertension,FAC-02
+PT-001004,35-49,M,106,East,Asthma,FAC-04
+PT-001005,80+,M,585,North,Hypertension,FAC-01
+PT-001006,50-64,F,561,North,COPD,FAC-01
+PT-001007,35-49,F,101,East,Chronic Kidney Disease,FAC-04
+PT-001008,18-34,F,586,North,Diabetes,FAC-01
+PT-001009,65-79,F,104,East,None,FAC-04
+PT-001010,65-79,M,924,West,Hypertension,FAC-02
+PT-001011,35-49,F,579,North,None,FAC-01
+PT-001012,50-64,M,613,Central,Hypertension,FAC-03
+PT-001013,65-79,F,120,East,Diabetes,FAC-04
+PT-001014,65-79,F,565,North,COPD,FAC-01
+PT-001015,18-34,F,620,Central,None,FAC-03
+PT-001016,0-17,F,900,West,Congestive Heart Failure,FAC-02
+PT-001017,18-34,M,568,North,Congestive Heart Failure,FAC-01
+PT-001018,65-79,M,136,East,Congestive Heart Failure,FAC-04
+PT-001019,65-79,F,113,East,Diabetes,FAC-04
+PT-001020,18-34,F,612,Central,Congestive Heart Failure,FAC-03
+PT-001021,35-49,F,929,West,Hypertension,FAC-02
+PT-001022,35-49,M,935,West,COPD,FAC-02
+PT-001023,50-64,F,558,North,Chronic Kidney Disease,FAC-01
+PT-001024,35-49,F,910,West,Diabetes,FAC-02
+PT-001025,35-49,F,572,North,Hypertension,FAC-01
+PT-001026,18-34,M,579,North,Hypertension,FAC-01
+PT-001027,18-34,F,109,East,Chronic Kidney Disease,FAC-04
+PT-001028,35-49,F,579,North,None,FAC-01
+PT-001029,80+,F,911,West,Hypertension,FAC-02
+PT-001030,50-64,M,573,North,Congestive Heart Failure,FAC-01
+PT-001031,35-49,M,572,North,Diabetes,FAC-01
+PT-001032,18-34,F,335,South,COPD,FAC-05
+PT-001033,0-17,F,140,East,Congestive Heart Failure,FAC-04
+PT-001034,0-17,F,565,North,None,FAC-01
+PT-001035,0-17,F,919,West,Chronic Kidney Disease,FAC-02
+PT-001036,18-34,M,926,West,None,FAC-02
+PT-001037,35-49,F,622,Central,Asthma,FAC-03
+PT-001038,18-34,F,576,North,Hypertension,FAC-01
+PT-001039,0-17,M,630,Central,COPD,FAC-03
+PT-001040,50-64,M,564,North,Chronic Kidney Disease,FAC-01
+PT-001041,50-64,F,907,West,None,FAC-02
+PT-001042,0-17,M,609,Central,Hypertension,FAC-03
+PT-001043,0-17,M,938,West,None,FAC-02
+PT-001044,18-34,F,567,North,Diabetes,FAC-01
+PT-001045,50-64,M,126,East,Asthma,FAC-04
+PT-001046,50-64,F,559,North,COPD,FAC-01
+PT-001047,0-17,F,571,North,Hypertension,FAC-01
+PT-001048,35-49,F,570,North,None,FAC-01
+PT-001049,18-34,F,558,North,Hypertension,FAC-01
+PT-001050,35-49,F,903,West,Chronic Kidney Disease,FAC-02
+PT-001051,65-79,M,572,North,Congestive Heart Failure,FAC-01
+PT-001052,18-34,M,926,West,Hypertension,FAC-02
+PT-001053,50-64,M,107,East,Asthma,FAC-04
+PT-001054,50-64,F,910,West,Asthma,FAC-02
+PT-001055,0-17,F,629,Central,Hypertension,FAC-03
+PT-001056,50-64,M,558,North,Hypertension,FAC-01
+PT-001057,0-17,F,566,North,None,FAC-01
+PT-001058,18-34,F,640,Central,None,FAC-03
+PT-001059,18-34,M,572,North,Diabetes,FAC-01
+PT-001060,0-17,F,574,North,None,FAC-01
+PT-001061,0-17,F,587,North,None,FAC-01
+PT-001062,50-64,F,940,West,Chronic Kidney Disease,FAC-02
+PT-001063,65-79,F,606,Central,Asthma,FAC-03
+PT-001064,18-34,M,629,Central,Diabetes,FAC-03
+PT-001065,18-34,F,133,East,Hypertension,FAC-04
+PT-001066,50-64,M,120,East,Congestive Heart Failure,FAC-04
+PT-001067,0-17,M,927,West,COPD,FAC-02
+PT-001068,65-79,M,573,North,Hypertension,FAC-01
+PT-001069,35-49,M,923,West,Chronic Kidney Disease,FAC-02
+PT-001070,35-49,M,636,Central,Chronic Kidney Disease,FAC-03
+PT-001071,18-34,F,128,East,Asthma,FAC-04
+PT-001072,35-49,M,577,North,Diabetes,FAC-01
+PT-001073,50-64,M,927,West,Diabetes,FAC-02
+PT-001074,65-79,M,553,North,None,FAC-01
+PT-001075,50-64,M,580,North,Chronic Kidney Disease,FAC-01
+PT-001076,35-49,F,325,South,Diabetes,FAC-05
+PT-001077,0-17,M,557,North,None,FAC-01
+PT-001078,35-49,Other,584,North,Hypertension,FAC-01
+PT-001079,50-64,M,928,West,COPD,FAC-02
+PT-001080,18-34,M,586,North,COPD,FAC-01
+PT-001081,18-34,F,900,West,Asthma,FAC-02
+PT-001082,80+,F,937,West,Diabetes,FAC-02
+PT-001083,50-64,F,125,East,Diabetes,FAC-04
+PT-001084,50-64,F,576,North,Asthma,FAC-01
+PT-001085,35-49,F,319,South,Hypertension,FAC-05
+PT-001086,35-49,M,914,West,Asthma,FAC-02
+PT-001087,35-49,M,558,North,None,FAC-01
+PT-001088,65-79,F,918,West,None,FAC-02
+PT-001089,65-79,M,131,East,Hypertension,FAC-04
+PT-001090,18-34,F,124,East,Diabetes,FAC-04
+PT-001091,35-49,F,105,East,Hypertension,FAC-04
+PT-001092,65-79,F,583,North,COPD,FAC-01
+PT-001093,35-49,F,587,North,COPD,FAC-01
+PT-001094,65-79,M,566,North,COPD,FAC-01
+PT-001095,0-17,M,600,Central,None,FAC-03
+PT-001096,65-79,F,585,North,Diabetes,FAC-01
+PT-001097,50-64,M,932,West,None,FAC-02
+PT-001098,35-49,F,571,North,Chronic Kidney Disease,FAC-01
+PT-001099,65-79,F,913,West,Hypertension,FAC-02
+PT-001100,50-64,F,908,West,Congestive Heart Failure,FAC-02
+PT-001101,0-17,M,335,South,None,FAC-05
+PT-001102,35-49,M,572,North,COPD,FAC-01
+PT-001103,80+,F,924,West,None,FAC-02
+PT-001104,80+,F,637,Central,Asthma,FAC-03
+PT-001105,0-17,F,905,West,Hypertension,FAC-02
+PT-001106,50-64,M,928,West,Asthma,FAC-02
+PT-001107,18-34,M,101,East,Hypertension,FAC-04
+PT-001108,0-17,M,932,West,Hypertension,FAC-02
+PT-001109,50-64,M,550,North,Congestive Heart Failure,FAC-01
+PT-001110,35-49,F,624,Central,Diabetes,FAC-03
+PT-001111,80+,F,608,Central,COPD,FAC-03
+PT-001112,18-34,F,920,West,Asthma,FAC-02
+PT-001113,50-64,Other,618,Central,Diabetes,FAC-03
+PT-001114,50-64,M,559,North,Chronic Kidney Disease,FAC-01
+PT-001115,18-34,F,563,North,Hypertension,FAC-01
+PT-001116,0-17,F,939,West,Diabetes,FAC-02
+PT-001117,18-34,M,589,North,Hypertension,FAC-01
+PT-001118,35-49,F,919,West,Chronic Kidney Disease,FAC-02
+PT-001119,50-64,F,101,East,Hypertension,FAC-04
+PT-001120,18-34,F,915,West,COPD,FAC-02
+PT-001121,65-79,F,604,Central,COPD,FAC-03
+PT-001122,0-17,M,926,West,Chronic Kidney Disease,FAC-02
+PT-001123,65-79,F,603,Central,None,FAC-03
+PT-001124,80+,F,134,East,COPD,FAC-04
+PT-001125,80+,M,919,West,Hypertension,FAC-02
+PT-001126,65-79,F,105,East,Diabetes,FAC-04
+PT-001127,50-64,M,576,North,Hypertension,FAC-01
+PT-001128,50-64,F,585,North,Chronic Kidney Disease,FAC-01
+PT-001129,0-17,F,626,Central,Diabetes,FAC-03
+PT-001130,65-79,F,624,Central,Diabetes,FAC-03
+PT-001131,80+,M,929,West,Hypertension,FAC-02
+PT-001132,35-49,Other,933,West,Diabetes,FAC-02
+PT-001133,0-17,F,938,West,Congestive Heart Failure,FAC-02
+PT-001134,35-49,F,916,West,Hypertension,FAC-02
+PT-001135,65-79,F,574,North,Asthma,FAC-01
+PT-001136,35-49,F,105,East,Hypertension,FAC-04
+PT-001137,0-17,F,922,West,Hypertension,FAC-02
+PT-001138,65-79,M,563,North,COPD,FAC-01
+PT-001139,35-49,F,584,North,Hypertension,FAC-01
+PT-001140,65-79,M,906,West,Hypertension,FAC-02
+PT-001141,50-64,F,912,West,Chronic Kidney Disease,FAC-02
+PT-001142,50-64,F,911,West,COPD,FAC-02
+PT-001143,80+,M,558,North,Asthma,FAC-01
+PT-001144,18-34,M,583,North,Hypertension,FAC-01
+PT-001145,35-49,F,102,East,COPD,FAC-04
+PT-001146,50-64,F,569,North,None,FAC-01
+PT-001147,65-79,F,590,North,None,FAC-01
+PT-001148,80+,M,551,North,Asthma,FAC-01
+PT-001149,65-79,F,135,East,None,FAC-04
+PT-001150,80+,M,575,North,Congestive Heart Failure,FAC-01
+PT-001151,35-49,F,590,North,COPD,FAC-01
+PT-001152,35-49,M,918,West,Asthma,FAC-02
+PT-001153,18-34,F,574,North,COPD,FAC-01
+PT-001154,35-49,M,909,West,Congestive Heart Failure,FAC-02
+PT-001155,80+,M,589,North,Hypertension,FAC-01
+PT-001156,80+,M,922,West,Hypertension,FAC-02
+PT-001157,18-34,F,622,Central,Asthma,FAC-03
+PT-001158,18-34,F,559,North,COPD,FAC-01
+PT-001159,50-64,F,919,West,None,FAC-02
+PT-001160,80+,M,129,East,Hypertension,FAC-04
+PT-001161,65-79,M,565,North,Diabetes,FAC-01
+PT-001162,80+,F,129,East,Chronic Kidney Disease,FAC-04
+PT-001163,35-49,F,578,North,Hypertension,FAC-01
+PT-001164,35-49,F,136,East,Diabetes,FAC-04
+PT-001165,0-17,M,317,South,COPD,FAC-05
+PT-001166,80+,F,901,West,Diabetes,FAC-02
+PT-001167,35-49,F,582,North,Diabetes,FAC-01
+PT-001168,35-49,F,118,East,Hypertension,FAC-04
+PT-001169,50-64,F,930,West,COPD,FAC-02
+PT-001170,65-79,F,572,North,Diabetes,FAC-01
+PT-001171,50-64,M,120,East,None,FAC-04
+PT-001172,65-79,M,588,North,Asthma,FAC-01
+PT-001173,50-64,F,909,West,COPD,FAC-02
+PT-001174,18-34,M,104,East,COPD,FAC-04
+PT-001175,0-17,M,102,East,COPD,FAC-04
+PT-001176,35-49,M,565,North,Congestive Heart Failure,FAC-01
+PT-001177,50-64,F,611,Central,Asthma,FAC-03
+PT-001178,35-49,F,568,North,COPD,FAC-01
+PT-001179,35-49,F,908,West,Hypertension,FAC-02
+PT-001180,50-64,F,901,West,None,FAC-02
+PT-001181,35-49,F,570,North,Hypertension,FAC-01
+PT-001182,80+,M,567,North,Hypertension,FAC-01
+PT-001183,65-79,F,585,North,Diabetes,FAC-01
+PT-001184,35-49,F,567,North,Hypertension,FAC-01
+PT-001185,35-49,F,588,North,Asthma,FAC-01
+PT-001186,18-34,M,616,Central,Congestive Heart Failure,FAC-03
+PT-001187,65-79,F,108,East,Congestive Heart Failure,FAC-04
+PT-001188,35-49,F,909,West,Diabetes,FAC-02
+PT-001189,0-17,F,614,Central,Congestive Heart Failure,FAC-03
+PT-001190,18-34,F,589,North,Asthma,FAC-01
+PT-001191,65-79,M,913,West,Congestive Heart Failure,FAC-02
+PT-001192,80+,M,550,North,None,FAC-01
+PT-001193,50-64,F,931,West,COPD,FAC-02
+PT-001194,50-64,M,320,South,Hypertension,FAC-05
+PT-001195,35-49,M,556,North,Congestive Heart Failure,FAC-01
+PT-001196,65-79,M,903,West,COPD,FAC-02
+PT-001197,18-34,F,579,North,Hypertension,FAC-01
+PT-001198,80+,F,566,North,Chronic Kidney Disease,FAC-01
+PT-001199,35-49,M,570,North,None,FAC-01
+PT-001200,35-49,M,925,West,Diabetes,FAC-02
+PT-001201,65-79,F,912,West,Asthma,FAC-02
+PT-001202,35-49,M,563,North,Hypertension,FAC-01
+PT-001203,18-34,M,600,Central,Diabetes,FAC-03
+PT-001204,80+,F,909,West,Diabetes,FAC-02
+PT-001205,18-34,M,558,North,COPD,FAC-01
+PT-001206,0-17,M,919,West,Chronic Kidney Disease,FAC-02
+PT-001207,18-34,F,611,Central,Congestive Heart Failure,FAC-03
+PT-001208,50-64,F,921,West,Hypertension,FAC-02
+PT-001209,80+,M,574,North,COPD,FAC-01
+PT-001210,18-34,M,908,West,Asthma,FAC-02
+PT-001211,0-17,F,559,North,Hypertension,FAC-01
+PT-001212,65-79,M,127,East,Asthma,FAC-04
+PT-001213,65-79,M,580,North,None,FAC-01
+PT-001214,50-64,F,120,East,None,FAC-04
+PT-001215,35-49,M,933,West,None,FAC-02
+PT-001216,80+,F,624,Central,COPD,FAC-03
+PT-001217,50-64,F,101,East,None,FAC-04
+PT-001218,0-17,F,115,East,Diabetes,FAC-04
+PT-001219,18-34,M,567,North,None,FAC-01
+PT-001220,35-49,F,566,North,Diabetes,FAC-01
+PT-001221,50-64,M,577,North,Hypertension,FAC-01
+PT-001222,18-34,M,571,North,Hypertension,FAC-01
+PT-001223,0-17,F,914,West,Congestive Heart Failure,FAC-02
+PT-001224,50-64,M,577,North,Diabetes,FAC-01
+PT-001225,18-34,F,908,West,Hypertension,FAC-02
+PT-001226,18-34,F,552,North,None,FAC-01
+PT-001227,0-17,M,553,North,None,FAC-01
+PT-001228,50-64,F,925,West,Chronic Kidney Disease,FAC-02
+PT-001229,65-79,F,327,South,Asthma,FAC-05
+PT-001230,35-49,M,569,North,Chronic Kidney Disease,FAC-01
+PT-001231,65-79,F,901,West,Chronic Kidney Disease,FAC-02
+PT-001232,80+,M,925,West,Asthma,FAC-02
+PT-001233,50-64,M,929,West,Congestive Heart Failure,FAC-02
+PT-001234,18-34,F,556,North,COPD,FAC-01
+PT-001235,0-17,F,104,East,COPD,FAC-04
+PT-001236,18-34,F,570,North,Congestive Heart Failure,FAC-01
+PT-001237,35-49,M,908,West,Hypertension,FAC-02
+PT-001238,80+,M,122,East,Diabetes,FAC-04
+PT-001239,18-34,M,925,West,COPD,FAC-02
+PT-001240,18-34,F,557,North,Hypertension,FAC-01
+PT-001241,0-17,F,586,North,Chronic Kidney Disease,FAC-01
+PT-001242,50-64,M,576,North,Asthma,FAC-01
+PT-001243,35-49,F,554,North,Asthma,FAC-01
+PT-001244,35-49,M,933,West,Congestive Heart Failure,FAC-02
+PT-001245,65-79,M,586,North,Asthma,FAC-01
+PT-001246,65-79,M,106,East,None,FAC-04
+PT-001247,65-79,M,910,West,Hypertension,FAC-02
+PT-001248,80+,M,552,North,Congestive Heart Failure,FAC-01
+PT-001249,80+,F,932,West,COPD,FAC-02
+PT-001250,18-34,F,610,Central,Asthma,FAC-03
+PT-001251,65-79,M,587,North,Chronic Kidney Disease,FAC-01
+PT-001252,50-64,M,564,North,Hypertension,FAC-01
+PT-001253,65-79,F,906,West,Hypertension,FAC-02
+PT-001254,18-34,M,552,North,COPD,FAC-01
+PT-001255,65-79,M,911,West,COPD,FAC-02
+PT-001256,50-64,F,928,West,Asthma,FAC-02
+PT-001257,35-49,F,616,Central,Congestive Heart Failure,FAC-03
+PT-001258,65-79,M,606,Central,Chronic Kidney Disease,FAC-03
+PT-001259,65-79,M,563,North,Asthma,FAC-01
+PT-001260,50-64,F,618,Central,None,FAC-03
+PT-001261,50-64,M,633,Central,Asthma,FAC-03
+PT-001262,0-17,M,563,North,Hypertension,FAC-01
+PT-001263,65-79,F,553,North,Chronic Kidney Disease,FAC-01
+PT-001264,18-34,M,928,West,Diabetes,FAC-02
+PT-001265,0-17,M,113,East,Hypertension,FAC-04
+PT-001266,35-49,F,926,West,Asthma,FAC-02
+PT-001267,50-64,M,932,West,Chronic Kidney Disease,FAC-02
+PT-001268,35-49,F,912,West,Hypertension,FAC-02
+PT-001269,80+,M,627,Central,Hypertension,FAC-03
+PT-001270,65-79,M,110,East,Hypertension,FAC-04
+PT-001271,18-34,F,126,East,Asthma,FAC-04
+PT-001272,65-79,F,573,North,COPD,FAC-01
+PT-001273,35-49,F,584,North,COPD,FAC-01
+PT-001274,18-34,M,581,North,COPD,FAC-01
+PT-001275,35-49,F,940,West,Hypertension,FAC-02
+PT-001276,0-17,M,573,North,Congestive Heart Failure,FAC-01
+PT-001277,80+,M,604,Central,Asthma,FAC-03
+PT-001278,80+,M,115,East,Asthma,FAC-04
+PT-001279,35-49,M,583,North,Diabetes,FAC-01
+PT-001280,18-34,M,137,East,None,FAC-04
+PT-001281,65-79,F,576,North,Chronic Kidney Disease,FAC-01
+PT-001282,18-34,M,553,North,Hypertension,FAC-01
+PT-001283,50-64,M,571,North,Asthma,FAC-01
+PT-001284,65-79,F,589,North,Asthma,FAC-01
+PT-001285,0-17,F,929,West,Hypertension,FAC-02
+PT-001286,0-17,F,940,West,Hypertension,FAC-02
+PT-001287,18-34,F,611,Central,Hypertension,FAC-03
+PT-001288,0-17,M,305,South,Hypertension,FAC-05
+PT-001289,80+,F,581,North,Diabetes,FAC-01
+PT-001290,35-49,F,564,North,None,FAC-01
+PT-001291,50-64,F,581,North,Diabetes,FAC-01
+PT-001292,0-17,F,607,Central,Diabetes,FAC-03
+PT-001293,80+,M,554,North,None,FAC-01
+PT-001294,80+,F,569,North,Diabetes,FAC-01
+PT-001295,65-79,M,551,North,Hypertension,FAC-01
+PT-001296,65-79,M,558,North,Chronic Kidney Disease,FAC-01
+PT-001297,65-79,F,903,West,Diabetes,FAC-02
+PT-001298,50-64,F,565,North,Asthma,FAC-01
+PT-001299,50-64,M,908,West,Chronic Kidney Disease,FAC-02
+PT-001300,80+,F,574,North,None,FAC-01
+PT-001301,50-64,F,633,Central,Chronic Kidney Disease,FAC-03
+PT-001302,18-34,F,621,Central,Diabetes,FAC-03
+PT-001303,50-64,M,626,Central,None,FAC-03
+PT-001304,65-79,F,107,East,Asthma,FAC-04
+PT-001305,80+,F,919,West,COPD,FAC-02
+PT-001306,50-64,F,120,East,None,FAC-04
+PT-001307,50-64,F,565,North,Asthma,FAC-01
+PT-001308,35-49,F,914,West,Hypertension,FAC-02
+PT-001309,35-49,M,574,North,Diabetes,FAC-01
+PT-001310,18-34,F,561,North,Diabetes,FAC-01
+PT-001311,80+,F,132,East,Chronic Kidney Disease,FAC-04
+PT-001312,35-49,Other,560,North,None,FAC-01
+PT-001313,50-64,M,908,West,COPD,FAC-02
+PT-001314,50-64,M,601,Central,Diabetes,FAC-03
+PT-001315,65-79,F,933,West,None,FAC-02
+PT-001316,80+,M,573,North,Asthma,FAC-01
+PT-001317,50-64,F,920,West,None,FAC-02
+PT-001318,50-64,M,629,Central,COPD,FAC-03
+PT-001319,0-17,F,906,West,COPD,FAC-02
+PT-001320,35-49,F,552,North,Diabetes,FAC-01
+PT-001321,50-64,M,577,North,Congestive Heart Failure,FAC-01
+PT-001322,18-34,F,563,North,Hypertension,FAC-01
+PT-001323,50-64,F,624,Central,Asthma,FAC-03
+PT-001324,0-17,M,919,West,Congestive Heart Failure,FAC-02
+PT-001325,65-79,M,554,North,Diabetes,FAC-01
+PT-001326,50-64,F,904,West,Asthma,FAC-02
+PT-001327,50-64,F,625,Central,None,FAC-03
+PT-001328,35-49,F,601,Central,Hypertension,FAC-03
+PT-001329,35-49,F,126,East,Chronic Kidney Disease,FAC-04
+PT-001330,65-79,M,932,West,None,FAC-02
+PT-001331,80+,F,608,Central,None,FAC-03
+PT-001332,50-64,M,577,North,Asthma,FAC-01
+PT-001333,0-17,M,566,North,Diabetes,FAC-01
+PT-001334,65-79,M,918,West,Diabetes,FAC-02
+PT-001335,35-49,F,565,North,None,FAC-01
+PT-001336,35-49,F,603,Central,Hypertension,FAC-03
+PT-001337,18-34,Other,926,West,Diabetes,FAC-02
+PT-001338,18-34,M,602,Central,Asthma,FAC-03
+PT-001339,50-64,F,135,East,Hypertension,FAC-04
+PT-001340,50-64,F,122,East,COPD,FAC-04
+PT-001341,35-49,F,568,North,Diabetes,FAC-01
+PT-001342,35-49,M,928,West,Diabetes,FAC-02
+PT-001343,0-17,M,612,Central,COPD,FAC-03
+PT-001344,50-64,F,933,West,Hypertension,FAC-02
+PT-001345,50-64,M,567,North,Hypertension,FAC-01
+PT-001346,0-17,F,562,North,Hypertension,FAC-01
+PT-001347,50-64,M,569,North,Hypertension,FAC-01
+PT-001348,0-17,F,902,West,Hypertension,FAC-02
+PT-001349,35-49,F,136,East,COPD,FAC-04
+PT-001350,65-79,F,570,North,Diabetes,FAC-01
+PT-001351,65-79,F,589,North,Chronic Kidney Disease,FAC-01
+PT-001352,65-79,F,910,West,Asthma,FAC-02
+PT-001353,0-17,M,338,South,Congestive Heart Failure,FAC-05
+PT-001354,35-49,M,573,North,Asthma,FAC-01
+PT-001355,80+,F,117,East,Hypertension,FAC-04
+PT-001356,0-17,F,585,North,Hypertension,FAC-01
+PT-001357,18-34,M,567,North,Asthma,FAC-01
+PT-001358,35-49,M,586,North,COPD,FAC-01
+PT-001359,65-79,M,340,South,Hypertension,FAC-05
+PT-001360,0-17,M,134,East,Hypertension,FAC-04
+PT-001361,65-79,F,565,North,None,FAC-01
+PT-001362,18-34,F,914,West,None,FAC-02
+PT-001363,65-79,M,582,North,Hypertension,FAC-01
+PT-001364,35-49,F,909,West,Asthma,FAC-02
+PT-001365,80+,F,911,West,Diabetes,FAC-02
+PT-001366,65-79,M,626,Central,Hypertension,FAC-03
+PT-001367,50-64,M,920,West,Chronic Kidney Disease,FAC-02
+PT-001368,0-17,F,903,West,Hypertension,FAC-02
+PT-001369,50-64,F,914,West,Hypertension,FAC-02
+PT-001370,50-64,M,110,East,Asthma,FAC-04
+PT-001371,18-34,M,124,East,None,FAC-04
+PT-001372,80+,Other,559,North,Hypertension,FAC-01
+PT-001373,50-64,M,579,North,Diabetes,FAC-01
+PT-001374,65-79,F,313,South,Hypertension,FAC-05
+PT-001375,50-64,F,932,West,Asthma,FAC-02
+PT-001376,50-64,F,138,East,Diabetes,FAC-04
+PT-001377,18-34,M,322,South,Asthma,FAC-05
+PT-001378,65-79,F,573,North,Hypertension,FAC-01
+PT-001379,50-64,F,565,North,COPD,FAC-01
+PT-001380,50-64,M,570,North,Congestive Heart Failure,FAC-01
+PT-001381,65-79,M,103,East,Diabetes,FAC-04
+PT-001382,50-64,M,937,West,COPD,FAC-02
+PT-001383,0-17,Other,922,West,Hypertension,FAC-02
+PT-001384,18-34,F,585,North,Hypertension,FAC-01
+PT-001385,18-34,F,907,West,None,FAC-02
+PT-001386,65-79,M,915,West,None,FAC-02
+PT-001387,65-79,F,300,South,Hypertension,FAC-05
+PT-001388,65-79,F,576,North,COPD,FAC-01
+PT-001389,65-79,Unknown,104,East,Congestive Heart Failure,FAC-04
+PT-001390,65-79,M,327,South,None,FAC-05
+PT-001391,0-17,F,569,North,Diabetes,FAC-01
+PT-001392,65-79,F,568,North,Hypertension,FAC-01
+PT-001393,35-49,M,562,North,Asthma,FAC-01
+PT-001394,65-79,Other,104,East,None,FAC-04
+PT-001395,50-64,F,913,West,Asthma,FAC-02
+PT-001396,35-49,F,903,West,COPD,FAC-02
+PT-001397,35-49,M,913,West,Hypertension,FAC-02
+PT-001398,65-79,M,566,North,Hypertension,FAC-01
+PT-001399,80+,M,575,North,Chronic Kidney Disease,FAC-01
+PT-001400,50-64,M,625,Central,COPD,FAC-03
+PT-001401,50-64,M,926,West,Diabetes,FAC-02
+PT-001402,18-34,M,581,North,Hypertension,FAC-01
+PT-001403,35-49,M,907,West,COPD,FAC-02
+PT-001404,50-64,M,919,West,Asthma,FAC-02
+PT-001405,0-17,M,556,North,Diabetes,FAC-01
+PT-001406,65-79,F,915,West,Chronic Kidney Disease,FAC-02
+PT-001407,35-49,M,324,South,Asthma,FAC-05
+PT-001408,65-79,M,571,North,Chronic Kidney Disease,FAC-01
+PT-001409,18-34,F,917,West,COPD,FAC-02
+PT-001410,80+,F,578,North,Hypertension,FAC-01
+PT-001411,0-17,M,579,North,Hypertension,FAC-01
+PT-001412,35-49,M,315,South,Hypertension,FAC-05
+PT-001413,0-17,F,565,North,Diabetes,FAC-01
+PT-001414,35-49,Other,136,East,Hypertension,FAC-04
+PT-001415,65-79,F,589,North,None,FAC-01
+PT-001416,35-49,M,909,West,Asthma,FAC-02
+PT-001417,18-34,M,559,North,Congestive Heart Failure,FAC-01
+PT-001418,0-17,M,586,North,Hypertension,FAC-01
+PT-001419,50-64,Other,935,West,Asthma,FAC-02
+PT-001420,80+,M,615,Central,Hypertension,FAC-03
+PT-001421,35-49,F,329,South,Hypertension,FAC-05
+PT-001422,80+,M,560,North,Chronic Kidney Disease,FAC-01
+PT-001423,50-64,M,568,North,Hypertension,FAC-01
+PT-001424,80+,M,100,East,Hypertension,FAC-04
+PT-001425,80+,F,590,North,None,FAC-01
+PT-001426,35-49,M,552,North,COPD,FAC-01
+PT-001427,50-64,M,551,North,None,FAC-01
+PT-001428,18-34,F,581,North,COPD,FAC-01
+PT-001429,50-64,M,614,Central,Diabetes,FAC-03
+PT-001430,50-64,F,567,North,Hypertension,FAC-01
+PT-001431,35-49,F,911,West,Hypertension,FAC-02
+PT-001432,50-64,M,107,East,Hypertension,FAC-04
+PT-001433,35-49,F,906,West,Asthma,FAC-02
+PT-001434,18-34,F,116,East,Congestive Heart Failure,FAC-04
+PT-001435,65-79,F,938,West,None,FAC-02
+PT-001436,18-34,M,940,West,COPD,FAC-02
+PT-001437,35-49,F,903,West,Diabetes,FAC-02
+PT-001438,65-79,F,930,West,None,FAC-02
+PT-001439,18-34,F,938,West,None,FAC-02
+PT-001440,50-64,F,915,West,None,FAC-02
+PT-001441,65-79,M,121,East,Hypertension,FAC-04
+PT-001442,0-17,F,561,North,Chronic Kidney Disease,FAC-01
+PT-001443,18-34,M,586,North,Hypertension,FAC-01
+PT-001444,65-79,M,933,West,Diabetes,FAC-02
+PT-001445,0-17,M,561,North,COPD,FAC-01
+PT-001446,65-79,F,611,Central,Congestive Heart Failure,FAC-03
+PT-001447,50-64,M,927,West,Congestive Heart Failure,FAC-02
+PT-001448,65-79,M,115,East,Congestive Heart Failure,FAC-04
+PT-001449,0-17,F,320,South,None,FAC-05
+PT-001450,35-49,F,937,West,None,FAC-02
+PT-001451,35-49,F,584,North,None,FAC-01
+PT-001452,35-49,Unknown,590,North,Chronic Kidney Disease,FAC-01
+PT-001453,0-17,Other,934,West,None,FAC-02
+PT-001454,35-49,F,552,North,COPD,FAC-01
+PT-001455,18-34,F,931,West,Hypertension,FAC-02
+PT-001456,50-64,M,579,North,COPD,FAC-01
+PT-001457,65-79,F,936,West,COPD,FAC-02
+PT-001458,0-17,F,613,Central,Diabetes,FAC-03
+PT-001459,35-49,F,570,North,Hypertension,FAC-01
+PT-001460,0-17,M,551,North,Hypertension,FAC-01
+PT-001461,80+,M,133,East,Congestive Heart Failure,FAC-04
+PT-001462,65-79,F,590,North,COPD,FAC-01
+PT-001463,18-34,F,569,North,Congestive Heart Failure,FAC-01
+PT-001464,35-49,F,576,North,None,FAC-01
+PT-001465,0-17,M,921,West,Diabetes,FAC-02
+PT-001466,35-49,M,580,North,Hypertension,FAC-01
+PT-001467,18-34,F,310,South,None,FAC-05
+PT-001468,18-34,F,929,West,Hypertension,FAC-02
+PT-001469,50-64,F,584,North,Diabetes,FAC-01
+PT-001470,65-79,M,606,Central,None,FAC-03
+PT-001471,35-49,F,568,North,Asthma,FAC-01
+PT-001472,0-17,M,921,West,COPD,FAC-02
+PT-001473,0-17,M,590,North,Asthma,FAC-01
+PT-001474,35-49,F,933,West,Diabetes,FAC-02
+PT-001475,50-64,F,558,North,Diabetes,FAC-01
+PT-001476,0-17,F,123,East,COPD,FAC-04
+PT-001477,0-17,F,914,West,COPD,FAC-02
+PT-001478,35-49,M,565,North,Diabetes,FAC-01
+PT-001479,35-49,F,578,North,Hypertension,FAC-01
+PT-001480,80+,F,581,North,COPD,FAC-01
+PT-001481,35-49,F,137,East,Congestive Heart Failure,FAC-04
+PT-001482,65-79,M,313,South,Diabetes,FAC-05
+PT-001483,80+,Other,576,North,Hypertension,FAC-01
+PT-001484,18-34,F,607,Central,None,FAC-03
+PT-001485,65-79,F,911,West,None,FAC-02
+PT-001486,35-49,F,137,East,Diabetes,FAC-04
+PT-001487,50-64,M,907,West,None,FAC-02
+PT-001488,18-34,F,635,Central,COPD,FAC-03
+PT-001489,35-49,F,568,North,Diabetes,FAC-01
+PT-001490,65-79,M,915,West,Diabetes,FAC-02
+PT-001491,35-49,F,561,North,Congestive Heart Failure,FAC-01
+PT-001492,18-34,F,605,Central,None,FAC-03
+PT-001493,50-64,F,566,North,Hypertension,FAC-01
+PT-001494,18-34,M,579,North,Hypertension,FAC-01
+PT-001495,80+,M,920,West,Diabetes,FAC-02
+PT-001496,18-34,M,910,West,None,FAC-02
+PT-001497,80+,F,939,West,Hypertension,FAC-02
+PT-001498,80+,M,563,North,Diabetes,FAC-01
+PT-001499,0-17,F,567,North,Hypertension,FAC-01
+PT-001500,50-64,M,603,Central,Asthma,FAC-03
+PT-001501,35-49,M,916,West,Chronic Kidney Disease,FAC-02
+PT-001502,50-64,M,578,North,COPD,FAC-01
+PT-001503,18-34,M,110,East,None,FAC-04
+PT-001504,80+,M,904,West,Hypertension,FAC-02
+PT-001505,50-64,M,560,North,None,FAC-01
+PT-001506,18-34,M,915,West,Diabetes,FAC-02
+PT-001507,35-49,F,555,North,Diabetes,FAC-01
+PT-001508,65-79,F,581,North,Chronic Kidney Disease,FAC-01
+PT-001509,35-49,M,567,North,Hypertension,FAC-01
+PT-001510,65-79,F,929,West,Diabetes,FAC-02
+PT-001511,0-17,F,572,North,COPD,FAC-01
+PT-001512,50-64,M,609,Central,None,FAC-03
+PT-001513,65-79,F,333,South,Asthma,FAC-05
+PT-001514,50-64,F,559,North,Hypertension,FAC-01
+PT-001515,0-17,F,909,West,Chronic Kidney Disease,FAC-02
+PT-001516,80+,F,923,West,Chronic Kidney Disease,FAC-02
+PT-001517,35-49,F,553,North,Congestive Heart Failure,FAC-01
+PT-001518,35-49,M,108,East,Asthma,FAC-04
+PT-001519,18-34,M,573,North,Diabetes,FAC-01
+PT-001520,0-17,M,917,West,Hypertension,FAC-02
+PT-001521,50-64,M,900,West,Asthma,FAC-02
+PT-001522,65-79,F,585,North,Hypertension,FAC-01
+PT-001523,50-64,M,905,West,Hypertension,FAC-02
+PT-001524,18-34,F,634,Central,Asthma,FAC-03
+PT-001525,0-17,F,907,West,COPD,FAC-02
+PT-001526,50-64,M,629,Central,Diabetes,FAC-03
+PT-001527,35-49,M,114,East,Chronic Kidney Disease,FAC-04
+PT-001528,50-64,M,903,West,Hypertension,FAC-02
+PT-001529,80+,M,603,Central,Hypertension,FAC-03
+PT-001530,65-79,F,920,West,Chronic Kidney Disease,FAC-02
+PT-001531,35-49,M,904,West,Diabetes,FAC-02
+PT-001532,50-64,F,935,West,Asthma,FAC-02
+PT-001533,18-34,F,584,North,Hypertension,FAC-01
+PT-001534,65-79,F,612,Central,None,FAC-03
+PT-001535,65-79,M,584,North,Congestive Heart Failure,FAC-01
+PT-001536,80+,M,630,Central,Hypertension,FAC-03
+PT-001537,35-49,F,917,West,COPD,FAC-02
+PT-001538,65-79,F,554,North,Hypertension,FAC-01
+PT-001539,50-64,M,931,West,COPD,FAC-02
+PT-001540,18-34,M,574,North,Hypertension,FAC-01
+PT-001541,50-64,F,940,West,Hypertension,FAC-02
+PT-001542,80+,M,103,East,Asthma,FAC-04
+PT-001543,35-49,M,627,Central,COPD,FAC-03
+PT-001544,18-34,F,915,West,Hypertension,FAC-02
+PT-001545,65-79,M,119,East,None,FAC-04
+PT-001546,65-79,F,550,North,Hypertension,FAC-01
+PT-001547,35-49,M,585,North,Congestive Heart Failure,FAC-01
+PT-001548,50-64,Other,927,West,Asthma,FAC-02
+PT-001549,65-79,F,590,North,Asthma,FAC-01
+PT-001550,65-79,M,587,North,Diabetes,FAC-01
+PT-001551,50-64,F,126,East,Congestive Heart Failure,FAC-04
+PT-001552,80+,F,112,East,None,FAC-04
+PT-001553,18-34,M,635,Central,Hypertension,FAC-03
+PT-001554,80+,F,100,East,Diabetes,FAC-04
+PT-001555,18-34,M,116,East,None,FAC-04
+PT-001556,18-34,M,576,North,None,FAC-01
+PT-001557,35-49,M,117,East,Chronic Kidney Disease,FAC-04
+PT-001558,35-49,F,554,North,Hypertension,FAC-01
+PT-001559,18-34,Unknown,615,Central,Hypertension,FAC-03
+PT-001560,65-79,F,557,North,Hypertension,FAC-01
+PT-001561,50-64,M,554,North,Diabetes,FAC-01
+PT-001562,0-17,M,582,North,COPD,FAC-01
+PT-001563,80+,M,553,North,COPD,FAC-01
+PT-001564,18-34,F,933,West,None,FAC-02
+PT-001565,35-49,F,909,West,Congestive Heart Failure,FAC-02
+PT-001566,65-79,F,579,North,Hypertension,FAC-01
+PT-001567,35-49,M,606,Central,Hypertension,FAC-03
+PT-001568,35-49,M,322,South,None,FAC-05
+PT-001569,65-79,M,610,Central,Diabetes,FAC-03
+PT-001570,18-34,M,614,Central,Hypertension,FAC-03
+PT-001571,18-34,F,913,West,Diabetes,FAC-02
+PT-001572,35-49,F,557,North,Congestive Heart Failure,FAC-01
+PT-001573,50-64,Unknown,904,West,Diabetes,FAC-02
+PT-001574,65-79,F,585,North,None,FAC-01
+PT-001575,35-49,M,585,North,Hypertension,FAC-01
+PT-001576,50-64,F,918,West,Diabetes,FAC-02
+PT-001577,50-64,F,920,West,Diabetes,FAC-02
+PT-001578,35-49,F,118,East,Chronic Kidney Disease,FAC-04
+PT-001579,50-64,F,308,South,Hypertension,FAC-05
+PT-001580,0-17,M,104,East,None,FAC-04
+PT-001581,65-79,F,550,North,Chronic Kidney Disease,FAC-01
+PT-001582,35-49,F,917,West,Chronic Kidney Disease,FAC-02
+PT-001583,0-17,F,928,West,Congestive Heart Failure,FAC-02
+PT-001584,65-79,M,576,North,Chronic Kidney Disease,FAC-01
+PT-001585,50-64,M,112,East,Diabetes,FAC-04
+PT-001586,0-17,M,567,North,Chronic Kidney Disease,FAC-01
+PT-001587,65-79,M,124,East,Chronic Kidney Disease,FAC-04
+PT-001588,35-49,F,553,North,Diabetes,FAC-01
+PT-001589,50-64,F,127,East,None,FAC-04
+PT-001590,35-49,F,573,North,None,FAC-01
+PT-001591,18-34,M,578,North,Hypertension,FAC-01
+PT-001592,50-64,M,634,Central,Diabetes,FAC-03
+PT-001593,35-49,F,932,West,Hypertension,FAC-02
+PT-001594,35-49,M,131,East,Diabetes,FAC-04
+PT-001595,35-49,F,939,West,COPD,FAC-02
+PT-001596,80+,F,112,East,COPD,FAC-04
+PT-001597,35-49,F,927,West,Hypertension,FAC-02
+PT-001598,18-34,F,300,South,None,FAC-05
+PT-001599,50-64,M,905,West,Hypertension,FAC-02
+PT-001600,80+,F,132,East,Congestive Heart Failure,FAC-04
+PT-001601,18-34,F,126,East,COPD,FAC-04
+PT-001602,80+,M,914,West,Asthma,FAC-02
+PT-001603,0-17,F,915,West,COPD,FAC-02
+PT-001604,35-49,F,563,North,None,FAC-01
+PT-001605,35-49,F,575,North,None,FAC-01
+PT-001606,50-64,F,574,North,Hypertension,FAC-01
+PT-001607,35-49,F,938,West,Diabetes,FAC-02
+PT-001608,50-64,F,589,North,Diabetes,FAC-01
+PT-001609,0-17,F,555,North,COPD,FAC-01
+PT-001610,50-64,M,565,North,Hypertension,FAC-01
+PT-001611,0-17,F,923,West,COPD,FAC-02
+PT-001612,18-34,F,126,East,Hypertension,FAC-04
+PT-001613,35-49,F,588,North,None,FAC-01
+PT-001614,35-49,F,589,North,Asthma,FAC-01
+PT-001615,35-49,F,565,North,Hypertension,FAC-01
+PT-001616,0-17,M,611,Central,Hypertension,FAC-03
+PT-001617,35-49,F,555,North,Hypertension,FAC-01
+PT-001618,18-34,M,554,North,None,FAC-01
+PT-001619,18-34,F,326,South,Diabetes,FAC-05
+PT-001620,35-49,M,924,West,COPD,FAC-02
+PT-001621,65-79,F,553,North,Congestive Heart Failure,FAC-01
+PT-001622,50-64,F,931,West,Diabetes,FAC-02
+PT-001623,50-64,M,572,North,None,FAC-01
+PT-001624,65-79,M,920,West,Congestive Heart Failure,FAC-02
+PT-001625,50-64,M,566,North,Hypertension,FAC-01
+PT-001626,18-34,F,132,East,Hypertension,FAC-04
+PT-001627,18-34,M,563,North,None,FAC-01
+PT-001628,18-34,Other,566,North,Asthma,FAC-01
+PT-001629,50-64,F,557,North,Diabetes,FAC-01
+PT-001630,65-79,M,561,North,Diabetes,FAC-01
+PT-001631,50-64,M,608,Central,Congestive Heart Failure,FAC-03
+PT-001632,18-34,F,126,East,Asthma,FAC-04
+PT-001633,50-64,F,576,North,Hypertension,FAC-01
+PT-001634,80+,F,905,West,None,FAC-02
+PT-001635,65-79,M,303,South,Hypertension,FAC-05
+PT-001636,50-64,F,590,North,Hypertension,FAC-01
+PT-001637,65-79,M,316,South,Asthma,FAC-05
+PT-001638,65-79,F,585,North,Hypertension,FAC-01
+PT-001639,0-17,F,306,South,Hypertension,FAC-05
+PT-001640,50-64,F,633,Central,None,FAC-03
+PT-001641,18-34,F,586,North,Congestive Heart Failure,FAC-01
+PT-001642,65-79,M,555,North,Hypertension,FAC-01
+PT-001643,18-34,M,586,North,Diabetes,FAC-01
+PT-001644,65-79,F,132,East,Hypertension,FAC-04
+PT-001645,18-34,F,136,East,COPD,FAC-04
+PT-001646,0-17,F,563,North,Asthma,FAC-01
+PT-001647,18-34,F,612,Central,Diabetes,FAC-03
+PT-001648,0-17,F,104,East,Asthma,FAC-04
+PT-001649,80+,F,589,North,Hypertension,FAC-01
+PT-001650,65-79,F,911,West,Chronic Kidney Disease,FAC-02
+PT-001651,35-49,M,557,North,Asthma,FAC-01
+PT-001652,18-34,F,105,East,COPD,FAC-04
+PT-001653,80+,M,568,North,Diabetes,FAC-01
+PT-001654,35-49,M,587,North,Diabetes,FAC-01
+PT-001655,0-17,F,311,South,Diabetes,FAC-05
+PT-001656,65-79,F,135,East,Asthma,FAC-04
+PT-001657,35-49,Other,625,Central,Asthma,FAC-03
+PT-001658,50-64,M,619,Central,Hypertension,FAC-03
+PT-001659,0-17,F,625,Central,Hypertension,FAC-03
+PT-001660,80+,F,117,East,Congestive Heart Failure,FAC-04
+PT-001661,35-49,F,317,South,Chronic Kidney Disease,FAC-05
+PT-001662,18-34,F,556,North,Diabetes,FAC-01
+PT-001663,35-49,M,583,North,Hypertension,FAC-01
+PT-001664,0-17,F,582,North,COPD,FAC-01
+PT-001665,0-17,F,940,West,Asthma,FAC-02
+PT-001666,35-49,F,576,North,Asthma,FAC-01
+PT-001667,35-49,M,583,North,Diabetes,FAC-01
+PT-001668,18-34,M,561,North,Diabetes,FAC-01
+PT-001669,50-64,M,622,Central,Diabetes,FAC-03
+PT-001670,18-34,F,311,South,Chronic Kidney Disease,FAC-05
+PT-001671,35-49,M,130,East,Diabetes,FAC-04
+PT-001672,80+,M,566,North,Diabetes,FAC-01
+PT-001673,35-49,M,900,West,Congestive Heart Failure,FAC-02
+PT-001674,18-34,F,565,North,None,FAC-01
+PT-001675,50-64,M,135,East,Diabetes,FAC-04
+PT-001676,35-49,M,620,Central,Hypertension,FAC-03
+PT-001677,80+,F,627,Central,Diabetes,FAC-03
+PT-001678,18-34,F,564,North,Diabetes,FAC-01
+PT-001679,18-34,F,926,West,COPD,FAC-02
+PT-001680,50-64,M,578,North,Asthma,FAC-01
+PT-001681,65-79,F,587,North,Hypertension,FAC-01
+PT-001682,50-64,M,562,North,None,FAC-01
+PT-001683,50-64,F,111,East,Hypertension,FAC-04
+PT-001684,50-64,F,122,East,Congestive Heart Failure,FAC-04
+PT-001685,18-34,M,553,North,Chronic Kidney Disease,FAC-01
+PT-001686,0-17,M,628,Central,Diabetes,FAC-03
+PT-001687,65-79,M,568,North,None,FAC-01
+PT-001688,0-17,M,550,North,Hypertension,FAC-01
+PT-001689,50-64,M,319,South,Diabetes,FAC-05
+PT-001690,50-64,M,901,West,Asthma,FAC-02
+PT-001691,18-34,M,563,North,None,FAC-01
+PT-001692,65-79,Other,577,North,None,FAC-01
+PT-001693,0-17,F,916,West,COPD,FAC-02
+PT-001694,80+,F,557,North,Diabetes,FAC-01
+PT-001695,18-34,F,116,East,Hypertension,FAC-04
+PT-001696,50-64,F,931,West,Hypertension,FAC-02
+PT-001697,50-64,F,101,East,Hypertension,FAC-04
+PT-001698,0-17,M,103,East,None,FAC-04
+PT-001699,35-49,F,933,West,Chronic Kidney Disease,FAC-02
+PT-001700,18-34,M,935,West,Congestive Heart Failure,FAC-02
+PT-001701,80+,F,583,North,None,FAC-01
+PT-001702,18-34,M,610,Central,Asthma,FAC-03
+PT-001703,35-49,M,329,South,Hypertension,FAC-05
+PT-001704,65-79,F,577,North,Congestive Heart Failure,FAC-01
+PT-001705,35-49,F,103,East,Diabetes,FAC-04
+PT-001706,50-64,M,558,North,COPD,FAC-01
+PT-001707,50-64,M,556,North,None,FAC-01
+PT-001708,35-49,M,900,West,Diabetes,FAC-02
+PT-001709,18-34,M,583,North,None,FAC-01
+PT-001710,80+,F,926,West,COPD,FAC-02
+PT-001711,35-49,F,554,North,COPD,FAC-01
+PT-001712,35-49,F,580,North,Diabetes,FAC-01
+PT-001713,65-79,M,130,East,Diabetes,FAC-04
+PT-001714,50-64,F,556,North,COPD,FAC-01
+PT-001715,18-34,F,138,East,Hypertension,FAC-04
+PT-001716,35-49,F,604,Central,Hypertension,FAC-03
+PT-001717,18-34,M,559,North,Diabetes,FAC-01
+PT-001718,80+,M,565,North,Asthma,FAC-01
+PT-001719,0-17,F,614,Central,COPD,FAC-03
+PT-001720,0-17,F,552,North,Congestive Heart Failure,FAC-01
+PT-001721,65-79,M,558,North,Congestive Heart Failure,FAC-01
+PT-001722,50-64,M,640,Central,Diabetes,FAC-03
+PT-001723,18-34,F,922,West,Hypertension,FAC-02
+PT-001724,0-17,F,901,West,None,FAC-02
+PT-001725,50-64,F,924,West,Congestive Heart Failure,FAC-02
+PT-001726,18-34,F,140,East,Diabetes,FAC-04
+PT-001727,18-34,F,118,East,COPD,FAC-04
+PT-001728,65-79,M,909,West,Diabetes,FAC-02
+PT-001729,65-79,F,940,West,COPD,FAC-02
+PT-001730,35-49,F,554,North,Asthma,FAC-01
+PT-001731,0-17,M,553,North,Hypertension,FAC-01
+PT-001732,50-64,F,128,East,Hypertension,FAC-04
+PT-001733,35-49,M,924,West,Diabetes,FAC-02
+PT-001734,65-79,M,927,West,COPD,FAC-02
+PT-001735,80+,M,121,East,Diabetes,FAC-04
+PT-001736,35-49,F,567,North,Hypertension,FAC-01
+PT-001737,35-49,F,113,East,Asthma,FAC-04
+PT-001738,0-17,F,553,North,Diabetes,FAC-01
+PT-001739,50-64,M,566,North,Asthma,FAC-01
+PT-001740,65-79,F,920,West,Hypertension,FAC-02
+PT-001741,0-17,F,934,West,None,FAC-02
+PT-001742,35-49,F,935,West,Congestive Heart Failure,FAC-02
+PT-001743,65-79,F,136,East,Diabetes,FAC-04
+PT-001744,35-49,M,314,South,Hypertension,FAC-05
+PT-001745,65-79,M,561,North,Asthma,FAC-01
+PT-001746,35-49,F,569,North,Hypertension,FAC-01
+PT-001747,18-34,M,577,North,Hypertension,FAC-01
+PT-001748,0-17,M,556,North,Congestive Heart Failure,FAC-01
+PT-001749,65-79,F,318,South,Chronic Kidney Disease,FAC-05
+PT-001750,18-34,M,135,East,Asthma,FAC-04
+PT-001751,18-34,M,908,West,Hypertension,FAC-02
+PT-001752,0-17,M,557,North,Hypertension,FAC-01
+PT-001753,65-79,F,936,West,Hypertension,FAC-02
+PT-001754,18-34,F,563,North,Diabetes,FAC-01
+PT-001755,35-49,M,550,North,None,FAC-01
+PT-001756,18-34,M,612,Central,None,FAC-03
+PT-001757,80+,M,565,North,COPD,FAC-01
+PT-001758,35-49,F,561,North,Chronic Kidney Disease,FAC-01
+PT-001759,80+,M,140,East,Chronic Kidney Disease,FAC-04
+PT-001760,50-64,Other,927,West,Hypertension,FAC-02
+PT-001761,65-79,M,930,West,Asthma,FAC-02
+PT-001762,65-79,F,569,North,None,FAC-01
+PT-001763,35-49,M,937,West,Diabetes,FAC-02
+PT-001764,80+,F,569,North,Congestive Heart Failure,FAC-01
+PT-001765,65-79,F,585,North,Hypertension,FAC-01
+PT-001766,80+,F,911,West,COPD,FAC-02
+PT-001767,18-34,M,582,North,None,FAC-01
+PT-001768,80+,M,622,Central,Hypertension,FAC-03
+PT-001769,35-49,F,126,East,COPD,FAC-04
+PT-001770,65-79,M,582,North,Hypertension,FAC-01
+PT-001771,50-64,M,565,North,COPD,FAC-01
+PT-001772,0-17,M,586,North,None,FAC-01
+PT-001773,0-17,F,112,East,Diabetes,FAC-04
+PT-001774,0-17,F,102,East,None,FAC-04
+PT-001775,35-49,M,616,Central,COPD,FAC-03
+PT-001776,0-17,F,553,North,Diabetes,FAC-01
+PT-001777,50-64,M,937,West,Asthma,FAC-02
+PT-001778,65-79,M,552,North,Hypertension,FAC-01
+PT-001779,0-17,M,904,West,Diabetes,FAC-02
+PT-001780,65-79,F,586,North,Chronic Kidney Disease,FAC-01
+PT-001781,50-64,M,574,North,Asthma,FAC-01
+PT-001782,50-64,M,929,West,Asthma,FAC-02
+PT-001783,35-49,F,934,West,Hypertension,FAC-02
+PT-001784,35-49,F,606,Central,Asthma,FAC-03
+PT-001785,65-79,F,615,Central,Chronic Kidney Disease,FAC-03
+PT-001786,65-79,M,922,West,Congestive Heart Failure,FAC-02
+PT-001787,50-64,M,901,West,Congestive Heart Failure,FAC-02
+PT-001788,65-79,F,909,West,Congestive Heart Failure,FAC-02
+PT-001789,80+,F,590,North,None,FAC-01
+PT-001790,0-17,M,925,West,Diabetes,FAC-02
+PT-001791,35-49,M,335,South,Hypertension,FAC-05
+PT-001792,65-79,F,117,East,Hypertension,FAC-04
+PT-001793,80+,F,337,South,Asthma,FAC-05
+PT-001794,0-17,F,913,West,Chronic Kidney Disease,FAC-02
+PT-001795,35-49,Other,920,West,None,FAC-02
+PT-001796,65-79,M,906,West,None,FAC-02
+PT-001797,18-34,F,938,West,Asthma,FAC-02
+PT-001798,18-34,M,904,West,Diabetes,FAC-02
+PT-001799,18-34,F,563,North,COPD,FAC-01
+PT-001800,50-64,F,558,North,COPD,FAC-01
+PT-001801,0-17,F,909,West,None,FAC-02
+PT-001802,35-49,F,573,North,None,FAC-01
+PT-001803,18-34,M,916,West,Hypertension,FAC-02
+PT-001804,80+,M,565,North,Diabetes,FAC-01
+PT-001805,35-49,F,585,North,Congestive Heart Failure,FAC-01
+PT-001806,80+,M,577,North,Hypertension,FAC-01
+PT-001807,50-64,M,554,North,Diabetes,FAC-01
+PT-001808,35-49,M,578,North,None,FAC-01
+PT-001809,50-64,F,575,North,Hypertension,FAC-01
+PT-001810,18-34,M,919,West,Diabetes,FAC-02
+PT-001811,80+,M,570,North,Chronic Kidney Disease,FAC-01
+PT-001812,0-17,M,140,East,Hypertension,FAC-04
+PT-001813,50-64,M,582,North,Chronic Kidney Disease,FAC-01
+PT-001814,50-64,M,578,North,Congestive Heart Failure,FAC-01
+PT-001815,80+,M,587,North,COPD,FAC-01
+PT-001816,18-34,F,126,East,Hypertension,FAC-04
+PT-001817,35-49,M,574,North,Hypertension,FAC-01
+PT-001818,50-64,M,918,West,Chronic Kidney Disease,FAC-02
+PT-001819,65-79,F,553,North,Hypertension,FAC-01
+PT-001820,65-79,M,569,North,None,FAC-01
+PT-001821,35-49,M,320,South,Hypertension,FAC-05
+PT-001822,65-79,M,914,West,Diabetes,FAC-02
+PT-001823,50-64,F,926,West,None,FAC-02
+PT-001824,35-49,F,107,East,Chronic Kidney Disease,FAC-04
+PT-001825,80+,M,936,West,Asthma,FAC-02
+PT-001826,50-64,F,566,North,Hypertension,FAC-01
+PT-001827,65-79,F,128,East,Asthma,FAC-04
+PT-001828,50-64,F,554,North,Chronic Kidney Disease,FAC-01
+PT-001829,0-17,M,935,West,Hypertension,FAC-02
+PT-001830,35-49,M,906,West,Congestive Heart Failure,FAC-02
+PT-001831,0-17,M,901,West,Diabetes,FAC-02
+PT-001832,80+,F,572,North,None,FAC-01
+PT-001833,18-34,M,913,West,COPD,FAC-02
+PT-001834,65-79,F,588,North,None,FAC-01
+PT-001835,50-64,F,920,West,Asthma,FAC-02
+PT-001836,50-64,F,312,South,Hypertension,FAC-05
+PT-001837,65-79,F,631,Central,Chronic Kidney Disease,FAC-03
+PT-001838,18-34,F,930,West,None,FAC-02
+PT-001839,50-64,M,622,Central,None,FAC-03
+PT-001840,0-17,F,552,North,None,FAC-01
+PT-001841,65-79,F,578,North,COPD,FAC-01
+PT-001842,35-49,F,615,Central,None,FAC-03
+PT-001843,65-79,F,121,East,Congestive Heart Failure,FAC-04
+PT-001844,65-79,F,131,East,Diabetes,FAC-04
+PT-001845,35-49,F,919,West,Congestive Heart Failure,FAC-02
+PT-001846,18-34,F,938,West,Diabetes,FAC-02
+PT-001847,18-34,M,586,North,Asthma,FAC-01
+PT-001848,80+,M,103,East,None,FAC-04
+PT-001849,35-49,F,939,West,Congestive Heart Failure,FAC-02
+PT-001850,18-34,M,121,East,None,FAC-04
+PT-001851,50-64,Other,563,North,Hypertension,FAC-01
+PT-001852,35-49,M,568,North,Diabetes,FAC-01
+PT-001853,50-64,M,551,North,None,FAC-01
+PT-001854,50-64,F,564,North,None,FAC-01
+PT-001855,35-49,M,582,North,Asthma,FAC-01
+PT-001856,80+,F,313,South,Hypertension,FAC-05
+PT-001857,35-49,M,905,West,Hypertension,FAC-02
+PT-001858,50-64,M,584,North,Diabetes,FAC-01
+PT-001859,35-49,F,576,North,COPD,FAC-01
+PT-001860,35-49,M,570,North,COPD,FAC-01
+PT-001861,35-49,F,610,Central,Hypertension,FAC-03
+PT-001862,65-79,F,927,West,Chronic Kidney Disease,FAC-02
+PT-001863,80+,F,112,East,Chronic Kidney Disease,FAC-04
+PT-001864,50-64,M,587,North,COPD,FAC-01
+PT-001865,18-34,F,320,South,None,FAC-05
+PT-001866,65-79,F,900,West,Hypertension,FAC-02
+PT-001867,65-79,F,913,West,Diabetes,FAC-02
+PT-001868,18-34,M,924,West,Chronic Kidney Disease,FAC-02
+PT-001869,0-17,M,926,West,None,FAC-02
+PT-001870,35-49,F,565,North,Asthma,FAC-01
+PT-001871,35-49,M,551,North,COPD,FAC-01
+PT-001872,0-17,M,103,East,Hypertension,FAC-04
+PT-001873,65-79,M,914,West,COPD,FAC-02
+PT-001874,80+,M,580,North,Asthma,FAC-01
+PT-001875,65-79,F,124,East,Diabetes,FAC-04
+PT-001876,18-34,M,125,East,Hypertension,FAC-04
+PT-001877,35-49,F,140,East,Hypertension,FAC-04
+PT-001878,0-17,F,584,North,None,FAC-01
+PT-001879,50-64,F,333,South,Diabetes,FAC-05
+PT-001880,0-17,F,915,West,Asthma,FAC-02
+PT-001881,50-64,F,911,West,Diabetes,FAC-02
+PT-001882,18-34,F,578,North,Chronic Kidney Disease,FAC-01
+PT-001883,80+,M,584,North,Diabetes,FAC-01
+PT-001884,35-49,F,924,West,Congestive Heart Failure,FAC-02
+PT-001885,80+,M,114,East,Hypertension,FAC-04
+PT-001886,65-79,M,931,West,Diabetes,FAC-02
+PT-001887,50-64,M,932,West,Congestive Heart Failure,FAC-02
+PT-001888,50-64,M,624,Central,Asthma,FAC-03
+PT-001889,50-64,M,904,West,None,FAC-02
+PT-001890,50-64,M,315,South,Asthma,FAC-05
+PT-001891,80+,F,551,North,Chronic Kidney Disease,FAC-01
+PT-001892,80+,M,577,North,COPD,FAC-01
+PT-001893,0-17,F,934,West,None,FAC-02
+PT-001894,80+,M,139,East,Hypertension,FAC-04
+PT-001895,80+,Other,910,West,Congestive Heart Failure,FAC-02
+PT-001896,35-49,M,925,West,Asthma,FAC-02
+PT-001897,35-49,M,103,East,Asthma,FAC-04
+PT-001898,35-49,F,122,East,Diabetes,FAC-04
+PT-001899,18-34,M,577,North,Hypertension,FAC-01
+PT-001900,65-79,F,922,West,Asthma,FAC-02
+PT-001901,65-79,M,561,North,Congestive Heart Failure,FAC-01
+PT-001902,65-79,F,936,West,Diabetes,FAC-02
+PT-001903,65-79,F,558,North,Hypertension,FAC-01
+PT-001904,65-79,M,931,West,Diabetes,FAC-02
+PT-001905,50-64,F,915,West,Chronic Kidney Disease,FAC-02
+PT-001906,35-49,F,588,North,None,FAC-01
+PT-001907,65-79,M,927,West,None,FAC-02
+PT-001908,0-17,F,914,West,Asthma,FAC-02
+PT-001909,80+,F,570,North,Hypertension,FAC-01
+PT-001910,0-17,M,916,West,None,FAC-02
+PT-001911,35-49,F,562,North,Diabetes,FAC-01
+PT-001912,0-17,F,608,Central,Congestive Heart Failure,FAC-03
+PT-001913,50-64,F,587,North,Asthma,FAC-01
+PT-001914,80+,F,568,North,Diabetes,FAC-01
+PT-001915,65-79,F,907,West,None,FAC-02
+PT-001916,18-34,M,552,North,Hypertension,FAC-01
+PT-001917,0-17,M,100,East,COPD,FAC-04
+PT-001918,65-79,F,318,South,Diabetes,FAC-05
+PT-001919,50-64,F,633,Central,COPD,FAC-03
+PT-001920,0-17,M,570,North,None,FAC-01
+PT-001921,65-79,M,117,East,Hypertension,FAC-04
+PT-001922,50-64,M,580,North,Congestive Heart Failure,FAC-01
+PT-001923,18-34,M,317,South,COPD,FAC-05
+PT-001924,50-64,F,314,South,Congestive Heart Failure,FAC-05
+PT-001925,35-49,M,583,North,Diabetes,FAC-01
+PT-001926,0-17,F,937,West,COPD,FAC-02
+PT-001927,50-64,F,575,North,COPD,FAC-01
+PT-001928,0-17,F,579,North,Diabetes,FAC-01
+PT-001929,50-64,F,602,Central,Congestive Heart Failure,FAC-03
+PT-001930,50-64,M,636,Central,None,FAC-03
+PT-001931,0-17,F,901,West,COPD,FAC-02
+PT-001932,65-79,F,315,South,Chronic Kidney Disease,FAC-05
+PT-001933,35-49,M,581,North,Asthma,FAC-01
+PT-001934,35-49,M,916,West,Diabetes,FAC-02
+PT-001935,80+,M,938,West,Diabetes,FAC-02
+PT-001936,65-79,M,133,East,COPD,FAC-04
+PT-001937,65-79,M,107,East,Asthma,FAC-04
+PT-001938,50-64,F,616,Central,Diabetes,FAC-03
+PT-001939,18-34,F,136,East,COPD,FAC-04
+PT-001940,18-34,F,571,North,Diabetes,FAC-01
+PT-001941,65-79,M,918,West,COPD,FAC-02
+PT-001942,35-49,M,609,Central,None,FAC-03
+PT-001943,35-49,M,325,South,Congestive Heart Failure,FAC-05
+PT-001944,65-79,M,914,West,Hypertension,FAC-02
+PT-001945,80+,M,912,West,COPD,FAC-02
+PT-001946,65-79,F,904,West,Asthma,FAC-02
+PT-001947,50-64,F,612,Central,Hypertension,FAC-03
+PT-001948,18-34,F,132,East,Hypertension,FAC-04
+PT-001949,0-17,M,917,West,Chronic Kidney Disease,FAC-02
+PT-001950,50-64,F,103,East,Asthma,FAC-04
+PT-001951,65-79,M,940,West,None,FAC-02
+PT-001952,80+,M,914,West,COPD,FAC-02
+PT-001953,50-64,F,925,West,Diabetes,FAC-02
+PT-001954,18-34,M,621,Central,Hypertension,FAC-03
+PT-001955,18-34,F,563,North,Diabetes,FAC-01
+PT-001956,50-64,F,122,East,Hypertension,FAC-04
+PT-001957,50-64,M,900,West,Diabetes,FAC-02
+PT-001958,35-49,F,589,North,Asthma,FAC-01
+PT-001959,18-34,M,123,East,Asthma,FAC-04
+PT-001960,50-64,F,562,North,Diabetes,FAC-01
+PT-001961,65-79,F,588,North,Asthma,FAC-01
+PT-001962,18-34,M,924,West,COPD,FAC-02
+PT-001963,65-79,F,552,North,Chronic Kidney Disease,FAC-01
+PT-001964,18-34,M,566,North,Diabetes,FAC-01
+PT-001965,35-49,M,922,West,Hypertension,FAC-02
+PT-001966,65-79,M,562,North,None,FAC-01
+PT-001967,35-49,M,126,East,Hypertension,FAC-04
+PT-001968,50-64,F,580,North,Hypertension,FAC-01
+PT-001969,50-64,F,567,North,Diabetes,FAC-01
+PT-001970,18-34,M,586,North,Hypertension,FAC-01
+PT-001971,35-49,F,560,North,None,FAC-01
+PT-001972,18-34,M,932,West,Diabetes,FAC-02
+PT-001973,0-17,M,581,North,Asthma,FAC-01
+PT-001974,35-49,F,565,North,COPD,FAC-01
+PT-001975,18-34,F,132,East,Hypertension,FAC-04
+PT-001976,65-79,F,587,North,Asthma,FAC-01
+PT-001977,50-64,M,570,North,Diabetes,FAC-01
+PT-001978,65-79,M,115,East,COPD,FAC-04
+PT-001979,18-34,M,917,West,COPD,FAC-02
+PT-001980,65-79,F,940,West,Diabetes,FAC-02
+PT-001981,50-64,M,634,Central,Congestive Heart Failure,FAC-03
+PT-001982,35-49,M,564,North,Hypertension,FAC-01
+PT-001983,80+,M,589,North,Chronic Kidney Disease,FAC-01
+PT-001984,65-79,M,622,Central,Diabetes,FAC-03
+PT-001985,65-79,F,920,West,Hypertension,FAC-02
+PT-001986,50-64,F,931,West,Asthma,FAC-02
+PT-001987,35-49,M,555,North,COPD,FAC-01
+PT-001988,18-34,M,564,North,COPD,FAC-01
+PT-001989,18-34,M,577,North,None,FAC-01
+PT-001990,65-79,F,637,Central,None,FAC-03
+PT-001991,18-34,F,901,West,Chronic Kidney Disease,FAC-02
+PT-001992,0-17,F,579,North,None,FAC-01
+PT-001993,18-34,Other,935,West,Diabetes,FAC-02
+PT-001994,65-79,M,912,West,COPD,FAC-02
+PT-001995,50-64,Other,124,East,Hypertension,FAC-04
+PT-001996,65-79,F,926,West,COPD,FAC-02
+PT-001997,35-49,M,619,Central,COPD,FAC-03
+PT-001998,0-17,F,612,Central,Chronic Kidney Disease,FAC-03
+PT-001999,50-64,M,577,North,Diabetes,FAC-01

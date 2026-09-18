@@ -1,0 +1,17 @@
+# poc/nl-analytics-assistant/terraform/terraform.tfvars.example
+# Copy to terraform.tfvars and fill in real values.
+
+bootstrap_state_bucket = "hcf-b-seed-tfstate"
+target_env             = "dev"
+
+# Build + push the image first (see ../README.md), then set it here:
+container_image = "us-central1-docker.pkg.dev/hcf-dev-delivery/poc/nl-analytics:v0.1.0"
+
+vertex_location = "us-central1"
+vertex_model    = "gemini-2.5-pro"
+max_rows        = 1000
+
+# Who may call the service (kept authenticated + internal ingress).
+invoker_members = [
+  # "group:data-analysts@example.com",
+]

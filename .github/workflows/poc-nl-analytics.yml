@@ -1,0 +1,45 @@
+name: poc-nl-analytics
+
+# CI for the NL Analytics Assistant POC only. Scoped to the POC path so it never
+# interferes with the foundation's `terraform` workflow. No cloud auth needed:
+# tests run against the mock LLM + DuckDB, and Terraform is fmt/validate only.
+
+on:
+  push:
+    branches: [main]
+    paths: ["poc/nl-analytics-assistant/**", ".github/workflows/poc-nl-analytics.yml"]
+  pull_request:
+    paths: ["poc/nl-analytics-assistant/**", ".github/workflows/poc-nl-analytics.yml"]
+
+defaults:
+  run:
+    working-directory: poc/nl-analytics-assistant
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install
+        run: pip install -r app/requirements-dev.txt
+      - name: generate synthetic data
+        run: python data/generate_synthetic.py
+      - name: tests
+        run: pytest
+
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.5"
+      - name: fmt
+        run: terraform -chdir=terraform fmt -check -recursive
+      - name: init (no backend)
+        run: terraform -chdir=terraform init -backend=false
+      - name: validate
+        run: terraform -chdir=terraform validate

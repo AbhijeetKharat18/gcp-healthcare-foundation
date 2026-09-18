@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+app/tests/
+terraform/
+*.md
+.pytest_cache/

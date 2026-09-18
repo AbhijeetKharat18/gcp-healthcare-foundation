@@ -1,0 +1,6 @@
+facility_id,facility_name,region,bed_count
+FAC-01,Cedar Ridge Medical Center,North,420
+FAC-02,Bayview General Hospital,West,310
+FAC-03,Prairie Health System,Central,180
+FAC-04,Summit Regional Hospital,East,260
+FAC-05,Harbor Community Hospital,South,140

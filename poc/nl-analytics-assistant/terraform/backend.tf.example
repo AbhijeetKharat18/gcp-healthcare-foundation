@@ -1,0 +1,8 @@
+# poc/nl-analytics-assistant/terraform/backend.tf.example
+# Copy to backend.tf and set the bucket to your 0-bootstrap `tfstate_bucket`.
+terraform {
+  backend "gcs" {
+    bucket = "hcf-b-seed-tfstate"
+    prefix = "poc-nl-analytics"
+  }
+}
