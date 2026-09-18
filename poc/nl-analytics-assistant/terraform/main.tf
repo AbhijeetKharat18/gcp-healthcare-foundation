@@ -1,7 +1,15 @@
 # poc/nl-analytics-assistant/terraform/main.tf
 # The Cloud Run service for the NL Analytics Assistant. Runs in the delivery
-# project as sa-delivery, with internal-only ingress so it stays reachable only
-# from inside the VPC-SC perimeter (front it with an internal LB / IAP for users).
+# project as sa-delivery, with internal-only ingress so it is reachable only
+# from inside the VPC (front it with an internal LB / IAP for users).
+#
+# VPC-SC governs sa-delivery's calls to Vertex and BigQuery by identity +
+# perimeter regardless of network path, since both projects are perimeter
+# members. For a fully PRIVATE network path (egress via the restricted Google
+# APIs VIP instead of the public internet), add Direct VPC egress / a
+# Serverless VPC Access connector pointing at the env subnet - see the
+# `vpc_access` block noted in terraform/README.md. Left out here because it
+# requires the connector/subnet wiring from stage 3.
 
 resource "google_cloud_run_v2_service" "assistant" {
   name     = "${local.prefix}-${var.target_env}-nl-analytics"

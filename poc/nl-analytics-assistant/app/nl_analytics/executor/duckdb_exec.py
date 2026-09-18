@@ -44,6 +44,10 @@ class DuckDBExecutor:
                 "SELECT * FROM read_csv_auto(?, header=true, sample_size=-1)",
                 [str(csv)],
             )
+        # Defensive: resolve bare table names to the secure_views schema too, so
+        # the executor works even if handed an unqualified (but allow-listed)
+        # query directly.
+        self._con.execute("SET search_path = 'main,secure_views'")
 
     @staticmethod
     def _to_duckdb(sql: str) -> str:

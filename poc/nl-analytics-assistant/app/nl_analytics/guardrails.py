@@ -27,12 +27,20 @@ from .catalog import ALLOWED_TABLES
 
 _DIALECT = "bigquery"
 
-# Expression types that must never appear. Names are resolved defensively so the
-# module keeps working across sqlglot versions that add/rename node types.
+# The statement's root must be one of these query types. A positive allowlist
+# fails closed: any statement type we don't explicitly recognise as a read-only
+# query (EXPORT DATA, CREATE, CALL, ...) is rejected, even ones added in future
+# sqlglot versions. Names are resolved defensively across versions.
+_QUERY_ROOT_NAMES = ["Select", "Union", "Intersect", "Except", "SetOperation", "Subquery"]
+_QUERY_ROOTS = tuple(getattr(exp, n) for n in _QUERY_ROOT_NAMES if hasattr(exp, n))
+
+# Expression types that must never appear anywhere (defence in depth on top of
+# the root-type allowlist). Resolved defensively so the module keeps working
+# across sqlglot versions that add/rename node types.
 _FORBIDDEN_NAMES = [
     "Insert", "Update", "Delete", "Merge", "Create", "Drop", "Alter",
     "AlterTable", "TruncateTable", "Command", "Grant", "Set", "SetItem",
-    "Use", "Copy", "Pragma", "Transaction", "Commit", "Rollback",
+    "Use", "Copy", "Pragma", "Transaction", "Commit", "Rollback", "Export",
 ]
 _FORBIDDEN = tuple(getattr(exp, n) for n in _FORBIDDEN_NAMES if hasattr(exp, n))
 
@@ -67,8 +75,11 @@ def enforce(sql: str, allowed_tables: frozenset[str] = ALLOWED_TABLES,
         )
     expr = statements[0]
 
-    # 2. Read-only.
-    if isinstance(expr, _FORBIDDEN) or next(iter(expr.find_all(*_FORBIDDEN)), None):
+    # 2. Read-only. The root must be a query (positive allowlist, fails closed),
+    #    and no DML/DDL/command node may appear anywhere (defence in depth).
+    if not isinstance(expr, _QUERY_ROOTS):
+        raise GuardrailError("Only read-only SELECT queries are permitted.")
+    if next(iter(expr.find_all(*_FORBIDDEN)), None) is not None:
         raise GuardrailError("Only read-only SELECT queries are permitted.")
     if expr.find(exp.Select) is None:
         raise GuardrailError("Query must be a SELECT.")
@@ -92,6 +103,11 @@ def enforce(sql: str, allowed_tables: frozenset[str] = ALLOWED_TABLES,
             raise GuardrailError(
                 f"Only the 'secure_views' dataset may be queried, not {dataset!r}."
             )
+        # Normalise to a fully-qualified secure_views.<table> reference so the
+        # executed SQL never depends on a default dataset (and resolves the same
+        # against BigQuery and the local DuckDB schema).
+        if not dataset:
+            table.set("db", exp.to_identifier("secure_views"))
         referenced.append(name)
 
     # 4. Row limit (inject or cap).

@@ -49,8 +49,23 @@ terraform apply
 ## Notes
 
 - **Ingress is internal-only.** Put an internal HTTPS load balancer + IAP in
-  front for human users; the service itself stays in-perimeter, so Vertex and
-  BigQuery traffic never leaves the VPC-SC boundary.
+  front for human users. VPC-SC governs `sa-delivery`'s calls to Vertex and
+  BigQuery by identity + perimeter (both projects are perimeter members)
+  regardless of network path. For a fully private network path, add **Direct
+  VPC egress** / a Serverless VPC Access connector so egress leaves via the
+  restricted Google APIs VIP rather than the public internet:
+
+  ```hcl
+  # inside template { ... }
+  vpc_access {
+    network_interfaces {
+      network    = "<host-vpc>"     # from stage 3 output
+      subnetwork = "<env-subnet>"   # from stage 3 output
+    }
+    egress = "ALL_TRAFFIC"
+  }
+  ```
+  Left out of the POC because it needs the connector/subnet wiring from stage 3.
 - BigQuery query jobs run in the lakehouse project (where `secure_views` lives),
   so generated SQL needs no cross-project qualifier. Vertex runs in the delivery
   project.

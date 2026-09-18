@@ -51,4 +51,16 @@ class VertexGeminiProvider:
                 candidate_count=1,
             ),
         )
-        return clean_sql(response.text)
+        # response.text raises if the model returned no candidates or the
+        # response was blocked / truncated; surface a clean message instead.
+        try:
+            text = response.text
+        except (ValueError, AttributeError, IndexError) as exc:
+            raise RuntimeError(
+                "Vertex returned no usable text (response may have been blocked "
+                "or truncated)."
+            ) from exc
+        sql = clean_sql(text)
+        if not sql:
+            raise RuntimeError("Vertex returned an empty response.")
+        return sql

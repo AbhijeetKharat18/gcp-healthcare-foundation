@@ -112,7 +112,9 @@ committed CSVs let the demo run instantly.
   catalog test (`test_no_direct_identifier_columns`) enforces it.
 - **Read-only + scope enforcement**: guardrails block anything else, verified by
   tests.
-- **In-perimeter**: internal ingress; Vertex + BigQuery stay inside VPC-SC.
+- **In-perimeter**: internal-only ingress; VPC-SC governs every Vertex + BigQuery
+  call by `sa-delivery`'s identity + perimeter membership (add Direct VPC egress
+  for a fully private network path — see `terraform/README.md`).
 - **Auditability**: every query runs as `sa-delivery` through BigQuery, captured
   by the foundation's audit sink; the exact SQL is returned to the user.
 
