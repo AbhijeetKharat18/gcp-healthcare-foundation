@@ -10,6 +10,7 @@ the same guardrails that guard the cloud path.
 from __future__ import annotations
 
 import datetime as dt
+import threading
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
@@ -28,6 +29,12 @@ class DuckDBExecutor:
 
         self.max_rows = max_rows
         self._con = duckdb.connect(database=":memory:")
+        # A DuckDB connection is not safe for concurrent use, and uvicorn serves
+        # sync endpoints from a threadpool. Serialize access so concurrent
+        # requests can't clobber each other's result set. (Queries here run on a
+        # tiny in-memory DB in sub-millisecond time; the concurrent production
+        # path is BigQuery, whose client is thread-safe.)
+        self._lock = threading.Lock()
         self._load(data_dir)
 
     def _load(self, data_dir: Path) -> None:
@@ -61,14 +68,18 @@ class DuckDBExecutor:
 
     def dry_run(self, sql: str) -> int | None:
         local_sql = self._to_duckdb(sql)
-        self._con.execute(f"EXPLAIN {local_sql}")
+        with self._lock:
+            self._con.execute(f"EXPLAIN {local_sql}")
         return None
 
     def execute(self, sql: str) -> QueryResult:
         local_sql = self._to_duckdb(sql)
-        cur = self._con.execute(local_sql)
-        columns = [d[0] for d in cur.description]
-        raw = cur.fetchmany(self.max_rows)
+        # Hold the lock across execute+fetch: the cursor is tied to the shared
+        # connection, so the fetch must not interleave with another query.
+        with self._lock:
+            cur = self._con.execute(local_sql)
+            columns = [d[0] for d in cur.description]
+            raw = cur.fetchmany(self.max_rows)
         rows = [
             dict(zip(columns, (_json_safe(v) for v in record), strict=True))
             for record in raw

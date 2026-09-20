@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import concurrent.futures as cf
+
 import pytest
 from nl_analytics.config import load_settings
 from nl_analytics.executor.duckdb_exec import DuckDBExecutor
@@ -58,3 +60,23 @@ def test_json_safe_types(executor):
 def test_missing_data_dir_raises(tmp_path):
     with pytest.raises(FileNotFoundError, match="synthetic"):
         DuckDBExecutor(tmp_path)  # empty dir, no CSVs
+
+
+def test_concurrent_queries_are_isolated(executor):
+    # Regression: the shared connection must not clobber result sets when hit
+    # from many threads (uvicorn serves sync endpoints in a threadpool). Each
+    # query must return the full, correct result.
+    sql = (
+        "SELECT encounter_type, COUNT(*) AS n "
+        "FROM secure_views.v_encounter_facts GROUP BY encounter_type"
+    )
+
+    def run(_):
+        return executor.execute(sql).row_count
+
+    with cf.ThreadPoolExecutor(max_workers=16) as pool:
+        counts = list(pool.map(run, range(200)))
+
+    # Every concurrent call sees all three encounter types - never a truncated
+    # or empty result.
+    assert set(counts) == {3}

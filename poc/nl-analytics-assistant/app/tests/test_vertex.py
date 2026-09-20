@@ -1,14 +1,11 @@
-"""Vertex provider logic tests with a stubbed Vertex SDK (no cloud, no network).
+"""Vertex provider logic tests with a faked google-genai client (no network).
 
-The vertexai SDK isn't installed in the dev/test env, so we inject fake
-`vertexai` modules into sys.modules and a fake model, exercising the provider's
-own logic (prompt assembly, response handling, clean_sql) without any cloud.
+The Vertex provider uses the google-genai SDK in Vertex mode; we inject a fake
+client so we exercise the provider's own logic (prompt assembly, response
+handling, clean_sql) without any cloud call.
 """
 
 from __future__ import annotations
-
-import sys
-import types
 
 import pytest
 from nl_analytics.llm import build_provider
@@ -21,40 +18,27 @@ class _FakeResp:
 
     @property
     def text(self):
-        if self._text is None:
-            raise ValueError("no candidates")
         return self._text
 
 
-class _FakeModel:
+class _FakeModels:
     def __init__(self, text):
         self._text = text
-        self.last_prompt = None
-        self.last_config = None
+        self.last_kwargs = None
 
-    def generate_content(self, prompt, generation_config=None):
-        self.last_prompt = prompt
-        self.last_config = generation_config
+    def generate_content(self, **kwargs):
+        self.last_kwargs = kwargs
         return _FakeResp(self._text)
 
 
-@pytest.fixture(autouse=True)
-def _stub_vertex_sdk(monkeypatch):
-    """Provide fake `vertexai` + `vertexai.generative_models` modules."""
-    gm = types.ModuleType("vertexai.generative_models")
-    gm.GenerationConfig = lambda **kw: kw  # config is opaque to our test
-    gm.GenerativeModel = lambda name: _FakeModel("SELECT 1")
-    vx = types.ModuleType("vertexai")
-    vx.init = lambda **kw: None
-    vx.generative_models = gm
-    monkeypatch.setitem(sys.modules, "vertexai", vx)
-    monkeypatch.setitem(sys.modules, "vertexai.generative_models", gm)
-    yield
+class _FakeClient:
+    def __init__(self, text):
+        self.models = _FakeModels(text)
 
 
 def _provider(text) -> VertexGeminiProvider:
     p = VertexGeminiProvider(project="p", location="us-central1", model="gemini-2.5-pro")
-    p._model = _FakeModel(text)  # skip real GenerativeModel construction
+    p._client = _FakeClient(text)  # skip real genai.Client construction
     return p
 
 
@@ -68,30 +52,23 @@ def test_generates_and_cleans_sql():
     assert p.generate_sql("q", "sys") == "SELECT 1 FROM secure_views.v_facility_dim"
 
 
-def test_prompt_includes_question_and_system():
+def test_prompt_and_model_passed():
     p = _provider("SELECT 1")
     p.generate_sql("how many facilities?", "SYSTEM-RULES")
-    assert "how many facilities?" in p._model.last_prompt
-    assert "SYSTEM-RULES" in p._model.last_prompt
+    kwargs = p._client.models.last_kwargs
+    assert kwargs["model"] == "gemini-2.5-pro"
+    assert "how many facilities?" in kwargs["contents"]
+    assert "SYSTEM-RULES" in kwargs["contents"]
 
 
-def test_blocked_response_raises():
-    p = _provider(None)  # response.text raises -> handled
+def test_blocked_or_empty_response_raises():
     with pytest.raises(RuntimeError, match="no usable text"):
-        p.generate_sql("q", "sys")
+        _provider(None).generate_sql("q", "sys")
 
 
 def test_empty_after_clean_raises():
-    p = _provider("```sql\n\n```")  # cleans to empty
     with pytest.raises(RuntimeError, match="empty"):
-        p.generate_sql("q", "sys")
-
-
-def test_get_model_builds_once():
-    p = VertexGeminiProvider(project="p", location="l", model="m")
-    m1 = p._get_model()
-    m2 = p._get_model()
-    assert m1 is m2  # cached
+        _provider("```sql\n\n```").generate_sql("q", "sys")
 
 
 def test_factory_builds_vertex(monkeypatch):
