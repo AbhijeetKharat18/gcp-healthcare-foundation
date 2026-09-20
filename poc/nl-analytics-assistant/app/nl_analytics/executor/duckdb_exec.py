@@ -69,7 +69,10 @@ class DuckDBExecutor:
         cur = self._con.execute(local_sql)
         columns = [d[0] for d in cur.description]
         raw = cur.fetchmany(self.max_rows)
-        rows = [dict(zip(columns, (_json_safe(v) for v in record))) for record in raw]
+        rows = [
+            dict(zip(columns, (_json_safe(v) for v in record), strict=True))
+            for record in raw
+        ]
         return QueryResult(
             columns=columns,
             rows=rows,

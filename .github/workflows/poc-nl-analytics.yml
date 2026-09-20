@@ -25,10 +25,35 @@ jobs:
           python-version: "3.11"
       - name: install
         run: pip install -r app/requirements-dev.txt
+      - name: lint (ruff)
+        run: ruff check app data
       - name: generate synthetic data
         run: python data/generate_synthetic.py
-      - name: tests
-        run: pytest
+      - name: tests + coverage
+        run: pytest --cov=nl_analytics --cov-report=term-missing
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install
+        run: pip install -r app/requirements-dev.txt
+      - name: install browser
+        run: python -m playwright install --with-deps chromium
+      - name: generate synthetic data
+        run: python data/generate_synthetic.py
+      - name: browser e2e
+        run: NLA_E2E=1 pytest app/tests/e2e
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build image
+        run: docker build -t nl-analytics-assistant:ci .
 
   terraform:
     runs-on: ubuntu-latest

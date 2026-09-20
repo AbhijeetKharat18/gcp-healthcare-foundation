@@ -2,6 +2,21 @@
 pythonpath = ["app"]
 testpaths = ["app/tests"]
 addopts = "-q"
+markers = [
+    "e2e: browser end-to-end tests (opt in with NLA_E2E=1)",
+    "live_ollama: hits a running Ollama server (opt in with NLA_LIVE_OLLAMA=1)",
+]
 filterwarnings = [
     "ignore::DeprecationWarning",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "B", "UP", "C4", "SIM", "BLE", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests may use long lines and don't need blind-except discipline.
+"app/tests/**" = ["E501", "BLE001"]

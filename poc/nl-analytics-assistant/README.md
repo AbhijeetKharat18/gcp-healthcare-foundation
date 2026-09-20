@@ -76,11 +76,17 @@ Open http://localhost:8080 and try the sample questions, or click
 **"See the guardrails in action"** to watch an out-of-scope / destructive
 request get blocked before it runs.
 
-Run the tests:
+Run the tests / full QA gate:
 
 ```bash
-make test      # 61 tests: guardrails, pipeline, API, catalog, providers
+make test      # unit + integration tests (guardrails, pipeline, API, providers, data)
+make qa        # ruff lint + tests with coverage (the offline QA gate)
+make qa-e2e    # real browser end-to-end (Playwright/Chromium)
 ```
+
+See [`docs/QA_REPORT.md`](docs/QA_REPORT.md) for the full pre-GCP QA results
+(106 offline tests, 98% coverage, guardrail attack matrix, browser E2E) and what
+is deferred until a GCP project exists.
 
 ### Test the *real* NL→SQL locally — no GCP
 

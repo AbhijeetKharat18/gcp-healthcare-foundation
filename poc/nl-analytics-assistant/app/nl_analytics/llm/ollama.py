@@ -44,7 +44,7 @@ class OllamaProvider:
         try:
             response = client.post(f"{self.host}/api/generate", json=payload)
             response.raise_for_status()
-        except Exception as exc:  # noqa: BLE001 - clean, actionable message
+        except Exception as exc:
             raise RuntimeError(
                 f"Could not reach Ollama at {self.host} (is it running, and is "
                 f"model {self.model!r} pulled?): {exc}"

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from nl_analytics.llm import build_provider
 from nl_analytics.llm.aistudio import AIStudioGeminiProvider
 
@@ -56,6 +55,13 @@ def test_passes_model_and_prompt():
 def test_empty_response_raises():
     p = _provider_with("")
     with pytest.raises(RuntimeError):
+        p.generate_sql("q", "system")
+
+
+def test_empty_after_clean_raises():
+    # Non-empty text that cleans to nothing (empty fenced block).
+    p = _provider_with("```sql\n\n```")
+    with pytest.raises(RuntimeError, match="empty"):
         p.generate_sql("q", "system")
 
 

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from nl_analytics.llm import build_provider
 from nl_analytics.llm.ollama import OllamaProvider
 
@@ -25,7 +24,7 @@ class _FakeClient:
         self.last_url = None
         self.last_json = None
 
-    def post(self, url, json):  # noqa: A002 - mirrors httpx.Client.post
+    def post(self, url, json):  # mirrors httpx.Client.post signature
         self.last_url = url
         self.last_json = json
         return _FakeResponse(self._payload)
@@ -62,6 +61,18 @@ def test_sends_model_and_host():
 def test_empty_response_raises():
     p = _provider_with("")
     with pytest.raises(RuntimeError):
+        p.generate_sql("q", "sys")
+
+
+class _RaisingClient:
+    def post(self, url, json):  # mirrors httpx.Client.post signature
+        raise ConnectionError("connection refused")
+
+
+def test_unreachable_server_raises_clean_error():
+    p = OllamaProvider(host="http://localhost:11434", model="llama3.1")
+    p._client = _RaisingClient()
+    with pytest.raises(RuntimeError, match="Could not reach Ollama"):
         p.generate_sql("q", "sys")
 
 

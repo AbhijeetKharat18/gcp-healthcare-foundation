@@ -135,7 +135,7 @@ def generate(out_dir: Path, n_patients: int) -> dict[str, int]:
                         "observation_name", "value_num", "unit", "observation_date"])
 
         enc_seq = 0
-        for pkey, facility, region, age_band, primary in patients:
+        for pkey, facility, _region, age_band, primary in patients:
             icd10, readmit_p, base_charge = CONDITIONS[primary]
             # Older / sicker patients have more encounters.
             n_enc = rng.choices([1, 2, 3, 4, 5, 6], weights=[30, 28, 18, 12, 8, 4], k=1)[0]

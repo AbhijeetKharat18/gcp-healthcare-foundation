@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import pytest
 from fastapi.testclient import TestClient
-
 from nl_analytics.main import app
 
 
@@ -29,6 +28,16 @@ def test_index_served(client):
 def test_schema_endpoint(client):
     tables = client.get("/api/schema").json()["tables"]
     assert len(tables) == 5
+
+
+def test_samples_endpoint(client):
+    questions = client.get("/api/samples").json()["questions"]
+    assert len(questions) >= 1
+
+
+def test_prompt_endpoint(client):
+    body = client.get("/api/prompt").json()
+    assert "secure_views" in body["system_prompt"]
 
 
 def test_ask_success(client):

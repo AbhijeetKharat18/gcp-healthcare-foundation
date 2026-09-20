@@ -130,7 +130,8 @@ def _norm(text: str) -> str:
 class MockProvider:
     name = "mock"
 
-    def generate_sql(self, question: str, system_prompt: str) -> str:  # noqa: ARG002
+    def generate_sql(self, question: str, system_prompt: str) -> str:
+        # The mock maps on the question alone; system_prompt is unused by design.
         q = _norm(question)
         for keywords, sql in _ADVERSARIAL:
             if all(k in q for k in keywords):

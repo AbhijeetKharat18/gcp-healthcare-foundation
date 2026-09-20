@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 
-import sqlglot
-from sqlglot import exp
-
 import pytest
-
+import sqlglot
 from nl_analytics.guardrails import GuardrailError, enforce
+from sqlglot import exp
 
 DS = "secure_views"
 
@@ -80,6 +78,13 @@ def test_keeps_tighter_limit():
     assert _limit_value(result.sql) == 5
 
 
+def test_non_literal_limit_is_overridden():
+    # A LIMIT that isn't a plain integer literal (here a query parameter) can't
+    # be compared, so it is replaced with the safe max.
+    result = enforce(f"SELECT * FROM {DS}.v_facility_dim LIMIT @n", max_rows=1000)
+    assert _limit_value(result.sql) == 1000
+
+
 def test_union_is_wrapped_and_limited():
     sql = (
         f"SELECT age_band FROM {DS}.v_patient_summary "
@@ -119,7 +124,7 @@ def test_blocks_non_read_only(sql):
 
 def test_blocks_phi_hidden_in_cte():
     with pytest.raises(GuardrailError):
-        enforce(f"WITH x AS (SELECT * FROM curated_phi.encounter) SELECT * FROM x")
+        enforce("WITH x AS (SELECT * FROM curated_phi.encounter) SELECT * FROM x")
 
 
 def test_blocks_other_dataset_in_subquery():

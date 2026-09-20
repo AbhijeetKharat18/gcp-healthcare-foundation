@@ -65,7 +65,7 @@ def enforce(sql: str, allowed_tables: frozenset[str] = ALLOWED_TABLES,
     # 1. Single statement.
     try:
         statements = sqlglot.parse(sql, read=_DIALECT)
-    except Exception as exc:  # noqa: BLE001 - surface a clean message
+    except Exception as exc:
         raise GuardrailError(f"Could not parse SQL: {exc}") from exc
 
     statements = [s for s in statements if s is not None]

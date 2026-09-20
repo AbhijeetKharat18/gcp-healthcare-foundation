@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from nl_analytics.config import load_settings
 from nl_analytics.executor.duckdb_exec import DuckDBExecutor
 from nl_analytics.guardrails import enforce
@@ -43,3 +42,19 @@ def test_bigquery_dialect_functions_transpile(executor):
     result = executor.execute(sql)
     assert result.row_count == 1
     assert "pct" in result.columns
+
+
+def test_json_safe_types(executor):
+    # DATE -> isoformat string; NUMERIC -> float.
+    sql = (
+        "SELECT admit_date, total_charges FROM secure_views.v_encounter_facts "
+        "ORDER BY admit_date LIMIT 1"
+    )
+    row = executor.execute(sql).rows[0]
+    assert isinstance(row["admit_date"], str)
+    assert isinstance(row["total_charges"], (int, float))
+
+
+def test_missing_data_dir_raises(tmp_path):
+    with pytest.raises(FileNotFoundError, match="synthetic"):
+        DuckDBExecutor(tmp_path)  # empty dir, no CSVs

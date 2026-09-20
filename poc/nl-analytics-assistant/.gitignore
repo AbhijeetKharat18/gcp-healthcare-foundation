@@ -3,7 +3,13 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.ruff_cache/
 *.egg-info/
+
+# Test / coverage artifacts
+.coverage
+.coverage.*
+htmlcov/
 
 # Terraform (real backend/vars; examples are committed)
 backend.tf

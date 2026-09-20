@@ -77,7 +77,7 @@ class AnalyticsService:
         # 1. Generate.
         try:
             raw_sql = self.provider.generate_sql(question, self.system_prompt)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.exception("LLM generation failed")
             result.error = f"Could not generate SQL: {exc}"
             result.stage = "generate"
@@ -114,7 +114,7 @@ class AnalyticsService:
         # 4. Execute.
         try:
             query_result = self.executor.execute(guarded.sql)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.exception("Execution failed")
             result.error = f"Query execution failed: {exc}"
             result.stage = "execute"

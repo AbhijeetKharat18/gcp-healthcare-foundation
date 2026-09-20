@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import pytest
-
 from nl_analytics.service import AnalyticsService
 
 SAMPLES = [
