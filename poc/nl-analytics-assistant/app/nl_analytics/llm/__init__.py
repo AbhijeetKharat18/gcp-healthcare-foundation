@@ -31,8 +31,16 @@ def build_provider(settings: Settings) -> LLMProvider:
             api_key=settings.gemini_api_key,
             model=settings.aistudio_model,
         )
+    if provider == "ollama":
+        from .ollama import OllamaProvider
+
+        return OllamaProvider(
+            host=settings.ollama_host,
+            model=settings.ollama_model,
+        )
     raise ValueError(
-        f"Unknown NLA_PROVIDER: {settings.provider!r} (use 'vertex', 'aistudio', or 'mock')."
+        f"Unknown NLA_PROVIDER: {settings.provider!r} "
+        "(use 'vertex', 'aistudio', 'ollama', or 'mock')."
     )
 
 

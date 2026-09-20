@@ -40,6 +40,10 @@ class Settings:
     gemini_api_key: str = ""
     aistudio_model: str = "gemini-2.5-flash"
 
+    # Ollama (fully offline local testing path, no key needed).
+    ollama_host: str = "http://localhost:11434"
+    ollama_model: str = "llama3.1"
+
     # Local demo data (DuckDB executor).
     data_dir: Path = _DEFAULT_DATA_DIR
 
@@ -67,6 +71,8 @@ def load_settings() -> Settings:
         vertex_model=os.getenv("NLA_VERTEX_MODEL", "gemini-2.5-pro"),
         gemini_api_key=os.getenv("NLA_GEMINI_API_KEY", ""),
         aistudio_model=os.getenv("NLA_AISTUDIO_MODEL", "gemini-2.5-flash"),
+        ollama_host=os.getenv("NLA_OLLAMA_HOST", "http://localhost:11434"),
+        ollama_model=os.getenv("NLA_OLLAMA_MODEL", "llama3.1"),
         data_dir=Path(os.getenv("NLA_DATA_DIR", str(_DEFAULT_DATA_DIR))),
         max_rows=int(os.getenv("NLA_MAX_ROWS", "1000")),
         max_bytes_billed=int(

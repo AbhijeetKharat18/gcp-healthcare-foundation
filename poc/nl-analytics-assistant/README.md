@@ -56,9 +56,9 @@ This is defence-in-depth *on top of* the IAM boundary — belt and braces.
 ## Architecture: swappable by design
 
 - **LLM provider** (`app/nl_analytics/llm/`): `vertex` (Gemini, production),
-  `aistudio` (Gemini via a free AI Studio key, for local testing), or `mock`
-  (deterministic, offline). Swapping to Claude-on-Vertex later is a new provider
-  class, not a rewrite.
+  `aistudio` (Gemini via a free AI Studio key), `ollama` (a local model, fully
+  offline), or `mock` (deterministic, offline). Swapping to Claude-on-Vertex
+  later is a new provider class, not a rewrite.
 - **Executor** (`app/nl_analytics/executor/`): `bigquery` (production) or
   `duckdb` (local synthetic data). The local path transpiles the *real*
   BigQuery SQL to DuckDB, so the demo exercises the same guardrail path as prod.
@@ -82,31 +82,44 @@ Run the tests:
 make test      # 61 tests: guardrails, pipeline, API, catalog, providers
 ```
 
-### Test the *real* NL→SQL locally — free, no GCP
+### Test the *real* NL→SQL locally — no GCP
 
 The `mock` provider returns canned SQL, so it exercises the plumbing and
-guardrails but not the model's actual generation. To drive real
-natural-language → SQL locally **without a GCP subscription**, use a **free**
-[Google AI Studio](https://aistudio.google.com/apikey) key (same Gemini family
-as production; no project or billing):
+guardrails but not the model's actual generation. Two ways to drive real
+natural-language → SQL locally **without a GCP subscription**:
+
+**Fully offline with Ollama** (no key, no internet):
+
+```bash
+ollama pull qwen2.5-coder            # a code/SQL-tuned model works best
+export NLA_OLLAMA_MODEL=qwen2.5-coder # default is llama3.1
+make demo-ollama                     # NLA_PROVIDER=ollama + DuckDB
+```
+
+**Free Gemini via Google AI Studio** (closest to production; a free
+[API key](https://aistudio.google.com/apikey), no project or billing):
 
 ```bash
 export NLA_GEMINI_API_KEY=<your-free-key>
-make demo-gemini    # NLA_PROVIDER=aistudio + DuckDB
+make demo-gemini                     # NLA_PROVIDER=aistudio + DuckDB
 ```
 
-Questions now go to real Gemini, the returned SQL passes the same guardrails,
-and results come from the local synthetic data. The only things that still need
-GCP are querying the *real* `secure_views` in BigQuery and deploying to Cloud
-Run.
+Either way, questions go to a real model, the returned SQL passes the same
+guardrails, and results come from the local synthetic data. The only things
+that still need GCP are querying the *real* `secure_views` in BigQuery and
+deploying to Cloud Run.
 
 **Provider matrix**
 
 | `NLA_PROVIDER` | Model | Needs | Use for |
 |---|---|---|---|
 | `mock` | canned SQL | nothing | plumbing + guardrail tests |
-| `aistudio` | Gemini (AI Studio) | free API key | real NL→SQL locally |
+| `ollama` | local model | Ollama running | real NL→SQL, fully offline |
+| `aistudio` | Gemini (AI Studio) | free API key | real NL→SQL, closest to prod |
 | `vertex` | Gemini (Vertex) | GCP project | production |
+
+> Running the app **in Docker** against Ollama on the host? Point it at
+> `NLA_OLLAMA_HOST=http://host.docker.internal:11434`.
 
 ## Deploy to GCP (production path)
 
