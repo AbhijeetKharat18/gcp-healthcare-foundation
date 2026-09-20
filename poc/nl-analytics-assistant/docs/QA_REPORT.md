@@ -14,12 +14,25 @@ equivalent — all deps ship arm64 wheels)._
 | Unit / integration tests | **106 passing**, 0 failing |
 | Coverage (`nl_analytics`) | **98%** |
 | Static analysis (ruff) | **clean** |
-| Browser E2E (Playwright/Chromium) | **2 passing** |
+| Browser E2E (Playwright/Chromium) | **3 passing** (answer render, guardrail block, XSS escaping) |
+| Concurrency | 400 direct + 300 concurrent HTTP requests return correct results |
+| Security review | 1 finding (DOM-XSS), **fixed + regression-tested** |
+| Production dependency resolution | resolves cleanly (`pip` dry-run) |
 | Terraform `fmt` | **clean** (validate runs in CI where the registry is reachable) |
 | Synthetic data | referential integrity + de-identification enforced by tests; generation is deterministic |
 | Live local-model test (Ollama) | opt-in, runs on the machine with Ollama |
 
 Run it all offline with: `make qa` (lint + coverage) and `make qa-e2e` (browser).
+
+## Issues found and fixed during QA
+
+| # | Severity | Issue | Fix |
+|---|---|---|---|
+| 1 | High | `EXPORT DATA` exfiltration slipped past the denylist guardrail | Switched to a positive allowlist of query root types (fails closed) |
+| 2 | Med | Unqualified table names failed on the DuckDB path | Guardrail normalises to `secure_views.<table>` |
+| 3 | **High** | Shared DuckDB connection returned truncated/empty results under concurrent requests (silent data corruption) | Serialized DB access with a lock; regression test at 200-way concurrency |
+| 4 | **High** | `google-cloud-aiplatform` unpinned → 2.x dropped the SDK the Vertex provider used (prod breakage) | Migrated Vertex provider to `google-genai`; removed the dependency |
+| 5 | **Med** | DOM-XSS: query result cells rendered via `innerHTML` unescaped | HTML-escape all result-derived output; Playwright regression test |
 
 ## What was tested
 

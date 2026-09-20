@@ -8,6 +8,7 @@ checks the guardrail message appears.
 
 from __future__ import annotations
 
+import json
 import os
 import socket
 import subprocess
@@ -116,4 +117,38 @@ def test_ui_shows_guardrail_block(base_url):
         page.wait_for_selector(".notice.err", timeout=15000)
         err = page.inner_text(".notice.err").lower()
         assert "block" in err or "guardrail" in err
+        browser.close()
+
+
+def test_ui_escapes_malicious_cell_values(base_url):
+    # A malicious result value must render as inert text, not executable HTML.
+    from playwright.sync_api import sync_playwright
+
+    payload = '<img src=x onerror="window.__xss=1">'
+    fake = {
+        "question": "x", "ok": True, "sql": "SELECT 1",
+        "columns": ["note"], "rows": [{"note": payload}], "row_count": 1,
+        "tables_used": ["v_facility_dim"], "engine": "duckdb (local synthetic data)",
+        "elapsed_ms": 1,
+    }
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(**_launch_kwargs())
+        page = browser.new_page()
+        page.route(
+            "**/api/ask",
+            lambda route: route.fulfill(
+                status=200, content_type="application/json", body=json.dumps(fake)
+            ),
+        )
+        page.goto(base_url)
+        page.fill("#q", "x")
+        page.click("#ask")
+        page.wait_for_selector("#ok-body:not(.hidden)", timeout=15000)
+
+        # The onerror handler must not have fired, and no <img> element was created
+        # from the payload; it is shown as literal text instead.
+        assert page.evaluate("() => window.__xss") is None
+        assert page.query_selector("#table img") is None
+        assert "onerror" in page.inner_text("#table")
         browser.close()

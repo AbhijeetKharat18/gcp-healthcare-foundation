@@ -161,15 +161,23 @@ async function boot() {
   } catch (e) {}
 }
 
+// Escape everything derived from query results before it touches innerHTML.
+// The result set is arbitrary governed data (in prod, clinical strings), so it
+// must never be treated as markup.
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, m => (
+    {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[m]
+  ));
+}
 function renderTable(cols, rows) {
-  const head = "<tr>" + cols.map(c => `<th>${c}</th>`).join("") + "</tr>";
+  const head = "<tr>" + cols.map(c => `<th>${esc(c)}</th>`).join("") + "</tr>";
   const body = rows.map(r => "<tr>" + cols.map(c => `<td>${fmt(r[c])}</td>`).join("") + "</tr>").join("");
   $("table").innerHTML = head + body;
 }
 function fmt(v) {
   if (v === null || v === undefined) return "&mdash;";
   if (typeof v === "number") return v.toLocaleString();
-  return String(v);
+  return esc(v);
 }
 
 async function ask() {
@@ -190,15 +198,15 @@ async function ask() {
       $("sql").textContent = d.sql || "";
       const bytes = d.bytes_processed != null ? `<span><b>Est. bytes:</b> ${d.bytes_processed.toLocaleString()}</span>` : "";
       $("meta").innerHTML =
-        `<span><b>Engine:</b> ${d.engine}</span>` +
-        `<span><b>Tables:</b> ${(d.tables_used||[]).join(", ")}</span>` +
+        `<span><b>Engine:</b> ${esc(d.engine)}</span>` +
+        `<span><b>Tables:</b> ${(d.tables_used||[]).map(esc).join(", ")}</span>` +
         `<span><b>Rows:</b> ${d.row_count}</span>` +
         `<span><b>Time:</b> ${d.elapsed_ms} ms</span>` + bytes;
       renderTable(d.columns, d.rows);
       $("ok-body").classList.remove("hidden");
     } else {
-      const where = d.stage ? ` <span class="hint">(stage: ${d.stage})</span>` : "";
-      $("status").innerHTML = `<div class="notice err">${d.error || "Blocked"}${where}</div>`;
+      const where = d.stage ? ` <span class="hint">(stage: ${esc(d.stage)})</span>` : "";
+      $("status").innerHTML = `<div class="notice err">${esc(d.error || "Blocked")}${where}</div>`;
       if (d.sql) { $("sql").textContent = d.sql; $("meta").innerHTML = ""; $("table").innerHTML = ""; $("ok-body").classList.remove("hidden"); }
     }
   } catch (e) {
