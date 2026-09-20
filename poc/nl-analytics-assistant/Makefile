@@ -9,6 +9,7 @@ help:
 	@echo "make setup        - create venv and install dev deps"
 	@echo "make data         - (re)generate synthetic demo data"
 	@echo "make demo         - run the app locally (mock LLM + DuckDB) on :8080"
+	@echo "make demo-gemini  - run with real Gemini via a free AI Studio key (NLA_GEMINI_API_KEY)"
 	@echo "make test         - run the test suite"
 	@echo "make docker-build - build the Cloud Run container image"
 
@@ -22,6 +23,13 @@ data:
 
 demo:
 	NLA_PROVIDER=mock NLA_EXECUTOR=duckdb \
+		PYTHONPATH=app $(BIN)/uvicorn nl_analytics.main:app --host 0.0.0.0 --port 8080
+
+# Real NL->SQL locally with a free Google AI Studio key (no GCP project).
+# Get a key at https://aistudio.google.com/apikey then:
+#   export NLA_GEMINI_API_KEY=...
+demo-gemini:
+	NLA_PROVIDER=aistudio NLA_EXECUTOR=duckdb \
 		PYTHONPATH=app $(BIN)/uvicorn nl_analytics.main:app --host 0.0.0.0 --port 8080
 
 test:

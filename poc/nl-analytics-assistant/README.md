@@ -55,9 +55,10 @@ This is defence-in-depth *on top of* the IAM boundary — belt and braces.
 
 ## Architecture: swappable by design
 
-- **LLM provider** (`app/nl_analytics/llm/`): `vertex` (Gemini, production) or
-  `mock` (deterministic, offline). Swapping to Claude-on-Vertex later is a new
-  provider class, not a rewrite.
+- **LLM provider** (`app/nl_analytics/llm/`): `vertex` (Gemini, production),
+  `aistudio` (Gemini via a free AI Studio key, for local testing), or `mock`
+  (deterministic, offline). Swapping to Claude-on-Vertex later is a new provider
+  class, not a rewrite.
 - **Executor** (`app/nl_analytics/executor/`): `bigquery` (production) or
   `duckdb` (local synthetic data). The local path transpiles the *real*
   BigQuery SQL to DuckDB, so the demo exercises the same guardrail path as prod.
@@ -78,8 +79,34 @@ request get blocked before it runs.
 Run the tests:
 
 ```bash
-make test      # 40 tests: guardrails, pipeline, API, catalog invariants
+make test      # 61 tests: guardrails, pipeline, API, catalog, providers
 ```
+
+### Test the *real* NL→SQL locally — free, no GCP
+
+The `mock` provider returns canned SQL, so it exercises the plumbing and
+guardrails but not the model's actual generation. To drive real
+natural-language → SQL locally **without a GCP subscription**, use a **free**
+[Google AI Studio](https://aistudio.google.com/apikey) key (same Gemini family
+as production; no project or billing):
+
+```bash
+export NLA_GEMINI_API_KEY=<your-free-key>
+make demo-gemini    # NLA_PROVIDER=aistudio + DuckDB
+```
+
+Questions now go to real Gemini, the returned SQL passes the same guardrails,
+and results come from the local synthetic data. The only things that still need
+GCP are querying the *real* `secure_views` in BigQuery and deploying to Cloud
+Run.
+
+**Provider matrix**
+
+| `NLA_PROVIDER` | Model | Needs | Use for |
+|---|---|---|---|
+| `mock` | canned SQL | nothing | plumbing + guardrail tests |
+| `aistudio` | Gemini (AI Studio) | free API key | real NL→SQL locally |
+| `vertex` | Gemini (Vertex) | GCP project | production |
 
 ## Deploy to GCP (production path)
 

@@ -24,7 +24,16 @@ def build_provider(settings: Settings) -> LLMProvider:
             location=settings.vertex_location,
             model=settings.vertex_model,
         )
-    raise ValueError(f"Unknown NLA_PROVIDER: {settings.provider!r} (use 'vertex' or 'mock').")
+    if provider == "aistudio":
+        from .aistudio import AIStudioGeminiProvider
+
+        return AIStudioGeminiProvider(
+            api_key=settings.gemini_api_key,
+            model=settings.aistudio_model,
+        )
+    raise ValueError(
+        f"Unknown NLA_PROVIDER: {settings.provider!r} (use 'vertex', 'aistudio', or 'mock')."
+    )
 
 
 __all__ = ["LLMProvider", "MockProvider", "build_provider"]

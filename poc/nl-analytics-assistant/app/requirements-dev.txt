@@ -1,8 +1,11 @@
-# Local demo + test dependencies (no cloud SDKs needed: mock LLM + DuckDB).
+# Local demo + test dependencies. mock LLM + DuckDB need no cloud SDKs;
+# google-genai is included so you can also test real NL->SQL locally with a
+# free Google AI Studio key (NLA_PROVIDER=aistudio) - no GCP project needed.
 fastapi>=0.110
 uvicorn[standard]>=0.29
 pydantic>=2.6
 sqlglot>=25.0
 duckdb>=1.1
+google-genai>=1.0
 pytest>=8.0
 httpx>=0.27

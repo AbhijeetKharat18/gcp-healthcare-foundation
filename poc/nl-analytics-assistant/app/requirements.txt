@@ -6,3 +6,4 @@ sqlglot>=25.0
 duckdb>=1.1
 google-cloud-bigquery>=3.25
 google-cloud-aiplatform>=1.71
+google-genai>=1.0
